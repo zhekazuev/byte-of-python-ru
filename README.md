@@ -1,14 +1,20 @@
-# A Byte of Python
+<!-- # A Byte of Python -->
+# Укус Питона – A Byte of Python по-русски
 
-"A Byte of Python" is a free book on programming using the Python language. It serves as a tutorial or guide to the Python language for a beginner audience. If all you know about computers is how to save text files, then this is the book for you.
+<!-- "A Byte of Python" is a free book on programming using the Python language. It serves as a tutorial or guide to the Python language for a beginner audience. If all you know about computers is how to save text files, then this is the book for you. -->
+A Byte of Python – это свободная книга по программированию на языке Python. Она может служить учебным пособием или руководством по языку Python для начинающей аудитории. Если ваши знания о компьютере ограничиваются тем, как сохранять текстовые файлы, эта книга для вас.
 
-## For Python version 3
+<!-- ## For Python version 3 -->
+## Для Python версии 3
 
-This book will teach you to use Python version 3. There will also be guidance for you to adapt to the older and more common Python version 2 in the book.
+<!-- This book will teach you to use Python version 3. There will also be guidance for you to adapt to the older and more common Python version 2 in the book. -->
+Эта книга научит вас использовать Python версии 3. В книге также будет руководство по адаптации к более старой и более распространенной версии Python 2.
 
-## Who reads A Byte of Python? {#who-reads-bop}
+<!-- ## Who reads A Byte of Python? {#who-reads-bop} -->
+## Кто читает A Byte of Python? {#who-reads-bop}
 
-Here are what people are saying about the book:
+<!-- Here are what people are saying about the book: -->
+Вот что люди говорят о настоящей книге:
 
 > Somewhere around 2004 - 05 when I was convinced I wasn’t smart enough to be a programmer , I came came across the original A Byte of #Python, and that changed my entire perspective on computing and life , I owe a lot to that book @swaroopch had written.
 > -- [Rahul](https://twitter.com/unrahu1/status/1288743029637959682) on Jul 30, 2020
@@ -240,54 +246,87 @@ Here are what people are saying about the book:
 > I also saw that you do not mind that readers send you a thank note in your book. So I really like your book and appreciate it. Thanks.
 > -- [Isen I-Chun Chao](mailto:chao926@gmail.com)
 
-The book is even used by NASA! It is used in their [Jet Propulsion Laboratory](https://web.archive.org/web/20130614003212/http://dsnra.jpl.nasa.gov/software/Python/byte-of-python/output/byteofpython_html/) with their Deep Space Network project.
+<!-- The book is even used by NASA! It is used in their [Jet Propulsion Laboratory](https://web.archive.org/web/20130614003212/http://dsnra.jpl.nasa.gov/software/Python/byte-of-python/output/byteofpython_html/) with their Deep Space Network project. -->
+Эта книга используется даже в НАСА! Ею пользуются в [Лаборатории Реактивного Движения](https://web.archive.org/web/20130614003212/http://dsnra.jpl.nasa.gov/software/Python/byte-of-python/output/byteofpython_html/ "Jet Propulsion Laboratory") в рамках проекта "Сеть дальней космической связи".
 
-## Academic Courses
+<!-- ## Academic Courses -->
+## Учебные Курсы
 
-This book is/was being used as instructional material in various educational institutions:
+<!-- This book is/was being used as instructional material in various educational institutions: -->
+Эта книга используется в качестве учебного материала в различных учебных заведениях:
 
-- 'Principles of Programming Languages' course at [Vrije Universiteit, Amsterdam](http://www.few.vu.nl/~nsilvis/PPL/2007/index.html)
-- 'Basic Concepts of Computing' course at [University of California, Davis](http://www.cs.ucdavis.edu/courses/exp_course_desc/10.html)
-- 'Programming With Python' course at [Harvard University](http://www.people.fas.harvard.edu/~preshman/python_winter.html)
-- 'Introduction to Programming' course at [University of Leeds](http://www.comp.leeds.ac.uk/acom1900/)
-- 'Introduction to Application Programming' course at [Boston University](http://www.cs.bu.edu/courses/cs108/materials.html)
-- 'Information Technology Skills for Meteorology' course at [University of Oklahoma](http://gentry.metr.ou.edu/byteofpython/)
-- 'Geoprocessing' course at [Michigan State University](http://www.msu.edu/~ashton/classes/825/index.html)
-- 'Multi Agent Semantic Web Systems' course at the [University of Edinburgh](http://homepages.inf.ed.ac.uk/ewan/masws/)
-- 'Introduction to Computer Science and Programming' at [MIT OpenCourseWare](http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-00sc-introduction-to-computer-science-and-programming-spring-2011/references/)
-- 'Basic programming at the Faculty of Social Sciences, University of Ljubljana, Slovenia' -- [Aleš Žiberna](mailto:ales.ziberna@fdv.uni-lj.si) says _"I (and my predecessor) have been using your book as the main literature for this course"_
--  'Introduction to programming', Department of Information Sciences, University of Zadar, Croatia -- Krešimir Zauder says _"I would like to inform you that A Byte of Python is a mandatory read at my course"_
+<!-- - 'Principles of Programming Languages' course at [Vrije Universiteit, Amsterdam](http://www.few.vu.nl/~nsilvis/PPL/2007/index.html) -->
+- Курс "Принципы Языков Программирования" в университете [Vrije, Амстердам](http://www.few.vu.nl/~nsilvis/PPL/2007/index.html "Vrije Universiteit, Amsterdam")
+<!-- - 'Basic Concepts of Computing' course at [University of California, Davis](http://www.cs.ucdavis.edu/courses/exp_course_desc/10.html) -->
+- Курс "Основы Машинных Вычислений" в [Калифорнийском Университете в Дэвисе](http://www.cs.ucdavis.edu/courses/exp_course_desc/10.html "University of California, Davis")
+<!-- - 'Programming With Python' course at [Harvard University](http://www.people.fas.harvard.edu/~preshman/python_winter.html) -->
+- Курс "Программирование на Python" в [Гарвардском университете](http://www.people.fas.harvard.edu/~preshman/python_winter.html "Harvard University")
+<!-- - 'Introduction to Programming' course at [University of Leeds](http://www.comp.leeds.ac.uk/acom1900/) -->
+- Курс "Введение в Программирование" в [Университете Лидса](http://www.comp.leeds.ac.uk/acom1900/ "University of Leeds")
+<!-- - 'Introduction to Application Programming' course at [Boston University](http://www.cs.bu.edu/courses/cs108/materials.html) -->
+- Курс "Введение в Разработку Приложений" в [Бостонском Университете](http://www.cs.bu.edu/courses/cs108/materials.html "[Boston University")
+<!-- - 'Information Technology Skills for Meteorology' course at [University of Oklahoma](http://gentry.metr.ou.edu/byteofpython/) -->
+- Курс "Методы Информационных Технологий в Метеорологии" в [Университете Оклахомы](http://gentry.metr.ou.edu/byteofpython/ "University of Oklahoma")
+<!-- - 'Geoprocessing' course at [Michigan State University](http://www.msu.edu/~ashton/classes/825/index.html) -->
+- Курс “Обработка Геоданных” в [Университете штата Мичиган](http://www.msu.edu/~ashton/classes/825/index.html "Michigan State University")
+<!-- - 'Multi Agent Semantic Web Systems' course at the [University of Edinburgh](http://homepages.inf.ed.ac.uk/ewan/masws/) -->
+- Курс “Многоагентные Системы Семантической Паутины” в [Университете Эдинбурга](http://homepages.inf.ed.ac.uk/ewan/masws/ "University of Edinburgh")
+<!-- - 'Introduction to Computer Science and Programming' at [MIT OpenCourseWare](http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-00sc-introduction-to-computer-science-and-programming-spring-2011/references/) -->
+- Курс "Введение в Информатику и Программирование" по программе [MIT OpenCourseWare](http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-00sc-introduction-to-computer-science-and-programming-spring-2011/references/)
+<!-- - 'Basic programming at the Faculty of Social Sciences, University of Ljubljana, Slovenia' -- [Aleš Žiberna](mailto:ales.ziberna@fdv.uni-lj.si) says _"I (and my predecessor) have been using your book as the main literature for this course"_ -->
+- Курс "Базовое программирование на Факультете Социальных Наук Люблянского университета, Словения" - [Алеш Жиберна](mailto:ales.ziberna@fdv.uni-lj.si "") говорит: _"Я (и мой предшественник) пользовались вашей книгой в качестве основного литературного источника для этого курса"_
+<!-- -  'Introduction to programming', Department of Information Sciences, University of Zadar, Croatia -- Krešimir Zauder says _"I would like to inform you that A Byte of Python is a mandatory read at my course"_ -->
+- Курс "Введение в программирование", Департамент Информационных Наук, Задарский университет, Хорватия - говорит Крешимир Заудер _"Я хотел бы сообщить вам, что A Byte of Python является обязательным для чтения в моем курсе"_
 
-## License
+<!-- ## License -->
+## Лицензия
 
-This book is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
+<!-- This book is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). -->
+Настоящая книга распространяется на условиях лицензии [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
 
-This means:
+<!-- This means: -->
+Это означает, что:
 
-- You are free to Share i.e. to copy, distribute and transmit this book
-- You are free to Remix i.e. to make changes to this book (especially translations)
-- You are free to use it for commercial purposes
+<!-- - You are free to Share i.e. to copy, distribute and transmit this book -->
+- Вы имеете право делиться, т.е. копировать, распространять и передавать эту книгу
+<!-- - You are free to Remix i.e. to make changes to this book (especially translations) -->
+- Вы имеете право использовать фрагменты этой книги в своих текстах(в том числе переводы)
+<!-- - You are free to use it for commercial purposes -->
+- Вы имеете право использовать её в коммерческих целях
 
-Please note:
+<!-- Please note: -->
+Внимание:
 
-- Please do *not* sell electronic or printed copies of the book unless you have clearly and prominently mentioned in the description that these copies are *not* from the original author of this book.
-- Attribution *must* be shown in the introductory description and front page of the document by linking back to {{ book.officialUrl }} and clearly indicating that the original text can be fetched from this location.
-- All the code/scripts provided in this book is licensed under the [3-clause BSD License](http://www.opensource.org/licenses/bsd-license.php) unless otherwise noted.
+<!-- - Please do *not* sell electronic or printed copies of the book unless you have clearly and prominently mentioned in the description that these copies are *not* from the original author of this book. -->
+- При продаже электронной или печатной версии этой книги в её описании необходимо в явной форме указать, что она распространяется *не* от имени её первоначального автора.
+<!-- - Attribution *must* be shown in the introductory description and front page of the document by linking back to {{ book.officialUrl }} and clearly indicating that the original text can be fetched from this location. -->
+- Во введении или на титульной странице *должно* быть указано первичное авторство в форме ссылки на страницу {{ book.officialUrl }} с ясным указанием на то, что исходный текст книги может быть найден по этому адресу.
+<!-- - All the code/scripts provided in this book is licensed under the [3-clause BSD License](http://www.opensource.org/licenses/bsd-license.php) unless otherwise noted. -->
+- Все фрагменты программ/сценарии, представленные в этой книге, распространяются на условиях [Модифицированной лицензии BSD](http://www.opensource.org/licenses/bsd-license.php), если явно не указано обратное.
 
-## Read Now
+<!-- ## Read Now -->
+## Читать
 
-You can read it online at {{ book.officialUrl }}
+<!-- You can read it online at {{ book.officialUrl }} -->
+Вы можете приступить к чтению книги онлайн {{ book.officialUrl }}
 
-## Buy The Book
+<!-- ## Buy The Book -->
+## Купить Книгу
 
-A printed hardcopy of the book can be purchased at {{ book.buyBookUrl }} for your offline reading pleasure, and to support the continued development and improvement of this book.
+<!-- A printed hardcopy of the book can be purchased at {{ book.buyBookUrl }} for your offline reading pleasure, and to support the continued development and improvement of this book. -->
+Чтобы иметь возможность почитать эту книгу без подключения к Интернету, а также поддержать её дальнейшую разработку и усовершенствование, вы можете купить её печатный вариант (на английском языке) {{ book.buyBookUrl }}
 
-## Download
+<!-- ## Download -->
+## Скачать
 
-Visit {{ book.downloadUrl }} to download a PDF file (best for desktop reading) or an EPUB file (best for devices such as mobile, tablet, ebook readers).
+<!-- Visit {{ book.downloadUrl }} to download a PDF file (best for desktop reading) or an EPUB file (best for devices such as mobile, tablet, ebook readers). -->
+Посетите {{ book.downloadUrl }} чтобы загрузить книгу в виде PDF-файла (лучше всего для чтения на компьютере) или в виде EPUB-файла (лучше всего для таких устройств, как мобильные устройства, планшеты и электронные книги).
 
-Visit {{ book.sourceUrl }} for the raw content (for suggesting corrections, changes, translating, etc.)
+<!-- Visit {{ book.sourceUrl }} for the raw content (for suggesting corrections, changes, translating, etc.) -->
+Посетите {{ book.sourceUrl }} для получения полного исходника (для предложения исправлений, изменений, перевода и т.д.)
 
-## Read the book in your native language
+<!-- ## Read the book in your native language -->
+## Читать книгу на вашем родном языке
 
-If you are interested in reading or contributing translations of this book to other human languages, please see [Translations](./translations.md#translations).
+<!-- If you are interested in reading or contributing translations of this book to other human languages, please see [Translations](./translations.md#translations). -->
+Если вы хотите почитать эту книгу или помочь перевести её на другие языки, перейдите на страницу [Переводы](./translations.md#translations).
