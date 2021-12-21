@@ -1,6 +1,18 @@
 <!-- # A Byte of Python -->
 # Укус Питона – A Byte of Python по-русски
 
+> Примечание: От автора перевода
+> 
+> Перед вами перевод популярной книги [A Byte of Python](https://python.swaroopch.com "Название книги “A Byte of Python” (дословно – “Байт Питона”) по-английски звучит так же, как и “A Bite of Python” – “Укус Питона” (прим.перев.)") на русский язык.
+> 
+> Автор книги – [Swaroop Chitlur](https://github.com/swaroopch "Swaroop Chitlur GitHub").
+> 
+> Автор русского перевода – [Владимир Смоляр](mailto:v_2e-at-ukr-dot-net "Нажми чтобы написать на почту").
+> 
+> Сообщения об ошибках и предложения по улучшению перевода просьба присылать на e-mail: [v_2e-at-ukr-dot-net](mailto:v_2e-at-ukr-dot-net "Нажми чтобы написать на почту").
+> 
+> Свежую версию оригинала книги можно просмотреть [здесь](https://python.swaroopch.com "A Byte of Python").
+
 <!-- "A Byte of Python" is a free book on programming using the Python language. It serves as a tutorial or guide to the Python language for a beginner audience. If all you know about computers is how to save text files, then this is the book for you. -->
 A Byte of Python – это свободная книга по программированию на языке Python. Она может служить учебным пособием или руководством по языку Python для начинающей аудитории. Если ваши знания о компьютере ограничиваются тем, как сохранять текстовые файлы, эта книга для вас.
 
