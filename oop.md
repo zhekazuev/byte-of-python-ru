@@ -108,11 +108,11 @@
 
 Это длинный пример, но он помогает продемонстрировать природу переменных класса и объекта. Здесь `population` принадлежит классу `Robot`, и поэтому является переменной класса. Переменная `name` принадлежит объекту (ей присваивается значение при помощи `self`), и поэтому является переменной объекта.
 
-Таким образом, мы обращаемся к переменной класса `population` как `Robot.population`, а не `self.population`. К переменной же объекта name во всех методах этого объекта мы обращаемся при помощи обозначения `self.name`. Помните об этой простой разнице между переменными класса и объекта. Также имейте в виду, что переменная объекта с тем же именем, что и переменная класса, сделает недоступной ("спрячет") переменную класса!
+Таким образом, мы обращаемся к переменной класса `population` как `Robot.population`, а не `self.population`. К переменной же объекта `name` во всех методах этого объекта мы обращаемся при помощи обозначения `self.name`. Помните об этой простой разнице между переменными класса и объекта. Также имейте в виду, что переменная объекта с тем же именем, что и переменная класса, сделает недоступной ("спрячет") переменную класса!
 
 Вместо `Robot.population` мы могли бы также использовать `self.__class__.Population`, потому что каждый объект ссылается на свой класс через атрибут `self.__class__`.
 
-Метод `how_many` принадлежит классу, а не объекту. Это означает, что мы можем определить его как `classmethod` или `staticmethod`, в зависимости от того, нужно ли нам знать, в каком классе мы находимся. Поскольку нам не нужна такая информация, мы воспользуемся `staticmethod`.
+Метод `how_many` принадлежит классу, а не объекту. Это означает, что мы можем определить его как `classmethod` или `staticmethod`, в зависимости от того, нужно ли нам знать, в каком классе мы находимся. Поскольку мы ссылаемся на переменную класса, мы воспользуемся `classmethod`.
 
 Мы пометили метод `how_many` как метод класса, использующий [декоратор](./more.md#decorator).
 
@@ -141,45 +141,45 @@ how_many = classmethod(how_many)
 > 
 > В Python все члены класса (включая данные) являются _публичными_ (public), а все методы – _виртуальными_ (virtual).
 
-## Inheritance
+## Наследование
 
-One of the major benefits of object oriented programming is **reuse** of code and one of the ways this is achieved is through the **inheritance** mechanism. Inheritance can be best imagined as implementing a **type and subtype** relationship between classes.
+Одно из главных достоинств объектно-ориентированного программирования заключается в **многократном использовании** одного и того же кода, и один из способов этого достичь – при помощи механизма **наследования**. Легче всего представить себе наследование в виде отношения между классами как **тип и подтип**.
 
-Suppose you want to write a program which has to keep track of the teachers and students in a college. They have some common characteristics such as name, age and address. They also have specific characteristics such as salary, courses and leaves for teachers and, marks and fees for students.
+Представим, что нам нужно написать программу, которая отслеживает информацию о преподавателях и студентах в колледже. У них есть некоторые общие характеристики: имя, возраст и адрес. Есть также и специфические характеристики, такие как зарплата, курсы и отпуск для преподавателей, а также оценки и оплата за обучение для студентов.
 
-You can create two independent classes for each type and process them but adding a new common characteristic would mean adding to both of these independent classes. This quickly becomes unwieldy.
+Можно создать для них независимые классы и работать с ними, но тогда добавление какой-либо новой общей характеристики потребует добавления её к каждому из этих независимых классов в отдельности, что делает программу неповоротливой.
 
-A better way would be to create a common class called `SchoolMember` and then have the teacher and student classes _inherit_ from this class, i.e. they will become sub-types of this type (class) and then we can add specific characteristics to these sub-types.
+Лучше создать общий класс с именем `SchoolMember`, а затем сделать так, чтобы классы преподавателя и студента _наследовали_ этот класс, т.е. чтобы они стали подтипами этого типа (класса), после чего добавить любые специфические характеристики к этим подтипам.
 
-There are many advantages to this approach. If we add/change any functionality in `SchoolMember`, this is automatically reflected in the subtypes as well. For example, you can add a new ID card field for both teachers and students by simply adding it to the SchoolMember class. However, changes in the subtypes do not affect other subtypes. Another advantage is that you can refer to a teacher or student object as a `SchoolMember` object which could be useful in some situations such as counting of the number of school members. This is called **polymorphism** where a sub-type can be substituted in any situation where a parent type is expected, i.e. the object can be treated as an instance of the parent class.
+У такого подхода есть множество достоинств. Если мы добавим/изменим какую-либо функциональность в `SchoolMember`, это автоматически отобразится и во всех подтипах. Например, мы можем добавить новое поле удостоверения для преподавателей и студентов, просто добавив его к классу `SchoolMember`. С другой стороны, изменения в подтипах никак не влияют на другие подтипы. Ещё одно достоинство состоит в том, что обращаться к объекту преподавателя или студента можно как к объекту `SchoolMember`, что может быть полезно в ряде случаев, например, для подсчёта количества человек в школе. Когда подтип может быть подставлен в любом месте, где ожидается родительский тип, т.е. объект считается экземпляром родительского класса, это называется **полиморфизмом**.
 
-Also observe that we reuse the code of the parent class and we do not need to repeat it in the different classes as we would have had to in case we had used independent classes.
+Заметьте также, что код родительского класса используется многократно, и нет необходимости копировать его во все классы, как пришлось бы в случае использования независимых классов.
 
-The `SchoolMember` class in this situation is known as the **base class** or the **superclass**. The `Teacher` and `Student` classes are called the **derived classes** or **subclasses**.
+Класс `SchoolMember` в этой ситуации называют **базовым классом** или **надклассом**(также "суперкласс", "родительский класс"). Классы `Teacher` и `Student` называют **производными классами** или **подклассами**(также "субкласс", "класс-наследник").
 
-We will now see this example as a program (save as `oop_subclass.py`):
+Рассмотрим теперь этот пример в виде программы (сохраните как `oop_subclass.py`):
 
 <pre><code class="lang-python">{% include "./programs/oop_subclass.py" %}</code></pre>
 
-Output:
+Вывод:
 
 <pre><code>{% include "./programs/oop_subclass.txt" %}</code></pre>
 
-**How It Works**
+**Как это работает**
 
-To use inheritance, we specify the base class names in a tuple following the class name in the class definition (for example, `class Teacher(SchoolMember)`).   Next, we observe that the `__init__` method of the base class is explicitly called using the  `self`  variable so that we can initialize the base class part of an instance in the subclass. This is very important to remember- Since we are defining a  `__init__`  method in `Teacher`  and  `Student`  subclasses, Python does not automatically call the constructor of the base class  `SchoolMember`, you have to explicitly call it yourself.
+Чтобы воспользоваться наследованием, при определении класса мы указываем имена его базовых классов в виде кортежа, следующего сразу за его именем(например, `class Teacher(SchoolMember)`). Далее мы видим, что метод `__init__` базового класса вызывается явно при помощи переменной `self`, чтобы инициализировать часть объекта, относящуюся к базовому классу. Это очень важно запомнить: поскольку мы определяем метод `__init__` в подклассах `Teacher` и `Student`, Python не вызывает конструктор базового класса `SchoolMember` автоматически – его необходимо вызывать самостоятельно в явном виде.
 
-In contrast, if we have not defined an  `__init__`  method in a subclass, Python will call the constructor of the base class automatically.
+Напротив, если мы не определим метод `__init__` в подклассе, Python вызовет конструктор базового класса автоматически.
 
-While we could treat instances of `Teacher` or `Student` as we would an instance of `SchoolMember` and access the `tell` method of `SchoolMember` by simply typing `Teacher.tell` or `Student.tell`, we instead define another `tell` method in each subclass (using the `tell` method of `SchoolMember` for part of it) to tailor it for that subclass.  Because we have done this, when we write `Teacher.tell` Python uses the `tell` method for that subclass vs the superclass.  However, if we did not have a `tell` method in the subclass, Python would use the `tell` method in the superclass.  Python always starts looking for methods in the actual subclass type first, and if it doesnt find anything, it starts looking at the methods in the subclasss base classes, one by one in the order they are specified in the tuple (here we only have 1 base class, but you can have multiple base classes) in the class definition.
+Обратите внимание, что при вызове метода `tell` из класса `SchoolMember` экземпляры `Teacher` или `Student` можно использовать как экземпляры `SchoolMember`, просто набрав `Teacher.tell` или `Student.tell`. Вместо этого мы определили другой метод `tell` в каждом подклассе (используя метод `tell` класса `SchoolMember` как основу), чтобы адаптировать его для этого подкласса. Заметьте также, что вызывается метод `tell` из подкласса, а не метод `tell` из класса `SchoolMember`. 
 
-A note on terminology - if more than one class is listed in the inheritance tuple, then it is called **multiple inheritance**.
+Однако, если бы у нас не было метода `tell` в подклассе, Python использовал бы метод `tell` в надклассе. Это можно понять следующим образом: Python всегда начинает поиск методов в самом классе, что он и делает в данном случае. Если же он не находит метода, он начинает искать методы, принадлежащие базовым классам по очереди, в порядке, в котором они перечислены в кортеже (здесь у нас есть только 1 базовый класс, но у вас может быть несколько базовых классов) при определении класса.
 
-The `end` parameter is used in the `print` function in the superclass's `tell()` method to print a line and allow the next print to continue on the same line. This is a trick to make `print` not print a `\n` (newline) symbol at the end of the printing.
+Замечание по терминологии: если при наследовании перечислено более одного класса, это называется **множественным наследованием**.
 
 
-## Summary
+## Резюме
 
-We have now explored the various aspects of classes and objects as well as the various terminologies associated with it. We have also seen the benefits and pitfalls of object-oriented programming. Python is highly object-oriented and understanding these concepts carefully will help you a lot in the long run.
+Мы изучили различные аспекты классов и объектов, равно как и терминологию, связанную с ними. Мы также увидели ряд достоинств и "подводных камней" объектно-ориентированного программирования. Python – в высокой степени объектно-ориентирован, поэтому понимание этих принципов очень поможет вам в дальнейшем.
 
-Next, we will learn how to deal with input/output and how to access files in Python.
+Далее мы узнаем, как работать с вводом/выводом и получать доступ к файлам в Python.
