@@ -20,7 +20,7 @@
 * [Дополнительно](more.md)
 * [Что дальше](what_next.md)
 * [Приложение: FLOSS](floss.md)
-* [Приложение: о книге](about.md)
+* [Приложение: О книге](about.md)
 * [Приложение: История версий](revision_history.md)
 * [Приложение: Переводы](translations.md)
 * [Приложение: Инструкция по переводу](translation_howto.md)
