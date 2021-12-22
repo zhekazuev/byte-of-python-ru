@@ -59,7 +59,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: v${{ github.sha }}
-          release_name: Release "${{ steps.current-time.outputs.formattedTime }}"-${{ github.repository }}
+          release_name: Release ${{ steps.current-time.outputs.formattedTime }}-byte-of-python
           draft: false
           prerelease: false
       
