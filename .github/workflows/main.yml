@@ -45,6 +45,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Get current time
+        uses: 1466587594/get-current-time@v2
+        id: current-time
+        with:
+          format: DD-MM-YYYY
+
       # https://github.com/actions/create-release
       - name: Create Release
         id: create_release
@@ -53,10 +59,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: v${{ github.sha }}
-          release_name: Release ${{ steps.date.outputs.date }}-${{ github.repository }}
+          release_name: Release "${{ steps.current-time.outputs.formattedTime }}"-${{ github.repository }}
           draft: false
           prerelease: false
-
+      
       # https://github.com/actions/upload-release-asset
       - name: Upload Release PDF
         id: upload-release-pdf
