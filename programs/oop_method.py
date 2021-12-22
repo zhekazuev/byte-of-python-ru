@@ -1,8 +1,8 @@
 class Person:
     def say_hi(self):
-        print('Hello, how are you?')
+        print('Привет! Как дела?')
 
 p = Person()
 p.say_hi()
-# The previous 2 lines can also be written as
+# Предыдущие две строчки можно также записать как
 # Person().say_hi()
