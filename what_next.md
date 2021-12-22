@@ -1,4 +1,4 @@
-# What Next
+# What Next {#what-next}
 
 If you have read this book thoroughly till now and practiced writing a lot of programs, then you must have become comfortable and familiar with Python. You have probably created some Python programs to try out stuff and to exercise your Python skills as well. If you have not done it already, you should. The question now is 'What Next?'.
 
@@ -16,7 +16,7 @@ If you found that program easy, here's another one:
 
 The replace command can be as simple or as sophisticated as you wish, from simple string substitution to looking for patterns (regular expressions).
 
-## Next Projects
+## Next Projects {#next-projects}
 
 If you found above programs easy to create, then look at this comprehensive list of projects and try writing your own programs: https://github.com/thekarangoel/Projects#numbers (the same list is also at [Martyr2's Mega Project List](http://www.dreamincode.net/forums/topic/78802-martyr2s-mega-project-ideas-list/)).
 
@@ -25,26 +25,26 @@ Also see:
 - [Exercises for Programmers: 57 Challenges to Develop Your Coding Skills](https://pragprog.com/book/bhwb/exercises-for-programmers)
 - [Intermediate Python Projects](https://openhatch.org/wiki/Intermediate_Python_Workshop/Projects).
 
-## Example Code
+## Example Code {#example-code}
 
 The best way to learn a programming language is to write a lot of code and read a lot of code:
 
 - [Python Cookbook](http://code.activestate.com/recipes/langs/python/) is an extremely valuable collection of recipes or tips on how to solve certain kinds of problems using Python. This is a must-read for every Python user.
 - [Python Module of the Week](http://pymotw.com/2/contents.html) is another excellent must-read guide to the [Standard Library](./stdlib.md#stdlib).
 
-## Advice
+## Advice {#advice}
 
 - [The Hitchhiker's Guide to Python!](http://docs.python-guide.org/en/latest/)
 - [The Elements of Python Style](https://github.com/amontalenti/elements-of-python-style)
 - [Python Big Picture](http://slott-softwarearchitect.blogspot.ca/2013/06/python-big-picture-whats-roadmap.html)
 - ["Writing Idiomatic Python" ebook](http://www.jeffknupp.com/writing-idiomatic-python-ebook/) (paid)
 
-## Videos
+## Videos {#videos}
 
 - [Full Stack Web Development with Flask](https://github.com/realpython/discover-flask)
 - [PyVideo](http://www.pyvideo.org)
 
-## Questions and Answers
+## Questions and Answers {#faq}
 
 - [Official Python Dos and Don'ts](http://docs.python.org/3/howto/doanddont.html)
 - [Official Python FAQ](http://www.python.org/doc/faq/general/)
@@ -52,29 +52,29 @@ The best way to learn a programming language is to write a lot of code and read 
 - [Python Interview Q & A](http://dev.fyicenter.com/Interview-Questions/Python/index.html)
 - [StackOverflow questions tagged with python](http://stackoverflow.com/questions/tagged/python)
 
-## Tutorials
+## Tutorials {#tutorial}
 
 - [Hidden features of Python](http://stackoverflow.com/q/101268/4869)
 - [What's the one code snippet/python trick/etc did you wish you knew when you learned python?](http://www.reddit.com/r/Python/comments/19dir2/whats_the_one_code_snippetpython_tricketc_did_you/)
 - [Awaretek's comprehensive list of Python tutorials](http://www.awaretek.com/tutorials.html)
 
-## Discussion
+## Discussion {#discussion}
 
 If you are stuck with a Python problem, and don't know whom to ask, then the [python-tutor list](http://mail.python.org/mailman/listinfo/tutor) is the best place to ask your question.
 
 Make sure you do your homework by trying to solving the problem yourself first and [ask smart questions](http://catb.org/~esr/faqs/smart-questions.html).
 
-## News
+## News {#news}
 
 If you want to learn what is the latest in the world of Python, then follow the [Official Python Planet](http://planet.python.org).
 
-## Installing libraries
+## Installing libraries {#libraries}
 
 There are a huge number of open source libraries at the [Python Package Index](http://pypi.python.org/pypi) which you can use in your own programs.
 
 To install and use these libraries, you can use [pip](http://www.pip-installer.org/en/latest/).
 
-## Creating a Website
+## Creating a Website {#websites}
 
 Learn [Flask](http://flask.pocoo.org) to create your own website. Some resources to get started:
 
@@ -82,7 +82,7 @@ Learn [Flask](http://flask.pocoo.org) to create your own website. Some resources
 - [The Flask Mega-Tutorial](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
 - [Example Flask Projects](https://github.com/mitsuhiko/flask/tree/master/examples)
 
-## Graphical Software
+## Graphical Software {#graphical}
 
 Suppose you want to create your own graphical programs using Python. This can be done using a GUI (Graphical User Interface) library with their Python bindings. Bindings are what allow you to write programs in Python and use the libraries which are themselves written in C or C++ or other languages.
 
@@ -100,7 +100,7 @@ There are lots of choices for GUI using Python:
 - wxPython
     - This is the Python bindings for the wxWidgets toolkit. wxPython has a learning curve associated with it. However, it is very portable and runs on GNU/Linux, Windows, Mac and even embedded platforms. There are many IDEs available for wxPython which include GUI designers as well such as [SPE (Stani's Python Editor)](http://spe.pycs.net/) and the [wxGlade](http://wxglade.sourceforge.net/) GUI builder. You can create free as well as proprietary software using wxPython. To get started, read the [wxPython tutorial](http://zetcode.com/wxpython/). 
 
-### Summary of GUI Tools
+### Summary of GUI Tools {#gui-tools}
 
 For more choices, see the [GuiProgramming wiki page at the official python website](http://www.python.org/cgi-bin/moinmoin/GuiProgramming).
 
@@ -108,7 +108,7 @@ Unfortunately, there is no one standard GUI tool for Python. I suggest that you 
 
 For a more detailed and comprehensive analysis, see Page 26 of the ['The Python Papers, Volume 3, Issue 1' (PDF)](http://archive.pythonpapers.org/ThePythonPapersVolume3Issue1.pdf).
 
-## Various Implementations
+## Various Implementations {#implementations}
 
 There are usually two parts a programming language - the language and the software. A language is _how_ you write something. The software is _what_ actually runs our programs.
 
@@ -139,7 +139,7 @@ When you start writing larger programs, you should definitely learn more about a
 - [Funcy library](https://github.com/Suor/funcy)
 - [PyToolz library](http://toolz.readthedocs.org/en/latest/)
 
-## Summary
+## Summary {#summary}
 
 We have now come to the end of this book but, as they say, this is the _the beginning of the end_!. You are now an avid Python user and you are no doubt ready to solve many problems using Python. You can start automating your computer to do all kinds of previously unimaginable things or write your own games and much much more. So, get started!
 
