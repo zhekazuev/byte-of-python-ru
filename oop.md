@@ -1,95 +1,94 @@
-# Object Oriented Programming {#oop}
+# Объектно-ориентированное программирование {#oop}
 
-In all the programs we wrote till now, we have designed our program around functions i.e. blocks of statements which manipulate data. This is called the _procedure-oriented_ way of programming. There is another way of organizing your program which is to combine data and functionality and wrap it inside something called an object. This is called the _object oriented_ programming paradigm. Most of the time you can use procedural programming, but when writing large programs or have a problem that is better suited to this method, you can use object oriented programming techniques.
+До сих пор наши программы состояли из функций, т.е. блоков выражений, которые манипулируют данными. Это называется _процедурно-ориентированным_ стилем программирования. Существует и другой способ организации программ: объединять данные и функционал внутри некоего объекта. Это называется _объектно-ориентированной_ парадигмой программирования. В большинстве случаев можно ограничиться процедурным программированием, а при написании большой программы или если решение конкретной задачи того требует, можно переходить к техникам объектно-ориентированного программирования.
 
-Classes and objects are the two main aspects of object oriented programming. A **class** creates a new _type_ where **objects** are **instances** of the class. An analogy is that you can have variables of type `int` which translates to saying that variables that store integers are variables which are instances (objects) of the `int` class.
+Два основных аспекта объектно-ориентированного программирования – классы и объекты. **Класс** создаёт новый _тип_, а **объекты** являются **экземплярами** класса. Аналогично, когда мы говорим о переменных типа `int`, это означает, что переменные, которые хранят целочисленные значения, являются экземплярами (объектами) класса `int`.
 
-> **Note for Static Language Programmers**
+> **Замечание для Программистов на Статических Языках**
 > 
-> Note that even integers are treated as objects (of the `int` class). This is unlike C++ and Java (before version 1.5) where integers are primitive native types.
+> Обратите внимание, что даже целые числа рассматриваются как объекты (класса `int`), в отличие от C++ и Java (до версии 1.5), где целые числа являются примитивами.
+>
+> См. `help(int)` для более детального описания этого класса.
 > 
-> See `help(int)` for more details on the class.
+> Программисты на C# и Java 1.5 могут заметить сходство с концепцией _упаковки и распаковки_(boxing and unboxing).
+
+Объекты могут хранить данные в обычных переменных, которые _принадлежат_ объекту. Переменные, принадлежащие объекту или классу, называют **полями**. Объекты могут также обладать функционалом, т.е. иметь функции, _принадлежащие_ классу. Такие функции принято называть **методами** класса. Эта терминология важна, так как она помогает нам отличать независимые функции и переменные от тех, что принадлежат классу или объекту. Всё вместе (поля и методы) принято называть **атрибутами** класса.
+
+Поля бывают двух типов: они могут принадлежать каждому отдельному экземпляру объекта класса или всему классу. Они называются **переменными экземпляра** и **переменными класса** соответственно.
+
+Класс создаётся ключевым словом `class`. Поля и методы класса записываются в блоке кода с отступом.
+
+## Параметр `self` {#self}
+
+Методы класса имеют одно отличие от обычных функций: они должны иметь дополнительно имя, добавляемое к началу списка параметров. Однако, при вызове метода никакого значения этому параметру присваивать **не нужно** – его укажет Python. Эта переменная указывает на _сам_ объект экземпляра класса, и по традиции она называется `self`.
+
+Хотя этому параметру можно дать любое имя, _настоятельно рекомендуется_ использовать только имя `self`; использование любого другого имени не приветствуется. Есть много достоинств использования стандартного имени: во-первых, любой человек, просматривающий вашу программу, легко узнает его; во-вторых, некоторые специализированные Интегрированные среды разработки (IDE - Integrated Development Environment) изначально рассчитаны на использование `self`.
+
+> **Замечание для Программистов на C++, Java и C#**
 > 
-> C# and Java 1.5 programmers will find this similar to the _boxing and unboxing_ concept.
+> `self` в Python эквивалентно указателю `this` в C++ и ссылке this в Java и C#.
 
-Objects can store data using ordinary variables that _belong_ to the object. Variables that belong to an object or class are referred to as **fields**. Objects can also have functionality by using functions that _belong_ to a class. Such functions are called **methods** of the class. This terminology is important because it helps us to differentiate between functions and variables which are independent and those which belong to a class or object. Collectively, the fields and methods can be referred to as the **attributes** of that class.
+Вы, должно быть, удивляетесь, как Python присваивает значение `self `и почему вам не нужно указывать это значение самостоятельно. Поясним это на примере. Предположим, у нас есть класс с именем `MyClass` и экземпляр этого класса с именем `myobject`. При вызове метода этого объекта, например, `myobject.method(arg1, arg2)`, Python автоматически превращает это в `MyClass.method(myobject, arg1, arg2)` – в этом и состоит смысл `self`.
 
-Fields are of two types - they can belong to each instance/object of the class or they can belong to the class itself. They are called **instance variables** and **class variables** respectively.
+Это также означает, что если какой-либо метод не принимает аргументов, у него всё равно будет один аргумент – `self`.
 
-A class is created using the `class` keyword. The fields and methods of the class are listed in an indented block.
+## Классы {#classes}
 
-## The `self` {#self}
-
-Class methods have only one specific difference from ordinary functions - they must have an extra first name that has to be added to the beginning of the parameter list, but you **do not** give a value for this parameter when you call the method, Python will provide it. This particular variable refers to the object _itself_, and by convention, it is given the name `self`.
-
-Although, you can give any name for this parameter, it is _strongly recommended_ that you use the name `self` - any other name is definitely frowned upon. There are many advantages to using a standard name - any reader of your program will immediately recognize it and even specialized IDEs (Integrated Development Environments) can help you if you use `self`.
-
-> **Note for C++/Java/C# Programmers**
-> 
-> The `self` in Python is equivalent to the `this` pointer in C++ and the `this` reference in Java and C#.
-
-You must be wondering how Python gives the value for `self` and why you don't need to give a value for it. An example will make this clear. Say you have a class called `MyClass` and an instance of this class called `myobject`. When you call a method of this object as `myobject.method(arg1, arg2)`, this is automatically converted by Python into `MyClass.method(myobject, arg1, arg2)` - this is all the special `self` is about.
-
-This also means that if you have a method which takes no arguments, then you still have to have one argument - the `self`.
-
-## Classes {#classes}
-
-The simplest class possible is shown in the following example (save as `oop_simplestclass.py`).
+Простейший класс показан в следующем примере (сохраните как `oop_simplestclass.py`).
 
 <pre><code class="lang-python">{% include "./programs/oop_simplestclass.py" %}</code></pre>
 
-Output:
+Вывод:
 
 <pre><code>{% include "./programs/oop_simplestclass.txt" %}</code></pre>
 
-**How It Works**
+**Как это работает**
 
-We create a new class using the `class` statement and the name of the class. This is followed by an indented block of statements which form the body of the class. In this case, we have an empty block which is indicated using the `pass` statement.
+Мы создаём новый класс при помощи оператора `class` и имени класса. За этим следует блок выражений, формирующих тело класса. В данном случае блок у нас пуст, на что указывает оператор `pass`.
 
-Next, we create an object/instance of this class using the name of the class followed by a pair of parentheses. (We will learn [more about instantiation](#init) in the next section). For our verification, we confirm the type of the variable by simply printing it. It tells us that we have an instance of the `Person` class in the `__main__` module.
+Далее мы создаём объект-экземпляр класса, записывая имя класса со скобками. (Мы узнаем [больше о реализации](#init) в следующем разделе). Для проверки мы выясняем тип переменной, просто выводя её на экран. Так мы видим, что у нас есть экземпляр класса `Person` в модуле `__main__`.
 
-Notice that the address of the computer memory where your object is stored is also printed. The address will have a different value on your computer since Python can store the object wherever it finds space.
+Обратите внимание, что выводится также и адрес в памяти компьютера, где хранится ваш объект. На вашем компьютере адрес будет другим, так как Python хранит объекты там, где имеется свободное место.
 
-## Methods
+## Методы
 
-We have already discussed that classes/objects can have methods just like functions except that we have an extra `self` variable. We will now see an example (save as `oop_method.py`).
+Итак, мы выяснили что классы/объекты могут иметь методы, представляющие собой функции, за исключением дополнительной переменной `self`. А теперь давайте рассмотрим пример (сохраните как `oop_method.py`).
 
 <pre><code class="lang-python">{% include "./programs/oop_method.py" %}</code></pre>
 
-Output:
+Вывод:
 
 <pre><code>{% include "./programs/oop_method.txt" %}</code></pre>
 
-**How It Works**
+**Как это работает**
 
-Here we see the `self` in action. Notice that the `say_hi` method takes no parameters but still has the `self` in the function definition.
+Здесь мы видим `self` в действии. Обратите внимание, что метод `say_hi` не принимает параметров, но тем не менее, имеет `self` в определении функции.
 
-## The `__init__` method {#init}
+## Метод `__init__` {#init}
 
-There are many method names which have special significance in Python classes. We will see the significance of the `__init__` method now.
+Существует много методов, играющих специальную роль в классах Python. Сейчас мы увидим значительность метода `__init__`.
 
-The `__init__` method is run as soon as an object of a class is instantiated (i.e. created). The method is useful to do any *initialization* (i.e. passing initial values to your object) you want to do with your object. Notice the double underscores both at the beginning and at the end of the name.
+Метод `__init__` запускается, как только объект класса реализуется (т.е. создан). Этот метод полезен для осуществления разного рода *инициализации* (т.е. передача начальных значений вашему объекту), необходимой для данного объекта. Обратите внимание на двойные подчёркивания в начале и в конце имени.
 
-Example (save as `oop_init.py`):
+Пример (сохраните как `oop_init.py`):
 
 <pre><code class="lang-python">{% include "./programs/oop_init.py" %}</code></pre>
 
-Output:
+Вывод:
 
 <pre><code>{% include "./programs/oop_init.txt" %}</code></pre>
 
-**How It Works**
+**Как это работает**
 
-Here, we define the `__init__` method as taking a parameter `name` (along with the usual `self`). Here, we just create a new field also called `name`. Notice these are two different variables even though they are both called 'name'. There is no problem because the dotted notation `self.name` means that there is something called "name" that is part of the object called "self" and the other `name` is a local variable. Since we explicitly indicate which name we are referring to, there is no confusion.
+Здесь мы определяем метод `__init__` так, чтобы он принимал параметр `name` (наряду с обычным `self`). Далее мы создаём новое поле с именем `name`. Обратите внимание, что это две разные переменные, даже несмотря на то, что они обе названы 'name'. Это не проблема, так как точка в выражении `self.name` обозначает, что существует нечто с именем "name", являющееся частью объекта "self", и другое `name` – локальная переменная. Поскольку мы в явном виде указываем, к которому имени мы обращаемся, путаницы не возникнет.
 
-When creating new instance `p`, of the class `Person`, we do so by using the class name, followed by the arguments in the parentheses: p = Person('Swaroop').
+Для создания нового экземпляра `p` класса `Person` мы указываем имя класса, после которого – аргументы в скобках: `p = Person('Swaroop')`.
 
-We do not explicitly call the `__init__` method.
-This is the special significance of this method.
+Метод `__init__` мы при этом не вызываем явным образом. В этом и заключается специальная роль данного метода.
 
-Now, we are able to use the `self.name` field in our methods which is demonstrated in the `say_hi` method.
+После этого мы получаем возможность использовать поле `self.name` в наших методах, что и продемонстрировано в методе `say_hi`.
 
-## Class And Object Variables {#class-obj-vars}
+## Переменные класса и объекта {#class-obj-vars}
 
 We have already discussed the functionality part of classes and objects (i.e. methods), now let us learn about the data part. The data part, i.e. fields, are nothing but ordinary variables that are _bound_ to the **namespaces** of the classes and objects. This means that these names are valid within the context of these classes and objects only. That's why they are called _name spaces_.
 
