@@ -1,8 +1,8 @@
 $ python oop_subclass.py
-(Initialized SchoolMember: Mrs. Shrividya)
-(Initialized Teacher: Mrs. Shrividya)
-(Initialized SchoolMember: Swaroop)
-(Initialized Student: Swaroop)
+(Создан SchoolMember: Mrs. Shrividya)
+(Создан Teacher: Mrs. Shrividya)
+(Создан SchoolMember: Swaroop)
+(Создан Student: Swaroop)
 
-Name:"Mrs. Shrividya" Age:"40" Salary: "30000"
-Name:"Swaroop" Age:"25" Marks: "75"
+Имя:"Mrs. Shrividya" Возраст:"40" Зарплата: "30000"
+Имя:"Swaroop" Возраст:"25" Оценки: "75"
