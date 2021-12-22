@@ -3,10 +3,13 @@
         "authorUrl": "https://swaroopch.com/about",
         "buyBookUrl": "https://swaroopch.com/buybook",
         "contactUrl": "https://swaroopch.com/contact",
-        "downloadUrl": "https://github.com/swaroopch/byte-of-python/releases/latest",
-        "officialUrl": "https://python.swaroopch.com",
+        "downloadEnUrl": "https://github.com/swaroopch/byte-of-python/releases/latest",
+        "downloadRuUrl": "https://github.com/zhekazuev/byte-of-python-ru/releases/latest",
+        "officialEnUrl": "https://python.swaroopch.com",
+        "officialRuUrl": "https://zhekazuev.github.io/byte-of-python-ru/",
         "pythonVersion": "3.6.0",
-        "sourceUrl": "https://github.com/swaroopch/byte-of-python",
-        "vimBookUrl": "https://vim.swaroopch.com/"
+        "sourceEnUrl": "https://github.com/swaroopch/byte-of-python",
+        "sourceRuUrl": "https://github.com/zhekazuev/byte-of-python-ru/",
+        "vimBookUrl": "https://vim.swaroopch.com/byte-of-vim.pdf"
     }
 }
