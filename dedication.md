@@ -1,7 +1,7 @@
-# Dedication
+# Посвящение {#dediction}
 
-To [Kalyan Varma](http://www.kalyanvarma.net/) and many other seniors at [PESIT](http://www.pes.edu/) who introduced us to GNU/Linux and the world of open source.
+[Каляну Варме](http://www.kalyanvarma.net/) и многим другим старшим сотрудникам [PESIT](http://www.pes.edu/), которые познакомили нас с GNU/Linux и миром открытого исходного кода.
 
-To the memory of [Atul Chitnis](http://www.nextbigwhat.com/atul-chitnis-obituary-297/), a friend and guide who shall be missed greatly.
+Светлой памяти [Атула Читниса](http://www.nextbigwhat.com/atul-chitnis-obituary-297/ "Atul Chitnis"), друга и проводника, которого будет очень не хватать.
 
-To the [pioneers who made the Internet happen](http://www.ibiblio.org/pioneers/index.html). This book was first written in 2003. It still remains popular, thanks to the nature of sharing knowledge on the Internet as envisioned by the pioneers.
+[Пионерам, которые сделали Интернет](http://www.ibiblio.org/pioneers/index.html). Эта книга была впервые написана в 2003 году. Она до сих пор остается популярной благодаря природе обмена знаниями в Интернете, как это предполагалось первопроходцами.
