@@ -1,5 +1,5 @@
 class Person:
-    pass  # An empty block
+    pass  # Пустой блок
 
 p = Person()
 print(p)
