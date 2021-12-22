@@ -90,53 +90,56 @@
 
 ## Переменные класса и объекта {#class-obj-vars}
 
-We have already discussed the functionality part of classes and objects (i.e. methods), now let us learn about the data part. The data part, i.e. fields, are nothing but ordinary variables that are _bound_ to the **namespaces** of the classes and objects. This means that these names are valid within the context of these classes and objects only. That's why they are called _name spaces_.
+Функциональную часть классов и объектов (т.е. методы) мы обсудили, теперь давайте ознакомимся с частью данных. Данные, т.е. поля, являются не чем иным, как обычными переменными, _заключёнными_ в **пространствах имён** классов и объектов. Это означает, что их имена действительны только в контексте этих классов или объектов. Отсюда и название _пространство имён_.
 
-There are two types of _fields_ - class variables and object variables which are classified depending on whether the class or the object _owns_ the variables respectively.
+Существует два типа _полей_: переменные класса и переменные объекта, которые различаются в зависимости от того, _принадлежит_ ли переменная классу или объекту соответственно.
 
-**Class variables** are shared - they can be accessed by all instances of that class. There is only one copy of the class variable and when any one object makes a change to a class variable, that change will be seen by all the other instances.
+**Переменные класса** разделяемы – доступ к ним могут получать все экземпляры этого класса. Переменная класса существует только одна, поэтому когда любой из объектов изменяет переменную класса, это изменение отразится и во всех остальных экземплярах того же класса.
 
-**Object variables** are owned by each individual object/instance of the class. In this case, each object has its own copy of the field i.e. they are not shared and are not related in any way to the field by the same name in a different instance. An example will make this easy to understand (save as `oop_objvar.py`):
+**Переменные объекта** принадлежат каждому отдельному экземпляру класса. В этом случае у каждого объекта есть своя собственная копия поля, т.е. не разделяемая и никоим образом не связанная с другими такими же полями в других экземплярах. Это легко понять на примере (сохраните как `oop_objvar.py`):
 
 <pre><code class="lang-python">{% include "./programs/oop_objvar.py" %}</code></pre>
 
-Output:
+Вывод:
 
 <pre><code>{% include "./programs/oop_objvar.txt" %}</code></pre>
 
-**How It Works**
+**Как это работает**
 
-This is a long example but helps demonstrate the nature of class and object variables. Here, `population` belongs to the `Robot` class and hence is a class variable. The `name` variable belongs to the object (it is assigned using `self`) and hence is an object variable.
+Это длинный пример, но он помогает продемонстрировать природу переменных класса и объекта. Здесь `population` принадлежит классу `Robot`, и поэтому является переменной класса. Переменная `name` принадлежит объекту (ей присваивается значение при помощи `self`), и поэтому является переменной объекта.
 
-Thus, we refer to the `population` class variable as `Robot.population` and not as `self.population`. We refer to the object variable `name` using `self.name` notation in the methods of that object. Remember this simple difference between class and object variables. Also note that an object variable with the same name as a class variable will hide the class variable!
+Таким образом, мы обращаемся к переменной класса `population` как `Robot.population`, а не `self.population`. К переменной же объекта name во всех методах этого объекта мы обращаемся при помощи обозначения `self.name`. Помните об этой простой разнице между переменными класса и объекта. Также имейте в виду, что переменная объекта с тем же именем, что и переменная класса, сделает недоступной ("спрячет") переменную класса!
 
-Instead of `Robot.population`, we could have also used `self.__class__.population` because every object refers to its class via the `self.__class__` attribute.
+Вместо `Robot.population` мы могли бы также использовать `self.__class__.Population`, потому что каждый объект ссылается на свой класс через атрибут `self.__class__`.
 
-The `how_many` is actually a method that belongs to the class and not to the object. This means we can define it as either a `classmethod` or a `staticmethod` depending on whether we need to know which class we are part of. Since we refer to a class variable, let's use `classmethod`.
+Метод `how_many` принадлежит классу, а не объекту. Это означает, что мы можем определить его как `classmethod` или `staticmethod`, в зависимости от того, нужно ли нам знать, в каком классе мы находимся. Поскольку нам не нужна такая информация, мы воспользуемся `staticmethod`.
 
-We have marked the `how_many` method as a class method using a [decorator](./more.md#decorator).
+Мы пометили метод `how_many` как метод класса, использующий [декоратор](./more.md#decorator).
 
-Decorators can be imagined to be a shortcut to calling a wrapper function (i.e. a function that "wraps" around another function so that it can do something before or after the inner function), so applying the `@classmethod` decorator is the same as calling:
+<pre><code class="lang-python">{% include "./programs/oop_staticmethod.py" %}</code></pre>
+
+Декораторы можно считать неким упрощённым способом вызова явного оператора, как мы видели в этом примере.
+Декораторы можно представить как ярлык для вызова функции-оболочки (т.e. функция, которая "оборачивает" другую функцию, чтобы она могла что-то делать до или после внутренней функции), поэтому применение декоратора `@classmethod` аналогично вызову:
 
 ```python
 how_many = classmethod(how_many)
 ```
 
-Observe that the `__init__` method is used to initialize the `Robot` instance with a name. In this method, we increase the `population` count by 1 since we have one more robot being added. Also observe that the values of `self.name` is specific to each object which indicates the nature of object variables.
+Пронаблюдайте, как метод `__init__` используется для инициализации экземпляра `Robot` с именем. В этом методе мы увеличиваем счётчик `population` на 1, так как добавляем ещё одного робота. Также заметьте, что значения `self.name` для каждого объекта свои, что указывает на природу переменных объекта.
 
-Remember, that you must refer to the variables and methods of the same object using the `self` *only*. This is called an *attribute reference*.
+Помните, что к переменным и методам самого объекта нужно обращаться, пользуясь *только* `self`. Это называется *доступом к атрибутам*.
 
-In this program, we also see the use of *docstrings* for classes as well as methods. We can access the class docstring at runtime using `Robot.__doc__` and the method docstring as `Robot.say_hi.__doc__`
+В этом примере мы также наблюдали применение *строк документации* для классов, равно как и для методов. Во время выполнения мы можем обращаться к строке документации класса при помощи `Robot.__doc__`, а к строке документации метода – при помощи `Robot.say_hi.__doc__`.
 
-In the `die` method, we simply decrease the `Robot.population` count by 1.
+В методе `die` мы просто уменьшаем `Robot.population` на 1.
 
-All class members are public. One exception: If you use data members with names using the _double underscore prefix_ such as `__privatevar`, Python uses name-mangling to effectively make it a private variable.
+Все члены класса являются публичными (public). Исключение: если имя переменной начинается с _двойного подчёркивания_, как, например, `__privatevar`, Python делает эту переменную приватной (private).
 
-Thus, the convention followed is that any variable that is to be used only within the class or object should begin with an underscore and all other names are public and can be used by other classes/objects. Remember that this is only a convention and is not enforced by Python (except for the double underscore prefix).
+Поэтому принято имя любой переменной, которая должна использоваться только внутри класса или объекта, начинать с подчёркивания, а все остальные имена являются публичными, и могут использоваться в других классах/объектах. Помните, что это лишь соглашение и Python вовсе не обязывает делать именно так (кроме двойного подчёркивания).
 
-> **Note for C++/Java/C# Programmers**
+> **Примечание для программистов на C++/Java/C#**
 > 
-> All class members (including the data members) are _public_ and all the methods are _virtual_ in Python.
+> В Python все члены класса (включая данные) являются _публичными_ (public), а все методы – _виртуальными_ (virtual).
 
 ## Inheritance
 
