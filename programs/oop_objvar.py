@@ -1,39 +1,39 @@
 class Robot:
-    """Represents a robot, with a name."""
+    """Представляет робота с именем."""
 
-    # A class variable, counting the number of robots
+    # Переменная класса, содержащая количество роботов
     population = 0
 
     def __init__(self, name):
-        """Initializes the data."""
+        """Инициализация данных."""
         self.name = name
-        print("(Initializing {})".format(self.name))
+        print("(Инициализация {})".format(self.name))
 
-        # When this person is created, the robot
-        # adds to the population
+        # При создании этой личности, робот добавляется
+        # к переменной population
         Robot.population += 1
 
     def die(self):
-        """I am dying."""
-        print("{} is being destroyed!".format(self.name))
+        """Я умираю."""
+        print("{} уничтожается!".format(self.name))
 
         Robot.population -= 1
 
         if Robot.population == 0:
-            print("{} was the last one.".format(self.name))
+            print("{} был последним.".format(self.name))
         else:
-            print("There are still {:d} robots working.".format(
+            print("Осталось {:d} работающих роботов.".format(
                 Robot.population))
 
     def say_hi(self):
-        """Greeting by the robot.
+        """Приветствие робота.
 
-        Yeah, they can do that."""
-        print("Greetings, my masters call me {}.".format(self.name))
+        Да, они это могут."""
+        print("Приветствую! Мои хозяева называют меня {}.".format(self.name))
 
     @classmethod
     def how_many(cls):
-        """Prints the current population."""
+        """Выводит численность роботов."""
         print("We have {:d} robots.".format(cls.population))
 
 
@@ -45,9 +45,9 @@ droid2 = Robot("C-3PO")
 droid2.say_hi()
 Robot.how_many()
 
-print("\nRobots can do some work here.\n")
+print("\nЗдесь роботы могут проделать какую-то работу.\n")
 
-print("Robots have finished their work. So let's destroy them.")
+print("Роботы закончили свою работу. Давайте уничтожим их.")
 droid1.die()
 droid2.die()
 
