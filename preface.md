@@ -1,23 +1,23 @@
-# Preface
+# Предисловие
 
-Python is probably one of the few programming languages which is both simple and powerful. This is good for beginners as well as for experts, and more importantly, is fun to program with. This book aims to help you learn this wonderful language and show how to get things done quickly and painlessly - in effect 'The Anti-venom to your programming problems'.
+Python, вероятно, один из немногих языков программирования, который одновременно является простым и мощным. Это хорошо как для новичков, так и для экспертов, и, что более важно, на нем интересно программировать. Цель этой книги - помочь вам освоить этот замечательный язык и показать, как быстро и безболезненно добиваться поставленных задач - по сути, "Противоядие для ваших проблем с программированием".
 
-## Who This Book Is For
+## Для кого эта книга
 
-This book serves as a guide or tutorial to the Python programming language. It is mainly targeted at newbies. It is useful for experienced programmers as well.
+Эта книга служит руководством или учебником по языку программирования Python. В основном она предназначена для новичков. Она полезна и для опытных программистов.
 
-The aim is that if all you know about computers is how to save text files, then you can learn Python from this book. If you have previous programming experience, then you can also learn Python from this book.
+Цель состоит в том, что если все, что вы знаете о компьютерах - это как сохранять текстовые файлы, то вы можете изучить Python по этой книге. Если у вас есть предыдущий опыт программирования, то вы также сможете изучить Python по этой книге.
 
-If you do have previous programming experience, you will be interested in the differences between Python and your favorite programming language - I have highlighted many such differences. A little warning though, Python is soon going to become your favorite programming language!
+Если у вас есть опыт программирования, вам будет интересно узнать о различиях между Python и вашим любимым языком программирования - я выделил много таких различий. Однако предупреждаю: скоро Python станет вашим любимым языком программирования!
 
-## Official Website
+## Официальный Вебсайт
 
-The official website of the book is {{ book.officialUrl }} where you can read the whole book online, download the latest versions of the book, [buy a printed hard copy]({{ book.buyBookUrl }}) and also send me feedback.
+Официальный вебсайт книги - {{ book.officialUrl }}, где вы можете прочитать всю книгу онлайн, скачать последние версии книги, [купить печатную бумажную копию]({{ book.buyBookUrl }}), а также отправить мне отзыв.
 
-## Something To Think About
+## Есть над чем подумать
 
-> There are two ways of constructing a software design: one way is to make it so simple that there are obviously no deficiencies; the other is to make it so complicated that there are no obvious deficiencies. -- C. A. R. Hoare
+> Существует два способа создания проекта программного обеспечения: один способ - сделать его настолько простым, явно без недостатков; другой - сделать его настолько сложным, чтобы не было явных недостатков. -- C. A. R. Hoare
 
 <!-- -->
 
-> Success in life is a matter not so much of talent and opportunity as of concentration and perseverance. -- C. W. Wendte
+> Успех в жизни - это вопрос не столько таланта и возможностей, сколько концентрации и настойчивости. -- C. W. Wendte
