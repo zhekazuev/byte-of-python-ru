@@ -6,13 +6,13 @@
 > 
 > Автор книги – [Swaroop Chitlur](https://github.com/swaroopch "Swaroop Chitlur GitHub").
 > 
-> Автор русского перевода – [Владимир Смоляр](mailto:v_2e-at-ukr-dot-net "Нажми чтобы написать на почту").
+> Автор русского перевода – [Владимир Смоляр](mailto:v_2e@ukr.net "Нажми чтобы написать на почту").
 > 
-> Сообщения об ошибках и предложения по улучшению перевода просьба присылать на e-mail: [v_2e-at-ukr-dot-net](mailto:v_2e-at-ukr-dot-net "Нажми чтобы написать на почту").
+> Сообщения об ошибках и предложения по улучшению перевода просьба присылать на e-mail: [v_2e@ukr.net](mailto:v_2e@ukr.net "Нажми чтобы написать на почту") или добавлять в виде issue [сюда](https://github.com/zhekazuev/byte-of-python-ru/).
 > 
 > Свежую версию оригинала книги можно просмотреть [здесь](https://python.swaroopch.com "A Byte of Python").
 
-A Byte of Python – это свободная книга по программированию на языке Python. Она может служить учебным пособием или руководством по языку Python для начинающей аудитории. Если ваши знания о компьютере ограничиваются тем, как сохранять текстовые файлы, эта книга для вас.
+_A Byte of Python_ – это бесплатная книга по программированию на языке Python. Она может служить учебным пособием или руководством по языку Python для начинающей аудитории. Если ваши знания о компьютере ограничиваются тем, как сохранять текстовые файлы, эта книга для вас.
 
 ## Для Python версии 3
 
@@ -20,236 +20,238 @@ A Byte of Python – это свободная книга по программ�
 
 ## Кто читает A Byte of Python? {#who-reads-bop}
 
-Вот что люди говорят о настоящей книге:
+Вот что говорят люди об этой книге:
 
-> Somewhere around 2004 - 05 when I was convinced I wasn’t smart enough to be a programmer , I came came across the original A Byte of #Python, and that changed my entire perspective on computing and life , I owe a lot to that book @swaroopch had written.
-> -- [Rahul](https://twitter.com/unrahu1/status/1288743029637959682) on Jul 30, 2020
-
-> This is the book that got me into programming almost a decade ago.
-> Thank you @swaroopch. You changed my life.
-> -- [Stefan Froelich](https://twitter.com/TheDumbTechGuy/status/1157245235052929024) on Aug 2, 2019
+> Где-то в 2004-2005 годах, когда я был убежден, что недостаточно умен, чтобы быть программистом, я наткнулся на оригинальный _A Byte of Python_, который полностью изменил мой взгляд на вычисления и жизнь, Я многим обязан этой книге, написанной _@swaroopch_.
+> -- [Rahul](https://twitter.com/unrahu1/status/1288743029637959682) 30 Июля, 2020 
 
 <!-- -->
 
-> I am writing this email to thank you for the great help your book has done for me! It was a really good book that I enjoyed thoroughly. As a 15 year old who has never done programming before, trying to learn Python online was difficult and I couldn't understand anything. But I felt like your book gave was much easier to understand and eased me into the whole new world of programming. Thanks to you, I can now write a high level language with ease. I thought programming would be hard and boring, but with your book's help, I realised how fun and interesting yet simple it can be! I would like to thank you again for your hard work on helping out beginners like me.
-> -- [Prottyashita Tahiyat](mailto:protahiyat@gmail.com) on Sep 17, 2019
+> Эта книга познакомила меня с программированием почти десять лет назад.
+> Спасибо вам, _@swaroopch_. Вы изменили мою жизнь.
+> -- [Stefan Froelich](https://twitter.com/TheDumbTechGuy/status/1157245235052929024) 2 Августа, 2019
 
 <!-- -->
 
-> This is the best beginner's tutorial I've ever seen! Thank you for your effort.
+> Я пишу это письмо, чтобы поблагодарить вас за огромную помощь, которую мне оказала ваша книга! Это была действительно хорошая книга, которая мне очень понравилась. Мне было 15 лет, и я никогда раньше не занимался программированием, пытаться изучать _Python_ онлайн было сложно, и я ничего не смог понять. Но я почувствовал, что ваша книга была намного проще для понимания и облегчила мне жизнь в совершенно новом мире программирования. Благодаря вам теперь я могу легко писать на языке высокого уровня. Я думал, что программировать будет сложно и скучно, но с помощью вашей книги я понял, насколько это может быть весело, интересно и просто! Я хотел бы еще раз поблагодарить вас за вашу тяжелую работу по оказанию помощи таким новичкам, как я.
+> -- [Prottyashita Tahiyat](mailto:protahiyat@gmail.com) 17 Сентября, 2019
+
+<!-- -->
+
+> Это лучший учебник для начинающих из всех, что я видел! Спасибо вам за ваш труд.
 > -- [Walt Michalik](mailto:wmich50@theramp.net)
 
 <!-- -->
 
-> The best thing i found was "A Byte of Python", which is simply a brilliant book for a beginner. It's well written, the concepts are well explained with self evident examples.
+> _A Byte of Python_ - лучшее, что я когда-либо находил, просто блестящая книга для новичка. Она хорошо написана, концепции хорошо объяснены на очевидных примерах.
 > -- [Joshua Robin](mailto:joshrob@poczta.onet.pl)
 
 <!-- -->
 
-> Excellent gentle introduction to programming #Python for beginners
+> Превосходный вводный курс в программирование #Python для начинающих
 > -- [Shan Rajasekaran](https://twitter.com/ShanRajasekaran/status/268910645842423809)
 
 <!-- -->
 
-> start to love python with every single page read
+> Влюбляешься в _Python_ после каждой прочитанной страницей
 > -- [Herbert Feutl](https://twitter.com/HerbertFeutl/status/11901471389913088)
 
 <!-- -->
 
-> perfect beginners guide for python, will give u key to unlock magical world of python
+> Идеальное руководство для начинающих по _Python_, даст ключ к разблокировке волшебного мира _Python_
 > -- [Dilip](https://twitter.com/Dili_mathilakam/status/220033783066411008)
 
 <!-- -->
 
-> I should be doing my actual "work" but just found "A Byte of Python". A great guide with great examples.
+> Я должен был делать свою настоящую "работу", но только что нашел _A Byte of Python_. Отличное руководство с отличными примерами.
 > -- [Biologist John](https://twitter.com/BiologistJohn/statuses/194726001803132928)
 
 <!-- -->
 
-> Recently started reading a Byte of python. Awesome work. And that too for free. Highly recommended for aspiring pythonistas.
+> Недавно начал читать _A Byte of python_. Потрясающая работа. И при этом бесплатно. Очень рекомендую начинающим питонистам.
 > -- [Mangesh](https://twitter.com/mangeshnanoti/status/225680668867321857)
 
 <!-- -->
 
-> A Byte of Python, written by Swaroop. (this is the book I'm currently reading). Probably the best to start with, and probably the best in the world for every newbie or even a more experienced user.
+> _A Byte of Python_, написанная _Swaroop_ (именно эту книгу я сейчас читаю). Возможно, это лучшее, с чего можно начать, и, вероятно, лучшее в мире для любого новичка или даже более опытного пользователя.
 > -- [Apostolos](http://apas.gr/2010/04/27/learning-python/)
 
 <!-- -->
 
-> Enjoying Reading #ByteOfPython by @swaroopch best book ever
+> Наслаждаюсь чтением #ByteOfPython от _@swaroopch_ лучшая книга в мире
 > -- [Yuvraj Sharma](https://twitter.com/YuvrajPoudyal/status/448050415356346368)
 
 <!-- -->
 
-> A Byte of Python by @swaroopch is still the "Best newbie guide to python"
+> _A Byte of Python_ от _@swaroopch_ по-прежнему является "Лучшим руководством для новичков по Python".
 > -- [Nickson Kaigi](https://twitter.com/nickaigi/status/1136963950711648256)
 
 <!-- -->
 
-> Thank you so much for writing A Byte Of Python. I just started learning how to code two days ago and I'm already building some simple games. Your guide has been a dream and I just wanted to let you know how valuable it has been.
+> Большое спасибо за то, что вы написали книгу _A Byte Of Python_. Я только два дня назад начал изучать программирование и уже создал несколько простых игр. Ваше руководство было просто мечтой, и я просто хотел дать вам знать, насколько ценным оно оказалось.
 > -- Franklin
 
 <!-- -->
 
-> I'm from Dayanandasagar College of Engineering (7th sem, CSE). Firstly i want to say that your book "The byte of python" is too good a book for a beginner in python like me.The concepts are so well explained with simple examples that helped me to easily learn python. Thank you so much.
+> Я из инженерного колледжа Dayanandasagar (7-й семестр, CSE). Во-первых, я хочу сказать, что ваша книга _The byte of python_ - слишком хорошая книга для новичка в _python_, как я. Концепции так хорошо объясняются на простых примерах, что помогли мне легко изучить _python_. Спасибо вам большое.
 > -- Madhura
 
 <!-- -->
 
-> I am a 18 year old IT student studying at University in Ireland. I would like to express my gratitude to you for writing your book "A Byte of Python", I already had knowledge of 3 programming langagues - C, Java and Javascript, and Python was by far the easiest langague I have ever learned, and that was mainly because your book was fantastic and made learning python very simple and interesting. It is one of the best written and easy to follow programming books I have ever read. Congratulations and keep up the great work.
+> Я 18-летний студент факультета информационных технологий, обучающийся в университете в Ирландии. Я хотел бы выразить вам свою благодарность за написание книги _A Byte of Python_. Я уже знал 3 языка программирования - C, Java и Javascript, а _Python_ оказался самым легким из всех языков, которые я когда-либо изучал, и это в основном потому, что ваша книга была фантастической и сделала изучение _Python_ очень простым и интересным. Это одна из лучших книг по программированию, которые я когда-либо читал. Поздравляю и продолжайте в том же духе.
 > -- Matt
 
 <!-- -->
 
-> Hi, I'm from Dominican Republic. My name is Pavel, recently I read your book _A Byte of Python_ and I consider it excellent!!  :). I learnt much from all the examples. Your book is of great help for newbies like me...
+> Привет! Я из Доминиканской Республики. Меня зовут Павел. Недавно я прочитал вашу книгу _A Byte of Python_, и нахожу её замечательной :). Я многому научился на приведённых примерах. Ваша книга – отличный помощник таким новичкам, как я...
 > -- [Pavel Simo](mailto:pavel.simo@gmail.com)
 
 <!-- -->
 
-> I am a student from China, Now ,I have read you book A byte of Python, Oh it's beautiful. The book is very simple but can help all the first learnners. You know I am interesting in Java and cloud computing many times, i have to coding programm for the server, so i think python is a good choice, finish your book, i think its not only a good choice its must use the Python. My English is not very well, the email to you, i just wanna thank you! Best Wishes for you and your family.
+> Я студент из Китая, сейчас я прочитал вашу книгу _A Byte of Python_, она прекрасна. Книга очень простая, но может помочь всем начинающим. Вы знаете, я интересуюсь _Java_ и облачными вычислениями много раз, я должен кодировать программы для сервера, поэтому я думаю, что _Python_ - это хороший выбор, закончите вашу книгу, я думаю, что это не только хороший выбор, он должен использовать _Python_. Мой английский не очень хорошо, письмо к вам, я просто хочу поблагодарить вас! С наилучшими пожеланиями для вас и вашей семьи.
 > -- Roy Lau
 
 <!-- -->
 
-> I recently finished reading Byte of Python, and I thought I really ought to thank you. I was very sad to reach the final pages as I now have to go back to dull, tedious oreilly or etc.  manuals for learning about python. Anyway, I really appreciate your book.
+> Недавно я закончил читать _Byte of Python_ и подумал, что должен поблагодарить вас. Мне было очень грустно дочитывать последние страницы, ведь теперь мне придется вернуться к скучным, нудным руководствам _oreilly_ или т.п. для изучения _python_. В любом случае, я очень ценю вашу книгу.
 > [Samuel Young](mailto:sy137@gmail.com)
 
 <!-- -->
 
-> Dear Swaroop, I am taking a class from an instructor that has no interest in teaching. We are using Learning Python, second edition, by O'Reilly. It is not a text for beginner without any programming knowledge, and an instructor that should be working in another field.  Thank you very much for your book, without it I would be clueless about Python and programming. Thanks a million, you are able to _break the message down_ to a level that beginners can understand and not everyone can.
+> Уважаемый _Swaroop_, я прохожу курс, который ведёт преподаватель, совсем не заинтересованный в преподавании. Мы пользуемся книгой _Learning Python_, второе издание _O’Reilly_. Но она совсем не для начинающих студентов, практически без каких-либо знаний о программировании, и преподавателя, который должен работать кем-нибудь другим. Огромное спасибо вам за вашу книгу. Без неё я так бы никогда ничего и не понял о _Python_ и программировании вообще. Тысяча благодарностей! Вы умеете _разбить мысль на части_ до такого уровня, чтобы начинающим было легко понять, а далеко не каждый на это способен.
 > -- [Joseph Duarte](mailto:jduarte1@cfl.rr.com)
 
 <!-- -->
 
-> I love your book! It is the greatest Python tutorial ever, and a very useful reference. Brilliant, a true masterpiece! Keep up the good work!
+> Я в восторге от вашей книги! Это самый лучший учебник по _Python_, кроме того полезный и как справочник. Просто блестяще! Настоящий шедевр! Так держать!
 > -- Chris-André Sommerseth
 
 <!-- -->
 
-> First of all, I want to say thanks to you for this great book. I think it is a good book for those who are looking for a beginner's tutorial for Python.
-> It is about two or there years ago, I think, when I first heard of this book. At that time, I was unable to read books in English yet, so I got a chinese translation, which took me into the gate of Python programming.
-> Recently, I reread this book. This time, of course, the english version. I couldn't believe that I can read the whole book without my dictionary at hand. Of course, it all dues to your effort to make this book an easy-to-understand one.
+> Прежде всего, я хочу поблагодарить вас за эту замечательную книгу. Я думаю, что это хорошая книга для тех, кто ищет учебник по _Python_ для начинающих.
+> Думаю, около двух или около того лет назад я впервые услышал об этой книге. В то время я еще не мог читать книги на английском языке, поэтому мне попался китайский перевод, который и привел меня в ворота программирования на _Python_.
+> Недавно я перечитал эту книгу. На этот раз, конечно, английскую версию. Я не мог поверить, что могу прочитать всю книгу без словаря под рукой. Конечно, это все благодаря вашим усилиям сделать эту книгу легкой для понимания.
 > -- [myd7349](https://github.com/swaroopch/byte_of_python/pull/13)
 
 <!-- -->
 
-> I'm just e-mailing you to thank you for writing Byte of Python online.  I had been attempting Python for a few months prior to stumbling across your book, and although I made limited success with pyGame, I never completed a program.
-> Thanks to your simplification of the categories, Python actually seems a reachable goal. It seems like I have finally learned the foundations and I can continue into my real goal, game development.
+> Пишу вам, чтобы поблагодарить за написание и публикацию в сети _Byte of Python_. Я предпринимал попытки изучить _Python_ в течение нескольких месяцев, прежде чем наткнулся на вашу книгу. И хотя я достиг небольших успехов с _pyGame_, мне никак не удавалось закончить программу.
+> Благодаря вашему упрощению многих понятий, _Python_ теперь кажется мне вполне достижимой целью. Кажется, теперь я наконец-то освоил основы и могу продолжать идти к своей настоящей цели – разработке игр.
 > ...
-> Once again, thanks VERY much for placing such a structured and helpful guide to basic programming on the web.  It shoved me into and out of OOP with an understanding where two text books had failed.
+> Ещё раз спасибо ОГРОМНОЕ за размещение такого структурированного и полезного путеводителя по основам программирования в Интернете. Он провёл меня через ООП, разъяснив то, что не смогли разъяснить два учебника.
 > -- [Matt Gallivan](mailto:m_gallivan12@hotmail.com)
 
 <!-- -->
 
-> I would like to thank you for your book _A Byte of Python_ which i myself find the best way to learn python. I am a 15 year old i live in egypt my name is Ahmed. Python was my second programming language i learn visual basic 6 at school but didn't enjoy it, however i really enjoyed learning python. I made the addressbook program and i was sucessful. i will try to start make more programs and read python programs (if you could tell me source that would be helpful). I will also start on learning java and if you can tell me where to find a tutorial as good as yours for java that would help me a lot. Thanx.
+> Я бы хотел поблагодарить вас за вашу книгу _A Byte of Python_, которая кажется мне самым лучшим средством для изучения _python_. Мне 15 лет, я живу в Египте. Зовут меня Ахмед. _Python_ – мой второй язык программирования. В школе я изучал _visual basic 6_, но мне он не понравился, а изучать _python_ мне по-настоящему нравится. Мне удалось написать программу "Адресная книга". Теперь я буду больше программировать сам и читать чужие программы на _python_ (если вы подскажете мне подходящий их источник). Также я намерен приступить к изучению _java_, и если бы вы могли порекомендовать мне пособие по _Java_, столь же хорошее, как ваше, это бы мне очень помогло. Спасибо.
 > -- [Ahmed Mohammed](mailto:sedo_91@hotmail.com)
 
 <!-- -->
 
-> A wonderful resource for beginners wanting to learn more about Python is the 110-page PDF tutorial A Byte of Python by Swaroop C H. It is well-written, easy to follow, and may be the best introduction to Python programming available.
+> Замечательным источником для начинающих, желающих узнать больше о _Python_ может послужить пособие _A Byte of Python_, написанное _Swaroop C H_ в 110 страницах. Оно отлично написано, легко воспринимается и, возможно, это лучшее из существующих введение в программирование на _Python_.
 > -- [Drew Ames](http://www.linux.com/feature/126522)
 
 <!-- -->
 
-> Yesterday I got through most of Byte of Python on my Nokia N800 and it's the easiest and most concise introduction to Python I have yet encountered. Highly recommended as a starting point for learning Python.
+> Вчера я прошёл почти весь _Byte of Python_ на своём _Nokia N800_, и он показался мне наиболее лёгким и лаконичным введением в _Python_ из всех, что я встречал. Настоятельно рекомендую его как отправную точку для изучающих _Python_.
 > -- [Jason Delport](http://paxmodept.com/telesto/blogitem.htm?id=627)
 
 <!-- -->
 
-> Byte of Vim and Python by @swaroopch is by far the best works in technical writing to me. Excellent reads #FeelGoodFactor
+> _Byte of Vim_ и _Python_, написанные _@swaroopch_, на мой взгляд, наилучшие образцы технической документации. Прекрасно читаются #FeelGoodFactor
 > -- [Surendran](http://twitter.com/suren/status/12840485454)
 
 <!-- -->
 
-> "Byte of python" best one by far man
-> (in response to the question "Can anyone suggest a good, inexpensive resource for learning the basics of Python? ")
+> _Byte of Python_ – безусловно лучший
+> (в ответ на вопрос "Можете посоветовать хороший и недорогой ресурс для изучения основ _Python_?")
 > -- [Justin LoveTrue](http://www.facebook.com/pythonlang/posts/406873916788)
 
 <!-- -->
 
-> The Book Byte of python was very helpful ..Thanks bigtime :)
-> [Chinmay](https://twitter.com/a_chinmay/status/258822633741762560)
+> Книга _Byte of python_ очень помогла. Спасибо, bigtime :)
+> -- [Chinmay](https://twitter.com/a_chinmay/status/258822633741762560)
 
 <!-- -->
 
-> Always been a fan of A Byte of Python - made for both new and experienced programmers.
+> Всегда был поклонником _A Byte of Python_ – написанного как для новичков, так и для опытных программистов.
 > -- [Patrick Harrington](http://stackoverflow.com/a/457785/4869)
 
 <!-- -->
 
-> I started learning python few days ago from your book..thanks for such a nice book. it is so well written, you made my life easy..so you found a new fan of yours..thats me :) tons of thanks.
+> Я начал изучать _python_ несколько дней назад по вашей книге..спасибо за такую хорошую книгу. она так хорошо написана, вы облегчили мне жизнь..так что вы нашли нового поклонника. это я :) масса благодарностей.
 > -- [Gadadhari Bheem](https://twitter.com/Pagal_e_azam/statuses/242865885256232960)
 
 <!-- -->
 
-> Before I started to learn Python, I've acquired basic programming skills in Assembly, C, C++, C# and Java. The very reason I wanted to learn Python is it's popular (people are talking about it) and powerful (reality). This book written by Mr. Swaroop is a very good guide for both brand-new programmers and new python programmers. Took 10 half days to go through it. Great Help!
+> До того, как я начал изучать _Python_, я приобрел базовые навыки программирования на Ассемблере, _C_, _C++_, _C#_ и _Java_. Сама причина, по которой я хотел изучать _Python_, заключается в том, что он популярен (люди говорят о нем) и мощный (реальность). Эта книга, написанная Mr. Swaroop, является очень хорошим руководством как для начинающих программистов, так и для начинающих программистов на _python_. На ее прохождение у меня ушло 10 неполных дней. Отличная помощь!
 > -- [Fang Biyi (PhD Candidate ECE, Michigan State University)](mailto:fangbiyi@gmail.com)
 
 <!-- -->
 
-> Thank you ever so much for this book!!
-> This book cleared up many questions I had about certain aspects of Python such as object oriented programming.
-> I do not feel like an expert at OO but I know this book helped me on a first step or two.
-> I have now written several python programs that actually do real things for me as a system administrator. They are all procedural oriented but they are small by most peoples standards.
-> Again, thanks for this book. Thank you for having it on the web.
+> Огромное спасибо за эту книгу!!!
+> Эта книга прояснила многие вопросы, которые у меня были по некоторым аспектам _Python_, таким как объектно-ориентированное программирование.
+> Я не чувствую себя экспертом в OO, но я знаю, что эта книга помогла мне сделать первый шаг или два.
+> Сейчас я написал несколько программ на _python_, которые действительно делают реальные вещи для меня как системного администратора. Все они ориентированы на процедуры, но по стандартам большинства людей они небольшие.
+> Еще раз спасибо за эту книгу. Спасибо за то, что она есть в Интернете.
 > -- Bob
 
 <!-- -->
 
-> I just want to thank you for writing the first book on programming I've ever really read. Python is now my first language, and I can just imagine all the possibilities. So thank you for giving me the tools to create things I never would have imagined I could do before.
+> Я просто хочу поблагодарить вас за то, что вы написали первую книгу по программированию, которую я действительно прочитал. Теперь _Python_ - мой первый язык, и я могу только представить себе все возможности. Спасибо, что дали мне инструменты для создания вещей, о которых я раньше и не подозревал.
 > -- "The Walrus"
 
 <!-- -->
 
-> I wanted to thank you for writing _A Byte Of Python_ (2 & 3 Versions).  It has been invaluable to my learning experience in Python & Programming in general.
-> Needless to say, I am a beginner in the programming world, a couple of months of self study up to this point. I had been using youtube tutorials & some other online tutorials including other free books. I decided to dig into your book yesterday, & I've learned more on the first few pages than any other book or tutorial. A few things I had been confused about, were cleared right up with a GREAT example & explanation. Can't wait to read (and learn) more!!
-> Thank you so much for not only writing the book, but for putting it under the creative commons license (free). Thank goodness there are unselfish people like you out there to help & teach the rest of us.
+> Я хотел бы поблагодарить вас за написание _A Byte Of Python_(2 и 3 версии). Она оказала неоценимую помощь в моем обучении _Python_ и программированию в целом.
+> Само собой разумеется, я новичок в мире программирования, до этого момента я занимался самообразованием несколько месяцев. Я использовал туториалы на youtube и некоторые другие онлайн-туториалы, включая другие бесплатные книги. Вчера я решил изучить вашу книгу, и на первых нескольких страницах я узнал больше, чем из любой другой книги или учебника. Несколько вещей, которые меня смущали, были прояснены с помощью замечательного примера и объяснения. Не могу дождаться, чтобы прочитать (и узнать) больше!!!
+> Огромное спасибо за то, что вы не только написали книгу, но и выложили ее под лицензией _сreative commons_ (бесплатно). Слава Богу, что есть такие бескорыстные люди, как вы, которые помогают и учат остальных.
 > -- Chris
 
 <!-- -->
 
-> I wrote you back in 2011 and I was just getting into Python and wanted to thank you for your tutorial "A Byte of Python".  Without it, I would have fallen by the wayside.  Since then I have gone on to program a number of functions in my organization with this language with yet more on the horizon.  I would not call myself an advanced programmer by any stretch but I notice the occasional request for assistance now from others since I started using it.  I discovered, while reading "Byte" why I had ceased studying C and C\++ and it was because the book given to me started out with an example containing an augmented assignment.  Of course, there was no explanation for this arrangement of operators and I fell on my head trying to make sense of what was on the written page.  As I recall it was a most frustrating exercise which I eventually abandoned. Doesn't mean C or C++ is impossible to learn, or even that I am stupid, but it does mean that the documentation I worked my way through did not define the symbols and words which is an essential part of any instruction. Just as computers will not be able to understand a computer word or computer symbol that is outside the syntax for the language being used, a student new to any field will not grasp his subject if he encounters words or symbols for which there are no definitions.  You get a "blue screen" as it were in either case.  The solution is simple, though: find the word or symbol and get the proper definition or symbol and lo and behold,the computer or student can proceed.  Your book was so well put together that I found very little in it I couldn't grasp.  So, thank you.  I encourage you to continue to include full definitions of terms.  The documentation with Python is good, once you know, (the examples are its strength from what I see) but in many cases it seems that you have to know in order to understand the documentation which to my mind is not what should be.  Third party tutorials express the need for clarification of the documentation and their success largely depends on the words that are used to describe the terminology.  I have recommended your book to many others. Some in Australia, some in the Caribbean and yet others in the US. It fills a niche no others do.  I hope you are doing well and wish you all the success in the future.
+> Я написал вам еще в 2011 году, когда я только начинал изучать _Python_, и хотел поблагодарить вас за ваш учебник _A Byte of Python_. Без него я бы не справился с задачей. С тех пор я запрогроммировал на этом языке ряд функций в своей организации и еще больше на горизонте. Я бы ни в коем случае не назвал себя продвинутым программистом, но с тех пор, как я начал использовать этот язык, я замечаю, что иногда ко мне обращаются за помощью другие. Читая _Byte_, я понял, почему я перестал изучать _C_ и _C++_, а все потому, что книга, которую мне дали, начиналась с примера, содержащего расширенное присваивание. Разумеется, никакого объяснения такому расположению операторов не было, и я упал на голову, пытаясь понять смысл написанного. Насколько я помню, это было очень неприятное занятие, которое я в конце концов забросил. Это не значит, что _C_ или _C++_ невозможно выучить, или даже что я глуп, но это значит, что в документации, через которую я пробивался, не было определения символов и слов, что является неотъемлемой частью любой инструкции. Как компьютер не сможет понять компьютерное слово или компьютерный символ, которые находятся вне синтаксиса используемого языка, так и студент-новичок в любой области не сможет понять свой предмет, если он встретит слова или символы, для которых нет определений. В любом случае вы получите "синий экран". Однако решение простое: найдите слово или символ, дайте ему правильное определение или символ, и вот, компьютер или студент могут продолжать работу. Ваша книга настолько хорошо составлена, что я нашел в ней очень мало того, что не смог понять. Так что спасибо вам. Я призываю вас продолжать включать полные определения терминов. Документация по _Python_ хороша, если вы знаете (примеры - ее сильная сторона, как я вижу), но во многих случаях кажется, что вы должны знать, чтобы понять документацию, а это, на мой взгляд, не то, что должно быть. Сторонние учебники выражают потребность в разъяснении документации, и их успех во многом зависит от слов, которые используются для описания терминологии. Я рекомендовал вашу книгу многим другим. Некоторым в Австралии, некоторым на Карибах и другим в США. Она заполняет нишу, которую не заполняют другие книги. Я надеюсь, что у вас все хорошо, и желаю вам всяческих успехов в будущем.
 > -- Nick
 
 <!-- -->
 
-> hey, this is ankush(19). I was facing a great difficulty to start with python. I tried a lot of books but all were bulkier and not target oriented; and then i found this lovely one, which made me love python in no time. Thanks a lot for this "beautiful piece of book".
+> Привет, это Анкуш(19). Я столкнулся с большими трудностями, чтобы начать изучать _python_. Я перепробовал много книг, но все они были громоздкими и не ориентированными на цель; а потом я нашел эту прекрасную книгу, которая заставила меня полюбить _python_ в мгновение ока. Большое спасибо за этот "прекрасный кусок книги".
 > -- Ankush
 
 <!-- -->
 
-> I would like to thank you for your excellent guide on Python. I am a molecular biologist (with little programming background) and for my work I need to handle big datasets of DNA sequences and to analyse microscope images. For both things, programming in python has been useful, if not essential to complete and publish a 6-years project.
-> That such a guide is freely available is a clear sign that the forces of evil are not yet ruling the world! :)
+> Я хотел бы поблагодарить вас за прекрасное руководство по _Python_. Я молекулярный биолог (с небольшим опытом программирования), и для моей работы мне нужно обрабатывать большие наборы данных последовательностей ДНК и анализировать изображения с микроскопа. Для этих двух вещей программирование на _python_ было полезным, если не необходимым, чтобы завершить и опубликовать 6-летний проект.
+> То, что такое руководство находится в свободном доступе, является явным признаком того, что силы зла еще не правят миром! :)
 > -- Luca
 
 <!-- -->
 
-> Since this is going to be the first language you learn, you should use A Byte of Python. It really gives a proper introduction into programming in Python and it is paced well enough for the average beginner. The most important thing from then on will be actually starting to practice making your own little programs.
+> Поскольку это будет первый язык, который вы изучаете, вам следует использовать _A Byte of Python_. Она действительно дает правильное введение в программирование на _Python_ и имеет достаточно хороший темп для среднего новичка. Самым важным с этого момента будет начать практиковаться в создании собственных небольших программ.
 > -- ["{Unregistered}"](http://www.overclock.net/t/1177951/want-to-learn-programming-where-do-i-start#post_15837176)
 
 <!-- -->
 
-> Just to say a loud and happy _thank you very much_ for publishing "A Byte of Python" and "A Byte of Vim". Those books were very useful to me four or five years ago when I starting learning programming. Right now I'm developing a project that was a dream for a long, long time and just want to say _thank you_. Keep walking. You are a source of motivation. All the best.
+> Просто хочу сказать громкое и радостное _большое спасибо_ за публикацию _A Byte of Python_ и _A Byte of Vim_. Эти книги были очень полезны для меня четыре или пять лет назад, когда я начинал изучать программирование. Сейчас я разрабатываю проект, о котором мечтал долгое, долгое время, и просто хочу сказать вам _спасибо_. Продолжайте двигаться. Вы - источник мотивации. Всего наилучшего.
 > -- Jocimar
 
 <!-- -->
 
-> Finished reading A byte of Python in 3 days. It is thoroughly interesting. Not a single page was boring. I want to understand the Orca screen reader code. Your book has hopefully equipped me for it.
+> Закончил читать _A byte of Python_ за 3 дня. Книга очень интересная. Ни одна страница не была скучной. Я хочу разобраться в коде считывателя экрана _Orca_. Ваша книга, надеюсь, подготовила меня к этому.
 > -- Dattatray
 
 <!-- -->
 
-> Hi, 'A byte of python' is really a good reading for python beginners. So, again, NICE WORK!
-> i'm a 4 years experienced Java&C developer from China. Recently, i want to do some work on zim-wiki note project which uses pygtk to implement.
-> i read your book in 6 days, and i can read and write python code examples now.
-> thx for your contribution.
-> plz keep your enthusiasm to make this world better, this is just a little encourage from China.
+> Привет, _A byte of python_ - действительно хорошее чтение для новичков в _python_. Так что, еще раз, отличная работа!
+> я 4 года работаю _Java&C_ разработчиком из Китая. Недавно я захотел поработать над проектом _zim-wiki note_, который использует _pygtk_ для реализации.
+> я прочитал вашу книгу за 6 дней и теперь могу читать и писать примеры кода на _python_.
+> спасибо за ваш вклад.
+> пожалуйста, сохраняйте ваш энтузиазм, чтобы сделать этот мир лучше, это просто небольшая поддержка из Китая.
 > -- Lee
 
 <!-- -->
 
-> I am Isen from Taiwan, who is a graduating PhD student in Electrical Engineering Department of National Taiwan University. I would like to thank you for your great book. I think it is not only just easy to read but also comprehensive and complete for a new comer of Python. The reason I read your book is that I am starting to work on the GNU Radio framework. Your book let me catch most of important core ideas and skill of Python with a minimum time.
-> I also saw that you do not mind that readers send you a thank note in your book. So I really like your book and appreciate it. Thanks.
+> Я - Исен из Тайваня, аспирант кафедры электротехники Национального университета Тайваня. Я хотел бы поблагодарить вас за вашу замечательную книгу. Я думаю, что она не только легко читается, но и является исчерпывающей и полной для новичка в _Python_. Причина, по которой я прочитал вашу книгу, заключается в том, что я начинаю работать с фреймворком _GNU Radio_. Ваша книга позволила мне уловить большинство важных основных идей и навыков _Python_ за минимальное время.
+> Я также увидел, что вы не возражаете против того, чтобы читатели присылали вам благодарственные письма в вашей книге. Мне очень нравится ваша книга и я благодарна вам за нее. Спасибо.
 > -- [Isen I-Chun Chao](mailto:chao926@gmail.com)
 
 Эта книга используется даже в НАСА! Ею пользуются в [Лаборатории Реактивного Движения](https://web.archive.org/web/20130614003212/http://dsnra.jpl.nasa.gov/software/Python/byte-of-python/output/byteofpython_html/ "Jet Propulsion Laboratory") в рамках проекта "Сеть дальней космической связи".
