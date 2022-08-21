@@ -1,91 +1,99 @@
-# Installation {#installation}
+# Установка {#installation}
 
-When we refer to "Python 3" in this book, we will be referring to any version of Python equal to or greater than version [Python {{ book.pythonVersion }}](https://www.python.org/downloads/).
+Когда в этой книге мы говорим о "Python 3", мы имеем в виду любую версию Python, равную или большую, чем версия [Python {{ book.pythonVersion }}](https://www.python.org/downloads/).
 
-## Installation on Windows
+## Установка в Windows
 
-Visit https://www.python.org/downloads/ and download the latest version. At the time of this writing, it was Python 3.5.1 
-The installation is just like any other Windows-based software.
+Посетите страницу https://www.python.org/downloads/ и загрузите последнюю версию. На момент написания этой статьи это был Python 3.5.1
+Установка производится так же, как и для любых других программ для Windows.
 
-Note that if your Windows version is pre-Vista, you should [download Python 3.4 only](https://www.python.org/downloads/windows/) as later versions require newer versions of Windows.
+Обратите внимание, что если ваша версия Windows до Vista, вам следует [загрузить только Python 3.4](https://www.python.org/downloads/windows/), поскольку более поздние версии требуют более новых версий Windows.
 
-CAUTION: Make sure you check option `Add Python 3.5 to PATH`.
+ВНИМАНИЕ: Убедитесь, что вы отметили опцию `Добавить Python 3.5 в PATH`.
 
-To change install location, click on `Customize installation`, then `Next` and enter `C:\python35` (or another appropriate location) as the install location.
+Чтобы изменить место установки, нажмите на `Настроить установку`, затем `Далее` и введите `C:\python35` (или другое подходящее место) в качестве места установки.
 
-If you didn�t check the `Add Python 3.5 PATH` option earlier, check `Add Python to environment variables`. This does the same thing as `Add Python 3.5 to PATH` on the first install screen.
+Если вы не отметили опцию `Добавить Python 3.5 в PATH` ранее, отметьте опцию `Добавить Python в переменные среды`. Это делает то же самое, что и опция `Добавить Python 3.5 в PATH` на первом экране установки.
 
-You can choose to install Launcher for all users or not, it does not matter much. Launcher is used to switch between different versions of Python installed.
+Вы можете установить Launcher для всех пользователей или нет, это не имеет большого значения. Launcher используется для переключения между различными версиями установленного Python.
 
-If your path was not set correctly (by checking the `Add Python 3.5 Path` or `Add Python to environment variables` options), then follow the steps in the next section (`DOS Prompt`) to fix it. Otherwise, go to the `Running Python prompt on Windows` section in this document.
+Если ваш путь был установлен неправильно (путем проверки опций `Добавить путь Python 3.5` или `Добавить Python в переменные среды`), то выполните шаги в следующем разделе (`Командная строка DOS`), чтобы исправить это. В противном случае перейдите к разделу `Запуск интерпретатора Python в Windows` в этом документе.
 
-NOTE: For people who already know programming, if you are familiar with Docker, check out [Python in Docker](https://hub.docker.com/_/python/) and [Docker on Windows](https://docs.docker.com/windows/).
+ПРИМЕЧАНИЕ: Для тех, кто уже знаком с программированием, если вы знакомы с Docker, ознакомьтесь с [Python в Docker](https://hub.docker.com/_/python/) и [Docker в Windows](https://docs.docker.com/windows/).
 
-### DOS Prompt {#dos-prompt}
+### Командная строка DOS {#dos-prompt}
 
-If you want to be able to use Python from the Windows command line i.e. the DOS prompt, then you need to set the PATH variable appropriately.
+Для использования Python из командной строки Windows, т.е. командной строки DOS, необходимо установить должным образом переменную PATH.
 
-For Windows 2000, XP, 2003 , click on `Control Panel` -> `System` -> `Advanced` -> `Environment Variables`. Click on the variable named `PATH` in the _System Variables_ section, then select `Edit` and add `;C:\Python35` (please verify that this folder exists, it will be different for newer versions of Python) to the end of what is already there. Of course, use the appropriate directory name.
+Для Windows 2000, XP, 2003 , перейдите в `Панель управления` –> `Система` –> `Дополнительно` –> `Переменные среды`. Нажмите на переменную с именем `PATH` в разделе _Системные переменные_, после этого выберите `Редактировать` и допишите `;C:\Python35` к концу того, что там уже есть (проверьте, существует ли такой каталог, так как для более новых версий Python он будет иметь другое имя). Конечно, укажите действительное имя каталога.
 
-<!-- The directory should match pythonVersion variable in book.json -->
-For older versions of Windows, open the file `C:\AUTOEXEC.BAT` and add the line `PATH=%PATH%;C:\Python35` and restart the system. For Windows NT, use the `AUTOEXEC.NT` file.
+<!-- Каталог должен соответствовать переменной pythonVersion в book.json -->
+Для более старых версий Windows, откройте файл `C:\AUTOEXEC.BAT` и добавьте следующую строку `PATH=%PATH%;C:\Python35` и перезапустите систему. Для Windows NT используйте файл `AUTOEXEC.NT`.
 
-For Windows Vista:
+Для Windows Vista:
 
-- Click Start and choose `Control Panel`
-- Click System, on the right you'll see "View basic information about your computer"
-- On the left is a list of tasks, the last of which is `Advanced system settings`. Click that.
-- The `Advanced` tab of the `System Properties` dialog box is shown. Click the `Environment Variables` button on the bottom right.
-- In the lower box titled `System Variables` scroll down to Path and click the `Edit` button.
-- Change your path as need be.
-- Restart your system. Vista didn't pick up the system path environment variable change until I restarted.
+- Нажмите кнопку Пуск и выберите `Панель управления`
+- Нажмите Система, справа вы увидите "Просмотр основных сведений о вашем компьютере"
+- Слева – список действий, последним из которых будет `Дополнительные параметры системы`. Нажмите на него.
+- Отобразится вкладка `Дополнительно` диалога `Параметров системы`. Нажмите кнопку `Переменные среды` справа внизу.
+- В нижнем поле под названием `Системные переменные` прокрутите до Path и нажмите кнопку `Редактировать`.
+- Измените путь, как нужно.
+- Перезапустите систему. Vista не обновляет системные пути до перезагрузки.
 
-For Windows 7 and 8:
+Для Windows 7 и 8:
 
-- Right click on Computer from your desktop and select `Properties` or click `Start` and choose `Control Panel` -> `System and Security` -> `System`. Click on `Advanced system settings` on the left and then click on the `Advanced` tab. At the bottom click on `Environment Variables` and under `System variables`, look for the `PATH` variable, select and then press `Edit`.
-- Go to the end of the line under Variable value and append `;C:\Python35` (please verify that this folder exists, it will be different for newer versions of Python) to the end of what is already there. Of course, use the appropriate folder name.
-- If the value was `%SystemRoot%\system32;` It will now become `%SystemRoot%\system32;C:\Python36` <!-- The directory should match pythonVersion variable in book.json -->
-- Click `OK` and you are done. No restart is required, however you may have to close and reopen the command line.
+- Щёлкните правой кнопкой мыши на значке Компьютер на рабочем столе и выберите `Свойства`; иначе – нажмите кнопку `Пуск` и выберите `Панель Управления` –> `Система и безопасность` –> `Система`. Нажмите `Дополнительные параметры системы` слева, а затем выберите вкладку `Дополнительно`. Внизу нажмите кнопку `Переменные среды` и в отделе `Системные переменные` найдите переменную `PATH`, выберите её и нажмите `Редактировать`.
+- Перейдите к концу строки в поле "Значение переменной" и допишите `;C:\Python35` (пожалуйста, убедитесь, что эта папка существует, для новых версий Python она будет другой) в конец той, что уже есть. Конечно, используйте соответствующее имя папки.
+- Если значение переменной было `%SystemRoot%\system32;`, теперь оно примет вид `%SystemRoot%\system32;C:\Python36` <!-- Каталог должен соответствовать переменной pythonVersion в book.json -->
+- Нажмите `OK` и все готово. Перезагрузка не требуется, однако, возможно, вам придется закрыть и снова открыть командную строку.
 
-For Windows 10:
+Для Windows 10:
 
-Windows Start Menu > `Settings` > `About` > `System Info` (this is all the way over to the right) > `Advanced System Settings` > `Environment Variables` (this is towards the bottom) > (then highlight `Path` variable and click `Edit`) > `New` > (type in whatever your python location is.  For example, `C:\Python35\`)
+Меню "Пуск" > `Настройки` > `Общие` > `Информация о системе` (это справа) > `Дополнительные системные настройки` > `Переменные среды` (это внизу) > (затем выделите переменную `Путь` и нажмите `Редактировать`) > `Новый` > (введите любое местоположение вашего python. Например, `C:\Python35\`)
 
 
-### Running Python prompt on Windows
+### Запуск командной строки Python в Windows
 
-For Windows users, you can run the interpreter in the command line if you have [set the `PATH` variable appropriately](#dos-prompt).
+Для пользователей Windows можно запустить интерпретатор в командной строке, если вы [установили соответствующим образом переменную `PATH`](#dos-prompt).
 
-To open the terminal in Windows, click the start button and click `Run`. In the dialog box, type `cmd` and press `[enter]` key.
+Чтобы открыть терминал в Windows, нажмите кнопку “Пуск” и выберите `Выполнить`. В появившемся диалоговом окне наберите `cmd` и нажмите `[enter]`.
 
-Then, type `python` and ensure there are no errors.
+Затем наберите `python` и проверьте, нет ли ошибок.
 
-## Installation on Mac OS X
+## Установка на Mac OS X
 
-For Mac OS X users, use [Homebrew](http://brew.sh): `brew install python3`.
+У пользователей Mac OS X Python уже будет установлен в системе. В противном случае вы можете открыть терминал, нажав Command+Пробел, набрав в открывшейся строке поиска Terminal и нажав Enter.
 
-To verify, open the terminal by pressing `[Command + Space]` keys (to open Spotlight search), type `Terminal` and press `[enter]` key. Now, run `python3` and ensure there are no errors.
+Затем установить Homebrew, выполнив:
 
-## Installation on GNU/Linux
+```bash
+ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
+```
 
-For GNU/Linux users, use your distribution's package manager to install Python 3, e.g. on Debian & Ubuntu: `sudo apt-get update && sudo apt-get install python3`.
+Для пользователей Mac OS X используйте [Homebrew](http://brew.sh): `brew install python3`.
 
-To verify, open the terminal by opening the `Terminal` application or by pressing `Alt + F2` and entering `gnome-terminal`. If that doesn't work, please refer the documentation of your particular GNU/Linux distribution. Now, run `python3` and ensure there are no errors.
+Для проверки откройте терминал, нажав клавиши `[Command + Space]` (чтобы открыть поиск Spotlight), введите `Terminal` и нажмите клавишу `[enter]`. Теперь запустите `python3` и убедитесь в отсутствии ошибок.
 
-You can see the version of Python on the screen by running:
+## Установка в GNU/Linux
 
-<!-- The output should match pythonVersion variable in book.json -->
+Для пользователей GNU/Linux используйте менеджер пакетов вашего дистрибутива для установки Python 3, например, в Debian и Ubuntu: `sudo apt-get update && sudo apt-get install python3`.
+
+Чтобы проверить, откройте терминал, открыв приложение `Terminal` или нажав `Alt + F2` и введя `gnome-terminal`. Если это не сработает, обратитесь к документации вашего конкретного дистрибутива GNU/Linux. Теперь запустите `python3` и убедитесь в отсутствии ошибок.
+
+Вы можете увидеть версию Python на экране, выполнив команду:
+
+<!-- Вывод должен соответствовать переменной pythonVersion в book.json -->
 ```
 $ python3 -V
 Python 3.6.0
 ```
 
-NOTE: `$` is the prompt of the shell. It will be different for you depending on the settings of the operating system on your computer, hence I will indicate the prompt by just the `$` symbol.
+ПРИМЕЧАНИЕ: $ – это приглашение командной строки. Оно может выглядеть по-разному в зависимости от настроек вашей ОС, поэтому я буду обозначать приглашение просто одним символом $.
 
-CAUTION: Output may be different on your computer, depending on the version of Python software installed on your computer.
+ВНИМАНИЕ: В зависимости от версии программного обеспечения Python, установленного на вашем компьютере, вывод может отличаться.
 
-## Summary
+## Резюме
 
-From now on, we will assume that you have Python installed on your system.
+С этого момента мы будем считать, что в вашей системе установлен Python.
 
-Next, we will write our first Python program.
+Далее мы напишем нашу первую программу на Python.
