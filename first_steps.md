@@ -1,26 +1,26 @@
-# First Steps
+# Первые шаги
 
-We will now see how to run a traditional 'Hello World' program in Python. This will teach you how to write, save and run Python programs.
+Давайте посмотрим, как создать традиционную программу 'Hello World' на Python. Это научит вас писать, сохранять и выполнять программы на Python.
 
-There are two ways of using Python to run your program - using the interactive interpreter prompt or using a source file. We will now see how to use both of these methods.
+Существует два способа запуска программ на Python: использование интерактивного приглашения интерпретатора и использование файла с текстом программы. Сейчас мы увидим, как пользоваться обоими методами.
 
-## Using The Interpreter Prompt
+## Использование командной строки интерпретатора
 
-Open the terminal in your operating system (as discussed previously in the [Installation](./installation.md#installation) chapter) and then open the Python prompt by typing `python3` and pressing `[enter]` key.
+Откройте окно терминала (как было описано в главе [Установка](./installation.md#installation)) и запустите интерпретатор Python, введя команду `python3` и нажав `[enter]`.
 
-Once you have started Python, you should see `>>>` where you can start typing stuff. This is called the _Python interpreter prompt_.
+После запуска Python вы должны увидеть `>>>`, где можно начать набирать текст. Это называется _командная строка интерпретатора Python_.
 
-At the Python interpreter prompt, type:
+В командной строке интерпретатора Python введите:
 
 ```python
 print("Hello World")
 ```
 
-followed by the `[enter]` key. You should see the words `Hello World` printed to the screen.
+после чего нажмите клавишу `[enter]`. В результате должны появиться слова `Hello World`.
 
-Here is an example of what you should be seeing, when using a Mac OS X computer. The details about the Python software will differ based on your computer, but the part from the prompt (i.e. from `>>>` onwards) should be the same regardless of the operating system.
+Вот пример того, что вы должны увидеть, при использовании компьютера с Mac OS X. Детали программного обеспечения Python будут отличаться в зависимости от вашего компьютера, но часть от подсказки (т.е. от `>>>` и далее) должна быть одинаковой независимо от операционной системы.
 
-<!-- The output should match pythonVersion variable in book.json -->
+<!-- Вывод должен соответствовать переменной pythonVersion в book.json -->
 ```python
 $ python3
 Python 3.6.0 (default, Jan 12 2017, 11:26:36)
@@ -30,131 +30,129 @@ Type "help", "copyright", "credits" or "license" for more information.
 Hello World
 ```
 
-Notice that Python gives you the output of the line immediately! What you just entered is a single Python _statement_. We use `print` to (unsurprisingly) print any value that you supply to it. Here, we are supplying the text `Hello World` and this is promptly printed to the screen.
+Обратите внимание, что Python выдаёт результат работы строки немедленно! Вы только что ввели одиночный _оператор_ Python. `print` используется для того, чтобы (что неудивительно) напечатать любое переданное в него значение. В данном случае мы передали в него текст `Hello World`, который и был напечатан на экране.
 
-### How to Quit the Interpreter Prompt
+### Как выйти из командной строки интерпретатора
 
-If you are using a GNU/Linux or OS X shell, you can exit the interpreter prompt by pressing `[ctrl + d]` or entering `exit()` (note: remember to include the parentheses, `()`) followed by the `[enter]` key.
+Если вы используете GNU/Linux или оболочку OS X, вы можете выйти из командной строки интерпретатора нажатием `[ctrl + d]` или введя команду `exit()` (примечание: не забудьте написать скобки, `()`), а затем нажав клавишу `[enter]`.
 
-If you are using the Windows command prompt, press `[ctrl + z]` followed by the `[enter]` key.
+Если вы используете командную строку Windows, нажмите `[ctrl + z]`, а затем нажмите клавишу `[enter]`.
 
-## Choosing An Editor
+## Выбор редактора
 
-We cannot type out our program at the interpreter prompt every time we want to run something, so we have to save them in files and can run our programs any number of times.
+Поскольку мы не можем набирать программу в командной строке интерпретатора каждый раз, когда нам нужно что-то запустить, нам понадобится сохранять программы в файлах, чтобы потом иметь возможность запускать их сколько угодно раз.
 
-To create our Python source files, we need an editor software where you can type and save. A good programmer's editor will make your life easier in writing the source files. Hence, the choice of an editor is crucial indeed. You have to choose an editor as you would choose a car you would buy. A good editor will help you write Python programs easily, making your journey more comfortable and helps you reach your destination (achieve your goal) in a much faster and safer way.
+Для создания программ на Python в файлах нам нужна программа-редактор, в которой можно набирать и сохранять текст. Хороший редактор облегчит вам жизнь при написании исходных файлов. Следовательно, выбор редактора действительно очень важен. Вы должны выбрать редактор, также как вы выбираете автомобиль, который будете покупать. Хороший редактор поможет вам легко писать программы на Python, сделает ваше путешествие более комфортным и поможет вам достичь пункта назначения (достичь цели) гораздо быстрее и безопаснее.
 
-One of the very basic requirements is _syntax highlighting_ where all the different parts of your Python program are colorized so that you can _see_ your program and visualize its running.
+Одно из самых основных требований – это _подсветка синтаксиса_, когда разные элементы программы на Python раскрашены так, чтобы вы могли легко _видеть_ вашу программу и ход её выполнения.
 
-If you have no idea where to start, I would recommend using [PyCharm Educational Edition](https://www.jetbrains.com/pycharm-edu/) software which is available on Windows, Mac OS X and GNU/Linux. Details in the next section.
+Если вы не знаете, с чего начать, я бы рекомендовал использовать программу [PyCharm Educational Edition](https://www.jetbrains.com/pycharm-edu/), которая доступна для Windows, Mac OS X и GNU/Linux. Подробности в следующем разделе.
 
-If you are using Windows, *do not use Notepad* - it is a bad choice because it does not do syntax highlighting and also importantly it does not support indentation of the text which is very important in our case as we will see later. Good editors will automatically do this.
+Если вы пользуетесь Windows, *Не используйте Блокнот* – это плохой выбор, поскольку он не обладает функцией подсветки синтаксиса, а также не позволяет автоматически вставлять отступы, что очень важно в нашем случае, как мы увидим позже. Хорошие редакторы делают это автоматически.
 
-If you are an experienced programmer, then you must be already using [Vim](http://www.vim.org) or [Emacs](http://www.gnu.org/software/emacs/). Needless to say, these are two of the most powerful editors and you will benefit from using them to write your Python programs. I personally use both for most of my programs, and have even written an [entire book on Vim]({{ book.vimBookUrl }}).
+Опытные программисты, должно быть, уже используют [Vim](http://www.vim.org) или [Emacs](http://www.gnu.org/software/emacs/). Не стоит даже и говорить, что это два наиболее мощных редактора, и вы только выиграете от их использования для написания программ на Python. Лично я пользуюсь ими обоими для большинства своих программ, и даже написал [книгу о Vim]({{ book.vimBookUrl }}). 
 
-In case you are willing to take the time to learn Vim or Emacs, then I highly recommend that you do learn to use either of them as it will be very useful for you in the long run. However, as I mentioned before, beginners can start with PyCharm and focus the learning on Python rather than the editor at this moment.
+Если вы готовы потратить время на изучение Vim или Emacs, то я настоятельно рекомендую вам решиться и потратить время на изучение Vim или Emacs, поскольку это будет приносить вам пользу долгие годы. Однако, как я уже писал выше, новички могут пока просто остановиться на PyCharm и сосредоточиться на изучении Python, а не текстового редактора.
 
-To reiterate, please choose a proper editor - it can make writing Python programs more fun and easy.
+Я повторюсь ещё раз: обязательно выберите подходящий редактор – это сделает написание программ на Python более простым и занимательным.
 
-If you are interested in a detailed discussion on this topic, check out [Finding the Perfect Python Code Editor](https://realpython.com/courses/finding-perfect-python-code-editor/).
+Если вас интересует подробное обсуждение этой темы, загляните в [Поиск идеального редактора кода Python](https://realpython.com/courses/finding-perfect-python-code-editor/).
 
 ## PyCharm {#pycharm}
 
-[PyCharm Educational Edition](https://www.jetbrains.com/pycharm-edu/) is a free editor which you can use for writing Python programs.
+[PyCharm Educational Edition](https://www.jetbrains.com/pycharm-edu/) - это бесплатный редактор, который можно использовать для написания программ на языке Python.
 
-When you open PyCharm, you'll see this, click on `Create New Project`:
+Когда вы откроете PyCharm, вы увидите следующее, нажмите на `Create New Project`:
 
 ![When you open PyCharm](./img/pycharm_open.png)
 
-Select `Pure Python`:
+Выберите `Pure Python`:
 
 ![PyCharm New Project](./img/pycharm_create_new_project.png)
 
-Change `untitled` to `helloworld` as the location of the project, you should see details similar to this:
+Измените `untitled` на `helloworld` в качестве местоположения проекта, вы должны увидеть детали, подобные этим:
 
 ![PyCharm project details](./img/pycharm_create_new_project_pure_python.png)
 
-Click the `Create` button.
+Нажмите кнопку `Create`.
 
-Right-click on the `helloworld` in the sidebar and select `New` -> `Python File`:
+Щелкните правой кнопкой мыши на `helloworld` в боковой панели и выберите `New` -> `Python File`:
 
 ![PyCharm -> New -> Python File](./img/pycharm_new_python_file.png)
 
-You will be asked to type the name, type `hello`:
+Вам будет предложено ввести имя, введите `hello`:
 
 ![PyCharm New File dialog box](./img/pycharm_new_file_input.png)
 
-You can now see a file opened for you:
+Теперь вы видите, что для вас открыт файл:
 
 ![PyCharm hello.py file](./img/pycharm_hello_open.png)
 
-Delete the lines that are already present, and now type the following:
+Удалите уже имеющиеся строки, а теперь введите следующее:
 
 <!-- TODO: Update screenshots for Python 3 -->
 
 ```python
 print("hello world")
 ```
-Now right-click on what you typed (without selecting the text), and click on `Run 'hello'`.
+Теперь щелкните правой кнопкой мыши на том, что вы набрали (не выделяя текст), и нажмите `Run 'hello'`.
 
 ![PyCharm Run 'hello'](./img/pycharm_run.png)
 
-You should now see the output (what it prints) of your program:
+Теперь вы должны увидеть вывод (то, что печатает программа) вашей программы:
 
 ![PyCharm output](./img/pycharm_output.png)
 
-Phew! That was quite a few steps to get started, but henceforth, every time we ask you to create a new file, remember to just right-click on `helloworld` on the left -> `New` -> `Python File` and continue the same steps to type and run as shown above.
+Фух! Это было довольно много шагов для начала работы, но впредь, каждый раз, когда мы попросим вас создать новый файл, не забывайте просто щелкнуть правой кнопкой мыши на `helloworld` слева -> `New` -> `Python File` и продолжить те же шаги для ввода и запуска, как показано выше.
 
-You can find more information about PyCharm in the [PyCharm Quickstart](https://www.jetbrains.com/pycharm-educational/quickstart/) page.
+Более подробную информацию о PyCharm можно найти на странице [PyCharm Quickstart](https://www.jetbrains.com/pycharm-educational/quickstart/).
 
 ## Vim
 
-1. Install [Vim](http://www.vim.org)
-    * Mac OS X users should install `macvim` package via [HomeBrew](http://brew.sh/)
-    * Windows users should download the "self-installing executable" from [Vim website](http://www.vim.org/download.php)
-    * GNU/Linux users should get Vim from their distribution's software repositories, e.g. Debian and Ubuntu users can install the `vim` package.
-2. Install [jedi-vim](https://github.com/davidhalter/jedi-vim) plugin for autocompletion.
-3. Install corresponding `jedi` python package : `pip install -U jedi`
+1. Установите [Vim] (http://www.vim.org)
+    * Пользователи Mac OS X должны установить пакет `macvim` через [HomeBrew](http://brew.sh/)
+    * Пользователи Windows должны загрузить "самоустанавливающийся исполняемый файл" с [сайта Vim](http://www.vim.org/download.php)
+    * Пользователи GNU/Linux должны получить Vim из репозиториев программного обеспечения своего дистрибутива, например, пользователи Debian и Ubuntu могут установить пакет `vim`.
+2. Установите плагин [jedi-vim](https://github.com/davidhalter/jedi-vim) для автозаполнения.
+3. Установите соответствующий python-пакет `jedi`: `pip install -U jedi`.
 
 ## Emacs
 
-1. Install [Emacs 24+](http://www.gnu.org/software/emacs/).
-    * Mac OS X users should get Emacs from http://emacsformacosx.com
-    * Windows users should get Emacs from http://ftp.gnu.org/gnu/emacs/windows/
-    * GNU/Linux users should get Emacs from their distribution's software repositories, e.g. Debian and Ubuntu users can install the `emacs24` package.
-2. Install [ELPY](https://github.com/jorgenschaefer/elpy/wiki)
+1. Установите [Emacs 24+](http://www.gnu.org/software/emacs/).
+    * Пользователи Mac OS X должны получить Emacs с сайта http://emacsformacosx.com.
+    * Пользователи Windows должны получить Emacs с http://ftp.gnu.org/gnu/emacs/windows/
+    * Пользователи GNU/Linux должны получить Emacs из репозиториев программного обеспечения своего дистрибутива, например, пользователи Debian и Ubuntu могут установить пакет `emacs24`.
+2. Установите [ELPY](https://github.com/jorgenschaefer/elpy/wiki)
 
-## Using A Source File
+## Использование программных файлов
 
-Now let's get back to programming. There is a tradition that whenever you learn a new programming language, the first program that you write and run is the 'Hello World' program - all it does is just say 'Hello World' when you run it. As Simon Cozens[^1] says, it is the "traditional incantation to the programming gods to help you learn the language better."
+А теперь давайте вернёмся к программированию. Существует такая традиция, что какой бы язык программирования вы ни начинали учить, первой вашей программой должна быть программа 'Hello World'. Это программа, которая просто выводит надпись 'Hello World'. Как сказал Simon Cozens[^1], это "традиционное заклинание богов программирования, которое поможет вам лучше изучить язык".
 
-Start your choice of editor, enter the following program and save it as `hello.py`.
+Запустите выбранный вами редактор, введите следующую программу и сохраните её под именем `hello.py`.
 
-If you are using PyCharm, we have already [discussed how to run from a source file](#pycharm).
+Если вы используете PyCharm, мы уже [обсуждали, как запускать из исходного файла](#pycharm).
 
-For other editors, open a new file `hello.py` and type this:
+Для других редакторов откройте новый файл `hello.py` и введите следующее:
 
 ```python
 print("hello world")
 ```
 
-Where should you save the file? To any folder for which you know the location of the folder. If you
-don't understand what that means, create a new folder and use that location to save and run all
-your Python programs:
+Куда следует сохранить файл? В любую папку, расположение которой вам известно. Если вы не понимаете, что это значит, создайте новую папку и используйте это место для сохранения и запуска всех ваши программы на Python:
 
-- `/tmp/py` on Mac OS X
-- `/tmp/py` on GNU/Linux
-- `C:\py` on Windows
+- `/tmp/py` в Mac OS X
+- `/tmp/py` в GNU/Linux
+- `C:\py` в Windows
 
-To create the above folder (for the operating system you are using), use the `mkdir` command in the terminal, for example, `mkdir /tmp/py`.
+Чтобы создать папку (для используемой вами операционной системы), воспользуйтесь командой `mkdir` в терминале. Например, `mkdir /tmp/py`.
 
-IMPORTANT: Always ensure that you give it the file extension of `.py`, for example, `foo.py`.
+ВАЖНО: Не забывайте указывать расширение файла `.py`. Например, `foo.py`.
 
-To run your Python program:
+Чтобы запустить вашу программу Python:
 
-1. Open a terminal window (see the previous [Installation](./installation.md#installation) chapter on how to do that)
-2. **C**hange **d**irectory to where you saved the file, for example, `cd /tmp/py`
-3. Run the program by entering the command `python hello.py`. The output is as shown below.
+1. Откройте окно терминала (как это сделать, см. предыдущую главу [Установка](./installation.md#installation)).
+2. Измените директорию на место сохранения файла, например, `cd /tmp/py` (cd - **C**hange **d**irectory).
+3. Запустите программу, введя команду `python hello.py`. Вывод будет выглядеть так, как показано ниже.
 
 ```
 $ python hello.py
@@ -163,30 +161,30 @@ hello world
 
 ![Screenshot of running program in terminal](./img/terminal_screenshot.png)
 
-If you got the output as shown above, congratulations! - you have successfully run your first Python program. You have successfully crossed the hardest part of learning programming, which is, getting started with your first program!
+Если у вас получился такой же вывод, поздравляю! – вы успешно выполнили вашу первую программу на Python. Вы только что совершили самый сложный шаг в обучении программированию, заключающийся в написании своей первой программы!
 
-In case you got an error, please type the above program _exactly_ as shown above and run the program again. Note that Python is case-sensitive i.e. `print` is not the same as `Print` - note the lowercase `p` in the former and the uppercase `P` in the latter. Also, ensure there are no spaces or tabs before the first character in each line - we will see [why this is important](./basics.md#indentation) later.
+Если вы получите сообщение об ошибке, введите вышеуказанную программу в _точности_ так, как показано здесь, и запустите снова. Обратите внимание, что Python чувствительный к регистру, то есть `print` – это не то же самое, что `Print` (обратите внимание на букву `p` в нижнем регистре в первом случае и на букву `P` в верхнем регистре во втором). Также убедитесь, что перед первым символом в строке нет пробелов или символов табуляции – позже мы увидим, [почему это важно](./basics.md#indentation).
 
-**How It Works**
+**Как это работает**
 
-A Python program is composed of _statements_. In our first program, we have only one statement. In this statement, we call the `print` _statement_ to which we supply the text "hello world".
+Программа на языке Python состоит из _выражений_. В нашей первой программе у нас только один оператор. В этом операторе мы вызываем _выражение_ `print`, в которое вводим текст "hello world".
 
-## Getting Help
+## Получение помощи
 
-If you need quick information about any function or statement in Python, then you can use the built-in `help` functionality. This is very useful especially when using the interpreter prompt. For example, run `help('len')` - this displays the help for the `len` function which is used to count number of items.
+Для быстрого получения информации о любой функции или операторе Python служит встроенная функция `help`. Это особенно удобно при использовании командной строки интерпретатора. К примеру, выполните `help('len')` – это покажет справку по функции `len`, которая используется для подсчета количества элементов.
 
-TIP: Press `q` to exit the help.
+Примечание: Для выхода из справки нажмите `q`.
 
-Similarly, you can obtain information about almost anything in Python. Use `help()` to learn more about using `help` itself!
+Аналогичным образом можно получить информацию почти о чём угодно в Python. При помощи функции `help()` можно даже получить описание самой функции `help`!
 
-In case you need to get help for operators like `return`, then you need to put those inside quotes such as `help('return')` so that Python doesn't get confused on what we're trying to do.
+Если вас интересует информация об операторах, как например, `return`, их необходимо указывать в кавычках (например, `help('return')`), чтобы Python понял, чего мы хотим.
 
-## Summary
+## Резюме
 
-You should now be able to write, save and run Python programs at ease.
+Теперь вы умеете с лёгкостью писать, сохранять и запускать программы на Python.
 
-Now that you are a Python user, let's learn some more Python concepts.
+И поскольку сейчас вы уже используете Python, давайте узнаем больше о его основных принципах.
 
 ---
 
-[^1]: the author of the amazing 'Beginning Perl' book
+[^1]: автор замечательной книги 'Начало работы с Perl'
