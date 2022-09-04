@@ -1,204 +1,202 @@
-# Basics
+# Основы
 
-Just printing `hello world` is not enough, is it? You want to do more than that - you want to take some input, manipulate it and get something out of it. We can achieve this in Python using constants and variables, and we'll learn some other concepts as well in this chapter.
+Просто напечатать `hello world` недостаточно, верно? Вы хотите сделать больше – вы хотите ввести что-то в программу, обработать и получить нечто на выходе. В Python это можно организовать при помощи констант и переменных, а также некоторыми другими способами, которые будут рассмотрены в этой главе.
 
-## Comments
+## Комментарии
 
-_Comments_ are any text to the right of the `#` symbol and is mainly useful as notes for the reader of the program.
+_Комментарии_ – это то, что пишется после символа `#`, и представляет интерес лишь как заметка для читающего программу.
 
-For example:
+Например:
 
 ```python
-print('hello world') # Note that print is a function
+print('hello world') # print - это функция
 ```
 
-or:
+или:
 
 ```python
-# Note that print is a function
+# print - это функция
 print('hello world')
 ```
 
-Use as many useful comments as you can in your program to:
+Старайтесь в своих программах писать как можно больше полезных комментариев, объясняющих:
 
-- explain assumptions
-- explain important decisions
-- explain important details
-- explain problems you're trying to solve
-- explain problems you're trying to overcome in your program, etc.
+- предположения
+- важные решения
+- важные детали
+- проблемы, которые вы пытаетесь решить
+- проблемы, которых вы пытаетесь избежать в вашей программе и т.д.
 
-[*Code tells you how, comments should tell you why*](http://www.codinghorror.com/blog/2006/12/code-tells-you-how-comments-tell-you-why.html).
+[*Текст программы говорит о том, КАК, а комментарии должны объяснять, ПОЧЕМУ*](http://www.codinghorror.com/blog/2006/12/code-tells-you-how-comments-tell-you-why.html).
 
-This is useful for readers of your program so that they can easily understand what the program is doing. Remember, that person can be yourself after six months!
+Это будет полезно для тех, кто будет читать вашу программу, так как им легче будет понять, что программа делает. Помните, что таким человеком можете оказаться вы сами через полгода!
 
-## Literal Constants
+## Литеральные константы
 
-An example of a literal constant is a number like `5`, `1.23`, or a string like `'This is a string'` or `"It's a string!"`.
+Примером литеральной константы может быть число, например, `5`, `1.23`, или что-нибудь вроде `'This is a string'` или `"It's a string!"`. 
 
-It is called a literal because it is _literal_ - you use its value literally. The number `2` always represents itself and nothing else - it is a _constant_ because its value cannot be changed. Hence, all these are referred to as literal constants.
+Они называются литеральными, потому что они _буквальны_[^1] – вы используете их значение буквально. Число `2` всегда представляет само себя и ничего другого – это _константа_, потому что её значение нельзя изменить. Поэтому всё это называется литеральными константами.
 
-## Numbers
+## Числа
 
-Numbers are mainly of two types - integers and floats.
+Числа в Python бывают двух типов: целые и с плавающей точкой.
 
-An example of an integer is `2` which is just a whole number.
+Примером целого числа является `2`, которое представляет собой просто целое число.
 
-Examples of floating point numbers (or _floats_ for short) are `3.23` and `52.3E-4`. The `E` notation indicates powers of 10. In this case, `52.3E-4` means `52.3 * 10^-4^`.
+Примерами чисел с плавающей точкой (или _плавающих_ для краткости) могут быть `3.23` и `52.3E-4`. Обозначение `E` показывает степени числа 10. В данном случае `52.3E-4` означает `52.3 * 10^-4^`
 
-> **Note for Experienced Programmers**
+> **Замечание для опытных программистов**
 > 
-> There is no separate `long` type. The `int` type can be an integer of any size.
+> Нет отдельного типа `long` (длинное целое). `Целые` числа по умолчанию могут быть произвольной длины.
 
-## Strings
+## Строки
 
-A string is a _sequence_ of _characters_. Strings are basically just a bunch of words.
+Строка – это _последовательность символов_. Чаще всего строки – это просто некоторые наборы слов.
 
-You will be using strings in almost every Python program that you write, so pay attention to the following part.
+Я могу с уверенностью сказать, что вы будете использовать строки почти в каждой вашей программе на Python. Поэтому уделите внимание тому, как работать со строками в Python.
 
-### Single Quote
+### Одинарные кавычки
 
-You can specify strings using single quotes such as `'Quote me on this'`.
+Строку можно указать, используя одинарные кавычки, как например, `'Фраза в кавычках'`. 
 
-All white space i.e. spaces and tabs, within the quotes, are preserved as-is.
+Все пробелы и знаки табуляции сохранятся, как есть.
 
-### Double Quotes
+### Двойные кавычки
 
-Strings in double quotes work exactly the same way as strings in single quotes. An example is `"What's your name?"`.
+Строки в двойных кавычках работают точно так же, как и в одинарных. Например, `"What's your name?"`.
 
-### Triple Quotes {#triple-quotes}
+### Тройные кавычки {#triple-quotes}
 
-You can specify multi-line strings using triple quotes - (`"""` or `'''`). You can use single quotes and double quotes freely within the triple quotes. An example is:
+Можно указывать многострочные строки с использованием тройных кавычек (`"""` или `'''`). В пределах тройных кавычек можно свободно использовать одинарные и двойные кавычки. Например:
 
 ```python
-'''This is a multi-line string. This is the first line.
-This is the second line.
-"What's your name?," I asked.
-He said "Bond, James Bond."
+'''Это многострочная строка. Это её первая строка.
+Это её вторая строка.
+"What's your name?", - спросил я.
+Он ответил: "Bond, James Bond."
 '''
 ```
 
-### Strings Are Immutable
+### Строки неизменяемы
 
-This means that once you have created a string, you cannot change it. Although this might seem like
-a bad thing, it really isn't. We will see why this is not a limitation in the various programs that
-we see later on.
+Это означает, что после создания строки её больше нельзя изменять. На первый взгляд это может показаться недостатком, но на самом деле это не так. Впоследствии на примере разных программ мы увидим, почему это не является ограничением.
 
-> **Note for C/C++ Programmers**
+> **Замечание для программистов на C/C++**
 > 
-> There is no separate `char` data type in Python. There is no real need for it and I am sure you won't miss it.
+> В Python нет отдельного типа данных `char` (символ). В нём нет нужды, и я уверен, что вы не будете по нему скучать.
 
 <!-- -->
 
-> **Note for Perl/PHP Programmers**
+> **Замечание для программистов на Perl/PHP**
 > 
-> Remember that single-quoted strings and double-quoted strings are the same - they do not differ in any way.
+> Помните, что строки в двойных кавычках и в одинарных эквивалентны, и ничем друг от друга не отличаются.
 
-### The format method
+### Метод format
 
-Sometimes we may want to construct strings from other information. This is where the `format()` method is useful.
+Иногда бывает нужно составить строку на основе каких-либо данных. Вот здесь-то и пригождается метод `format()`.
 
-Save the following lines as a file `str_format.py`:
+Сохраните следующие строки в файл `str_format.py`:
 
 ```python
 age = 20
 name = 'Swaroop'
 
-print('{0} was {1} years old when he wrote this book'.format(name, age))
-print('Why is {0} playing with that python?'.format(name))
+print('Возраст {0} - {1} лет.'.format(name, age))
+print('Почему {0} забавляется с этим Python?'.format(name))
 ```
 
-Output:
+Вывод:
 
 ```
 $ python str_format.py
-Swaroop was 20 years old when he wrote this book
-Why is Swaroop playing with that python?
+Возраст Swaroop - 20 лет.
+Почему Swaroop забавляется с этим Python?
 ```
 
-**How It Works**
+**Как это работает**
 
-A string can use certain specifications and subsequently, the `format` method can be called to substitute those specifications with corresponding arguments to the `format` method.
+Строка может использовать определенные спецификации, и впоследствии метод `format` может быть вызван для замены этих спецификаций соответствующими аргументами метода `format`.
 
-Observe the first usage where we use `{0}` and this corresponds to the variable `name` which is the first argument to the format method. Similarly, the second specification is `{1}` corresponding to `age` which is the second argument to the format method. Note that Python starts counting from 0 which means that first position is at index 0, second position is at index 1, and so on.
+Взгляните на первый случай применения обозначений, где мы пишем `{0}`, и это соответствует переменной `name`, являющейся первым аргументом метода `format`. Аналогично, второе обозначение `{1}` соответствует переменной `age`, являющейся вторым аргументом метода `format`. Заметьте, что Python начинает отсчёт с 0, поэтому первая позиция – номер 0, вторая – номер 1 и т.д.
 
-Notice that we could have achieved the same using string concatenation:
+Заметьте, мы ведь могли добиться того же самого результата и объединением строк:
 
 ```python
-name + ' is ' + str(age) + ' years old'
+'Возраст' + name + ' - ' + str(age) + ' лет.'
 ```
 
-but that is much uglier and more error-prone. Second, the conversion to string would be done automatically by the `format` method instead of the explicit conversion to strings needed in this case. Third, when using the `format` method, we can change the message without having to deal with the variables used and vice-versa.
+однако вы сами видите, как это некрасиво, и как легко в таком случае допустить ошибку. Во-вторых, преобразование в строку делается методом `format` автоматически, в отличие от явного преобразования в нашем примере. В-третьих, используя метод `format`, мы можем изменить сообщение, не затрагивая используемых переменных, и наоборот.
 
-Also note that the numbers are optional, so you could have also written as:
-
-```python
-age = 20
-name = 'Swaroop'
-
-print('{} was {} years old when he wrote this book'.format(name, age))
-print('Why is {} playing with that python?'.format(name))
-```
-
-which will give the same exact output as the previous program.
-
-We can also name the parameters:
+На всякий случай имейте в виду, что цифры здесь не обязательны. Можно было бы просто написать:
 
 ```python
 age = 20
 name = 'Swaroop'
 
-print('{name} was {age} years old when he wrote this book'.format(name=name, age=age))
-print('Why is {name} playing with that python?'.format(name=name))
+print('{} было {} лет когда он написал эту книгу'.format(name, age))
+print('Почему {} забавляется с этим Python?'.format(name))
 ```
 
-which will give the same exact output as the previous program.
+и получить такой же результат, как и ранее.
 
-Python 3.6 introduced a shorter way to do named parameters, called "f-strings":
+Могут быть и более детальные обозначения, такие как:
 
 ```python
 age = 20
 name = 'Swaroop'
 
-print(f'{name} was {age} years old when he wrote this book')  # notice the 'f' before the string
-print(f'Why is {name} playing with that python?')  # notice the 'f' before the string
+print('{name} было {age} лет когда он написал эту книгу'.format(name=name, age=age))
+print('Почему {name} забавляется с этим Python?'.format(name=name))
 ```
 
-which will give the same exact output as the previous program.
+что даст такой же точный вывод, как и предыдущая программа.
 
-What Python does in the `format` method is that it substitutes each argument value into the place of the specification. There can be more detailed specifications such as:
+В Python 3.6 появился более короткий способ работы с именованными параметрами, который называется "f-строки":
 
 ```python
-# decimal (.) precision of 3 for float '0.333'
-print('{0:.3f}'.format(1.0/3))
-# fill with underscores (_) with the text centered
-# (^) to 11 width '___hello___'
+age = 20
+name = 'Swaroop'
+
+print(f'{name} было {age} лет когда он написал эту книгу')  # заметьте 'f' идет перед строкой
+print(f'Почему {name} забавляется с этим Python?')  # заметьте 'f' идет перед строкой
+```
+
+что даст такой же точный результат, как и предыдущая программа.
+
+Что делает Python в методе `format`, так это подставляет значение каждого аргумента на место спецификации. Могут быть более подробные спецификации, такие как:
+
+```python
+# десятичное число (.) с точностью в 3 знака для плавающих '0.333'
+print('{0:.3}'.format(1/3))
+# заполнить подчёркиваниями (_) с центровкой текста (^) по ширине 11 '___hello___'
 print('{0:_^11}'.format('hello'))
-# keyword-based 'Swaroop wrote A Byte of Python'
-print('{name} wrote {book}'.format(name='Swaroop', book='A Byte of Python'))
+# по ключевым словам 'Swaroop написал A Byte of Python'
+print('{name} написал {book}'.format(name='Swaroop', book='A Byte of Python'))
 ```
 
-Output:
+Вывод:
 
 ```
 0.333
 ___hello___
-Swaroop wrote A Byte of Python
+Swaroop написал A Byte of Python
 ```
 
-Since we are discussing formatting, note that `print` always ends with an invisible "new line" character (`\n`) so that repeated calls to `print` will all print on a separate line each. To prevent this newline character from being printed, you can specify that it should `end` with a blank:
+Поскольку мы обсуждаем форматирование, обратите внимание, что `print` всегда завершается невидимым символом "новой строки" (`\n`), так что повторные вызовы `print` будут печататься каждый раз на отдельной строке. Чтобы предотвратить печать этого символа новой строки, вы можете указать, что он должен заканчиваться(`end`) пустой строкой:
 
 ```python
+# '' или "" - это пустая строка
 print('a', end='')
 print('b', end='')
 ```
 
-Output is:
+Вывод:
 
 ```
 ab
 ```
 
-Or you can `end` with a space:
+Или вы можете `закончить` пробелом:
 
 ```python
 print('a', end=' ')
@@ -206,218 +204,218 @@ print('b', end=' ')
 print('c')
 ```
 
-Output is:
+Вывод:
 
 ```
 a b c
 ```
 
-### Escape Sequences
+### Управляющие последовательности
 
-Suppose, you want to have a string which contains a single quote (`'`), how will you specify this string? For example, the string is `"What's your name?"`. You cannot specify `'What's your name?'` because Python will be confused as to where the string starts and ends. So, you will have to specify that this single quote does not indicate the end of the string. This can be done with the help of what is called an _escape sequence_. You specify the single quote as `\'` : notice the backslash. Now, you can specify the string as `'What\'s your name?'`.
+Предположим, у вас есть строка, содержащая одинарную кавычку (`'`), как вы зададите эту строку? Например, строка `"What's your name?"`. Вы не можете указать `'What's your name?'`, потому что Python запутается, где начинается и заканчивается строка. Поэтому нужно указать, что эта одинарная кавычка не обозначает конец строки. Это можно сделать с помощью так называемой _управляющей последовательности_ или _escape последовательности_. Вы указываете одинарную кавычку как `\'`: обратите внимание на обратную косую черту. Теперь вы можете указать строку как `'What\'s your name?'`.
 
-Another way of specifying this specific string would be `"What's your name?"` i.e. using double quotes. Similarly, you have to use an escape sequence for using a double quote itself in a double quoted string. Also, you have to indicate the backslash itself using the escape sequence `\\`.
+Другим способом указать эту конкретную строку было бы `"What's your name?"`, т.е. используя двойные кавычки. Аналогично, для использования двойной кавычки в строке с двойными кавычками необходимо использовать управляющую последовательность. Кроме того, вы должны указать обратную косую черту, используя последовательность `\\`.
 
-What if you wanted to specify a two-line string? One way is to use a triple-quoted string as shown [previously](#triple-quotes) or you can use an escape sequence for the newline character - `\n` to indicate the start of a new line. An example is:
-
-```python
-'This is the first line\nThis is the second line'
-```
-
-Another useful escape sequence to know is the tab: `\t`. There are many more escape sequences but I have mentioned only the most useful ones here.
-
-One thing to note is that in a string, a single backslash at the end of the line indicates that the string is continued in the next line, but no newline is added. For example:
+Что если вы хотите указать двухстрочную строку? Можно использовать тройные кавычки, как показано [ранее](#triple-quotes), или использовать управляющую последовательность для символа новой строки - `\n`, чтобы указать начало новой строки. Пример:
 
 ```python
-"This is the first sentence. \
-This is the second sentence."
+'Это первая строка\nЭто вторая строка'
 ```
 
-is equivalent to
+Еще одна полезная последовательность, которую необходимо знать, - это табуляция: `\t`. Существует еще много других экранирующих последовательностей, но я упомянул здесь только самые полезные из них.
+
+Следует отметить, что в строке один обратный слеш в конце строки означает, что строка продолжается в следующей строке, но новая строка не добавляется. Например:
 
 ```python
-"This is the first sentence. This is the second sentence."
+"Это первое предложение. \
+Это второе предложение."
 ```
 
-### Raw String
-
-If you need to specify some strings where no special processing such as escape sequences are handled, then what you need is to specify a _raw_ string by prefixing `r` or `R` to the string. An example is:
+эквивалентно
 
 ```python
-r"Newlines are indicated by \n"
+"Это первое предложение. Это второе предложение".
 ```
 
-> **Note for Regular Expression Users**
+### Необработанная строка
+
+Если вам нужно указать некоторые строки, которые не обрабатываются специальными средствами, такими как управляющие последовательности, то вам нужно указать _необработанную_ строку, добавив к ней префикс `r` или `R`. Пример:
+
+```python
+r"Новые строки обозначаются \n"
+```
+
+> **Примечание для пользователей регулярных выражений**
 > 
-> Always use raw strings when dealing with regular expressions. Otherwise, a lot of backwhacking may be required. For example, backreferences can be referred to as `'\\1'` or `r'\1'`.
+> Всегда используйте необработанные строки при работе с регулярными выражениями. В противном случае может потребоваться много бэкслешей. Например, бэкслешы можно обозначить как `'\\\1'` или `r'\1'`.
 
-## Variable
+## Переменные
 
-Using just literal constants can soon become boring - we need some way of storing any information and manipulate them as well. This is where _variables_ come into the picture. Variables are exactly what the name implies - their value can vary, i.e., you can store anything using a variable. Variables are just parts of your computer's memory where you store some information. Unlike literal constants, you need some method of accessing these variables and hence you give them names.
+Использование одних лишь литеральных констант может скоро наскучить – нам ведь нужен способ хранения любой информации и манипулирования ею. Вот здесь на сцену выходят _переменные_. Слово переменные говорит само за себя – их значение может меняться, а значит, вы можете хранить в переменной всё, что угодно. Переменные – это просто области памяти компьютера, в которых вы храните некоторую информацию. В отличие от констант, к такой информации нужно каким-то образом получать доступ, поэтому переменным даются имена.
 
-## Identifier Naming
+## Имена идентификаторов
 
-Variables are examples of identifiers. _Identifiers_ are names given to identify _something_. There are some rules you have to follow for naming identifiers:
+Переменные – это частный случай идентификаторов. _Идентификаторы_ – это имена, присвоенные _чему-то_ для его обозначения. При выборе имён для идентификаторов необходимо соблюдать следующие правила:
 
-- The first character of the identifier must be a letter of the alphabet (uppercase ASCII or lowercase ASCII or Unicode character) or an underscore (`_`).
-- The rest of the identifier name can consist of letters (uppercase ASCII or lowercase ASCII or Unicode character), underscores (`_`) or digits (0-9).
-- Identifier names are case-sensitive. For example, `myname` and `myName` are _not_ the same. Note the lowercase `n` in the former and the uppercase `N` in the latter.
-- Examples of _valid_ identifier names are `i`, `name_2_3`. Examples of _invalid_ identifier names are `2things`, `this is spaced out`, `my-name` and `>a1b2_c3`.
+- Первым символом идентификатора должна быть буква из алфавита (символ ASCII в верхнем или нижнем регистре, или символ Unicode), а также символ подчёркивания (`_`).
+- Остальная часть идентификатора может состоять из букв (символы ASCII в верхнем или нижнем регистре, а также символы Unicode), знаков подчёркивания (`_`) или цифр (0-9).
+- Имена идентификаторов чувствительны к регистру. Например, `myname` и `myName` – это _не_ одно и то же. Обратите внимание на `n` в нижнем регистре в первом случае и `N` в верхнем во втором.
+- Примеры _допустимых_ имён идентификаторов: `i`, `name_2_3`. Примеры _недопустимых_ имён идентификаторов: `2things`, `this is spaced out`, `my-name` and `>a1b2_c3`.
 
-## Data Types
+## Типы данных
 
-Variables can hold values of different types called _data types_. The basic types are numbers and strings, which we have already discussed. In later chapters, we will see how to create our own types using [classes](./oop.md#classes).
+Переменные могут хранить значения разных типов, называемых _типами данных_. Основными типами являются числа и строки, о которых мы уже говорили. В дальнейших главах мы увидим, как создавать свои собственные типы при помощи [классов](./oop.md#classes).
 
-## Object
+## Объекты
 
-Remember, Python refers to anything used in a program as an _object_.  This is meant in the generic sense. Instead of saying "the _something_"', we say "the _object_".
+Помните, Python рассматривает всё, что есть в программе, как _объекты_. Имеется в виду, в самом общем смысле. Вместо того, чтобы говорить _что-то_, мы говорим _объект_.
 
-> **Note for Object Oriented Programming users**:
+> **Замечание для программистов в объектно-ориентированном стиле**:
 >
-> Python is strongly object-oriented in the sense that everything is an object including numbers, strings and functions.
+> Python строго объектно ориентирован в том смысле, что объектом является всё, включая числа, строки и функции.
 
-We will now see how to use variables along with literal constants. Save the following example and run the program.
+Сейчас мы увидим, как использовать переменные наряду с константами. Сохраните следующий пример и запустите программу.
 
-## How to write Python programs
+## Как писать программы на Python
 
-Henceforth, the standard procedure to save and run a Python program is as follows:
+Впредь стандартная процедура сохранения и запуска программы на Python будет выглядеть так:
 
-### For PyCharm
+### Для PyCharm
 
-1. Open [PyCharm](./first_steps.md#pycharm).
-2. Create new file with the filename mentioned.
-3. Type the program code given in the example.
-4. Right-click and run the current file.
+1. Откройте [PyCharm](./first_steps.md#pycharm).
+2. Создайте новый файл с указанным именем.
+3. Введите текст программы из примера.
+4. Щелкните правой кнопкой мыши и запустите текущий файл.
 
-NOTE: Whenever you have to provide [command line arguments](./modules.md#modules), click on `Run` -> `Edit Configurations` and type the arguments in the `Script parameters:` section and click the `OK` button:
+ПРИМЕЧАНИЕ: Если вам необходимо предоставить [аргументы командной строки](./modules.md#modules), нажмите `Run` -> `Edit Configurations` и введите аргументы в разделе `Script parameters:` и нажмите кнопку `OK`:
 
-![PyCharm command line arguments](./img/pycharm_command_line_arguments.png)
+![Аргументы командной строки PyCharm](./img/pycharm_command_line_arguments.png)
 
-### For other editors
+### Для других редакторов
 
-1. Open your editor of choice.
-2. Type the program code given in the example.
-3. Save it as a file with the filename mentioned.
-4. Run the interpreter with the command `python program.py` to run the program.
+1. Откройте выбранный вами редактор.
+2. Введите код программы, приведенный в примере.
+3. Сохраните его в виде файла с указанным именем.
+4. Запустите интерпретатор командой `python program.py` для выполнения программы.
 
-### Example: Using Variables And Literal Constants
+### Пример: Использование переменных и констант
 
-Type and run the following program:
+Введите и запустите следующую программу:
 
 ```python
-# Filename : var.py
+# Имя файла : var.py
 i = 5
 print(i)
 i = i + 1
 print(i)
 
-s = '''This is a multi-line string.
-This is the second line.'''
+s = '''Это многострочная строка.
+Это вторая её строчка.'''
 print(s)
 ```
 
-Output:
+Вывод:
 
 ```
 5
 6
-This is a multi-line string.
-This is the second line.
+Это многострочная строка.
+Это вторая её строчка.
 ```
 
-**How It Works**
+**Как это работает**
 
-Here's how this program works. First, we assign the literal constant value `5` to the variable `i` using the assignment operator (`=`). This line is called a statement because it states that something should be done and in this case, we connect the variable name `i` to the value `5`. Next, we print the value of `i` using the `print` statement which, unsurprisingly, just prints the value of the variable to the screen.
+Вот как эта программа работает. Сперва мы присваиваем значение константы `5` переменной `i`, используя оператор присваивания (`=`). Эта строка называется предложением и указывает, что должно быть произведено некоторое действие, и в данном случае мы связываем имя переменной `i` со значением `5`. Затем мы печатаем значение `i`, используя функцию `print`, которая просто печатает значение переменной на экране.
 
-Then we add `1` to the value stored in `i` and store it back. We then print it and expectedly, we get the value `6`.
+Далее мы добавляем `1` к значению, хранящемуся в `i` и сохраняем его там. После этого мы печатаем его и получаем значение `6`, что неудивительно.
 
-Similarly, we assign the literal string to the variable `s` and then print it.
+Аналогичным образом мы присваиваем строковую константу переменной `s`, после чего печатаем её.
 
-> **Note for static language programmers**
+> **Замечание для программистов на статических языках программирования**
 > 
-> Variables are used by just assigning them a value. No declaration or data type definition is needed/used.
+>  Переменные используются простым присваиванием им значений. Никакого предварительного объявления или определения типа данных не требуется/применяется.
 
-## Logical And Physical Line
+## Логические и физические строки
 
-A physical line is what you _see_ when you write the program. A logical line is what _Python sees_ as a single statement. Python implicitly assumes that each _physical line_ corresponds to a _logical line_.
+Физическая строка – это то, что вы _видите_, когда набираете программу. Логическая строка – это то, что _Python видит_ как единое предложение. Python неявно предполагает, что каждой _физической строке_ соответствует _логическая строка_.
 
-An example of a logical line is a statement like `print('hello world')` - if this was on a line by itself (as you see it in an editor), then this also corresponds to a physical line.
+Примером логической строки может служить предложение `print('hello world')` – если оно на одной строке (как вы видите это в редакторе), то эта строка также соответствует физической строке.
 
-Implicitly, Python encourages the use of a single statement per line which makes code more readable.
+Python неявно стимулирует использование по одному предложению на строку, что облегчает чтение кода.
 
-If you want to specify more than one logical line on a single physical line, then you have to explicitly specify this using a semicolon (`;`) which indicates the end of a logical line/statement. For example:
+Чтобы записать более одной логической строки на одной физической строке, вам придётся явно указать это при помощи точки с запятой (`;`), которая отмечает конец логической строки/предложения. Например,
 
 ```python
 i = 5
 print(i)
 ```
 
-is effectively same as
+то же самое, что
 
 ```python
 i = 5;
 print(i);
 ```
 
-which is also same as
+и то же самое может быть записано в виде
 
 ```python
 i = 5; print(i);
 ```
 
-and same as
+или даже
 
 ```python
 i = 5; print(i)
 ```
 
-However, I *strongly recommend* that you stick to *writing a maximum of a single logical line on each single physical line*. The idea is that you should never use the semicolon. In fact, I have _never_ used or even seen a semicolon in a Python program.
+Однако я *настоятельно рекомендую* вам придерживаться *написания одной логической строки в каждой физической строке*. Таким образом вы можете обойтись совсем без точки с запятой. Кстати, я _никогда_ не использовал и даже не встречал точки с запятой в программах на Python.
 
-There is one kind of situation where this concept is really useful: if you have a long line of code, you can break it into multiple physical lines by using the backslash. This is referred to as _explicit line joining_:
+Можно использовать более одной физической строки для логической строки, но к этому следует прибегать лишь в случае очень длинных строк. Пример написания одной логической строки, занимающей несколько физических строк, приведён ниже. Это называется _явным объединением строк_:
 
 ```python
-s = 'This is a string. \
-This continues the string.'
+s = 'Это строка. \
+Это строка продолжается.'
 print(s)
 ```
 
-Output:
+Вывод:
 
 ```
-This is a string. This continues the string.
+Это строка. Это строка продолжается.
 ```
 
-Similarly,
+Аналогично,
 
 ```python
 i = \
 5
 ```
 
-is the same as
+то же самое, что и
 
 ```python
 i = 5
 ```
 
-Sometimes, there is an implicit assumption where you don't need to use a backslash. This is the case where the logical line has a starting parentheses, starting square brackets or a starting curly braces but not an ending one. This is called *implicit line joining*. You can see this in action when we write programs using [list](./data_structures.md#lists) in later chapters.
+Иногда имеет место неявное подразумевание, когда использование обратной косой черты не обязательно. Это относится к случаям, когда в логической строке есть открывающаяся круглая, квадратная или фигурная скобка, но нет закрывающейся. Это называется _неявным объединением строк_. Вы сможете увидеть это в действии в программах с использованием [списков](./data_structures.md#lists) в дальнейших главах.
 
-## Indentation
+## Отступы
 
-Whitespace is important in Python. Actually, *whitespace at the beginning of the line is important*. This is called _indentation_. Leading whitespace (spaces and tabs) at the beginning of the logical line is used to determine the indentation level of the logical line, which in turn is used to determine the grouping of statements.
+В Python пробелы важны. Точнее, п*робелы в начале строки важны*. Это называется _отступами_. Передние отступы (пробелы и табуляции) в начале логической строки используются для определения уровня отступа логической строки, который, в свою очередь, используется для группировки предложений.
 
-This means that statements which go together _must_ have the same indentation. Each such set of statements is called a *block*. We will see examples of how blocks are important in later chapters.
+Это означает, что предложения, идущие вместе, _должны_ иметь одинаковый отступ. Каждый такой набор предложений называется *блоком*. В дальнейших главах мы увидим примеры того, насколько важны блоки.
 
-One thing you should remember is that wrong indentation can give rise to errors. For example:
+Вы должны запомнить, что неправильные отступы могут приводить к возникновению ошибок. Например:
 
 ```python
 i = 5
-# Error below! Notice a single space at the start of the line
- print('Value is', i)
-print('I repeat, the value is', i)
+# Ошибка! Обратите внимание на первый пробел в начале строки
+ print('Значение составляет ', i) 
+print('Я повторяю, значение составляет ', i)
 ```
 
-When you run this, you get the following error:
+Когда вы запустите это, вы получите следующую ошибку:
 
 ```
   File "whitespace.py", line 3
@@ -426,19 +424,22 @@ When you run this, you get the following error:
 IndentationError: unexpected indent
 ```
 
-Notice that there is a single space at the beginning of the second line. The error indicated by Python tells us that the syntax of the program is invalid i.e. the program was not properly written. What this means to you is that _you cannot arbitrarily start new blocks of statements_ (except for the default main block which you have been using all along, of course). Cases where you can use new blocks will be detailed in later chapters such as the [control flow](./control_flow.md#control_flow).
+Обратите внимание на то, что в начале второй строки есть один пробел. Ошибка, отображённая Python, говорит нам о том, что синтаксис программы неверен, т.е. программа не была написана по правилам. Для вас же это означает, что _вы не можете начинать новые блоки предложений где попало_ (кроме основного блока по умолчанию, который используется на протяжении всей программы, конечно). Случаи, в которых вы можете использовать новые блоки, будут подробно описаны в дальнейших главах, как например, в главе [Поток команд](./control_flow.md#control_flow).
 
-> **How to indent**
+> **Как отступать**
 > 
-> Use four spaces for indentation. This is the official Python language recommendation. Good editors will automatically do this for you. Make sure you use a consistent number of spaces for indentation, otherwise your program will not run or will have unexpected behavior.
+> Используйте четыре пробела для отступов. Это официальная рекомендация языка Python. Хорошие редакторы автоматически делают это за вас. Убедитесь, что вы используете одинаковое количество пробелов для отступов, иначе ваша программа не будет выполняться или будет иметь неожиданное поведение.
 
 <!-- -->
 
-> **Note to static language programmers**
+> **Замечание для программистов на статических языках программирования**
 > 
-> Python will always use indentation for blocks and will never use braces. Run `from __future__ import braces` to learn more.
+> Python всегда будет использовать отступы для выделения блоков и никогда не будет использовать скобки. Введите from __future__ import braces, чтобы узнать больше.
 
-## Summary
+## Резюме
 
-Now that we have gone through many nitty-gritty details, we can move on to more interesting stuff such as control flow statements. Be sure to become comfortable with what you have read in this chapter.
+Теперь, когда мы прошли через множество жизненно важных мелочей, можно перейти к более интересным вещам – таким как управляющие конструкции. Но сначала как следует освойтесь с прочитанным в настоящей главе.
 
+------
+
+[^1]: "literal" – англ. "буквальный"; вспомните "литера" (син. "буква"). (прим. перев.)
