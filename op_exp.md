@@ -1,14 +1,14 @@
-# Operators and Expressions {#op-exp}
+# Операторы и выражения {#op-exp}
 
-Most statements (logical lines) that you write will contain _expressions_. A simple example of an expression is `2 + 3`. An expression can be broken down into operators and operands.
+Большинство предложений (логических строк) в программах содержат _выражения_. Простой пример выражения: `2 + 3`. Выражение можно разделить на операторы и операнды.
 
-_Operators_ are functionality that do something and can be represented by symbols such as `+` or by special keywords. Operators require some data to operate on and such data is called _operands_. In this case, `2` and `3` are the operands.
+_Операторы_ – это некий функционал, производящий какие-либо действия, который может быть представлен в виде символов, как например `+`, или специальных зарезервированных слов. Операторы могут производить некоторые действия над данными, и эти данные называются _операндами_. В нашем случае `2` и `3` – это операнды.
 
-## Operators
+## Операторы
 
-We will briefly take a look at the operators and their usage.
+Кратко рассмотрим операторы и их применение:
 
-Note that you can evaluate the expressions given in the examples using the interpreter interactively. For example, to test the expression `2 + 3`, use the interactive Python interpreter prompt:
+Обратите внимание, вычислить значения выражений, данных в примерах, можно также используя интерпретатор интерактивно. Например, для проверки выражения `2 + 3` воспользуйтесь интерактивной командной строкой интерпретатора Python:
 
 ```python
 >>> 2 + 3
@@ -18,187 +18,187 @@ Note that you can evaluate the expressions given in the examples using the inter
 >>>
 ```
 
-Here is a quick overview of the available operators:
+Вот краткий обзор доступных операторов:
 
-- `+` (plus)
-    - Adds two objects
-    - `3 + 5` gives `8`. `'a' + 'b'` gives `'ab'`.
+- `+` (сложение)
+    - Суммирует два объекта
+    - `3 + 5` даст `8`. `'a' + 'b'` даст `'ab'`.
 
-- `-` (minus)
-    - Gives the subtraction of one number from the other; if the first operand is absent it is assumed to be zero.
-    - `-5.2` gives a negative number and `50 - 24` gives `26`.
+- `-` (вычитание)
+    - Даёт разность двух чисел; если первый операнд отсутствует, он считается равным нулю.
+    - `-5.2` даст отрицательное число, а `50 - 24` даст `26`.
 
-- `*` (multiply)
-    - Gives the multiplication of the two numbers or returns the string repeated that many times.
-    - `2 * 3` gives `6`. `'la' * 3` gives `'lalala'`.
+- `*` (умножение)
+    - Даёт произведение двух чисел или возвращает строку, повторённую заданное число раз.
+    - `2 * 3` даст `6`. `'la' * 3` даст `'lalala'`.
 
-- `**` (power)
-    - Returns x to the power of y
-    - `3 ** 4` gives `81` (i.e. `3 * 3 * 3 * 3`)
+- `**` (возведение в степень)
+    - Возвращает число х, возведённое в степень y
+    - `3 ** 4` даст `81` (т.е. `3 * 3 * 3 * 3`)
 
-- `/` (divide)
-    - Divide x by y
-    - `13 / 3` gives `4.333333333333333`
+- `/` (деление)
+    - Возвращает частное от деления x на y
+    - `13 / 3` даст `4.333333333333333`
 
-- `//` (divide and floor)
-    - Divide x by y and round the answer _down_ to the nearest integer value. Note that if one of the values is a float, you'll get back a float.
-    - `13 // 3` gives `4`
-    - `-13 // 3` gives `-5`
-    - `9//1.81` gives `4.0`
+- `//` (целочисленное деление)
+    - Разделить x на y и округлить ответ _вниз_ до ближайшего целочисленного значения. Обратите внимание, что если одно из значений является float, вы получите обратно float.
+    - `13 // 3` даст `4`
+    - `-13 // 3` даст `-5`
+    - `9//1.81` даст `4.0`
 
-- `%` (modulo)
-    - Returns the remainder of the division
-    - `13 % 3` gives `1`. `-25.5 % 2.25` gives `1.5`.
+- `%` (модуль)
+    - Возвращает остаток от деления
+    - `13 % 3` даст `1`. `-25.5 % 2.25` даст `1.5`.
 
-- `<<` (left shift)
-    - Shifts the bits of the number to the left by the number of bits specified. (Each number is represented in memory by bits or binary digits i.e. 0 and 1)
-    - `2 << 2` gives `8`. `2` is represented by `10` in bits.
-    - Left shifting by 2 bits gives `1000` which represents the decimal `8`.
+- `<<` (сдвиг влево)
+    - Сдвигает биты числа влево на заданное количество позиций. (Любое число в памяти компьютера представлено в виде битов - или двоичных чисел, т.е. 0 и 1)
+    - `2 << 2` даст `8`. В двоичном виде `2` представляет собой `10`.
+    - Сдвиг влево на 2 бита даёт `1000`, что в десятичном виде означает `8`.
 
-- `>>` (right shift)
-    - Shifts the bits of the number to the right by the number of bits specified.
-    - `11 >> 1` gives `5`.
-    - `11` is represented in bits by `1011` which when right shifted by 1 bit gives `101`which is the decimal `5`.
+- `>>` (сдвиг вправо)
+    - Сдвигает биты числа вправо на заданное число позиций.
+    - `11 >> 1` даст `5`.
+    - В двоичном виде `11` представляется как `1011`, что будучи смещённым на 1 бит вправо, даёт `101`, а это, в свою очередь, не что иное как десятичное `5`.
 
-- `&` (bit-wise AND)
-    - Bit-wise AND of the numbers: if both bits are `1`, the result is `1`. Otherwise, it's `0`.
-    - `5 & 3` gives `1` (`0101 & 0011` gives `0001`)
+- `&` (побитовое И)
+    - Побитовая операция И над числами: если оба бита равны `1`, то результат равен `1`. В противном случае - `0`.
+    - `5 & 3` даст `1` (`0101 & 0011` даст `0001`)
     
-- `|` (bit-wise OR)
-    - Bitwise OR of the numbers: if both bits are `0`, the result is `0`. Otherwise, it's `1`. 
-    - `5 | 3` gives `7` (`0101 | 0011` gives `0111`)
+- `|` (побитовое ИЛИ)
+    - Побитовая операция ИЛИ над числами: если оба бита равны `0`, то результат равен `0`. В противном случае - `1`. 
+    - `5 | 3` даст `7` (`0101 | 0011` даст `0111`)
     
-- `^` (bit-wise XOR) 
-    - Bitwise XOR of the numbers: if both bits (`1 or 0`) are the same, the result is `0`. Otherwise, it's `1`.
-    - `5 ^ 3` gives `6` (`O101 ^ 0011` gives `0110`)
+- `^` (побитовое ИСКЛЮЧАЮЩЕЕ ИЛИ) 
+    - Побитовая операция ИСКЛЮЧАЮЩЕЕ ИЛИ: если оба бита (`1 или 0`) одинаковы, результатом будет `0`. В противном случае - `1`.
+    - `5 ^ 3` даст `6` (`O101 ^ 0011` даст `0110`)
 
-- `~` (bit-wise invert)
-    - The bit-wise inversion of x is -(x+1)
-    - `~5` gives `-6`. More details at http://stackoverflow.com/a/11810203
+- `~` (побитовое НЕ)
+    - Побитовая операция НЕ для числа x соответствует -(x+1)
+    - `~5` даст `-6`. Более подробная информация на сайте http://stackoverflow.com/a/11810203
 
-- `<` (less than)
-    - Returns whether x is less than y. All comparison operators return `True` or `False`. Note the capitalization of these names.
-    - `5 < 3` gives `False` and `3 < 5` gives `True`.
-    - Comparisons can be chained arbitrarily: `3 < 5 < 7` gives `True`.
+- `<` (меньше)
+    - Определяет, верно ли, что x меньше y. Все операторы сравнения возвращают `True` или `False`. Обратите внимание на заглавные буквы в этих словах.
+    - `5 < 3` даст `False` и `3 < 5` даст `True`.
+    - Можно составлять произвольные цепочки сравнений: `3 < 5 < 7` даёт `True`.
 
-- `>` (greater than)
-    - Returns whether x is greater than y
-    - `5 > 3` returns `True`. If both operands are numbers, they are first converted to a common type. Otherwise, it always returns `False`.
+- `>` (больше)
+    - Определяет, верно ли, что x больше y
+    - `5 > 3` даёт `True`. Если оба операнда - числа, то перед сравнением они оба преобразуются к одинаковому типу. В противном случае всегда возвращается `False`.
 
-- `<=` (less than or equal to)
-    - Returns whether x is less than or equal to y
-    - `x = 3; y = 6; x <= y` returns `True`
+- `<=` (меньше или равно)
+    - Определяет, верно ли, что x меньше или равно y
+    - `x = 3; y = 6; x <= y` даёт `True`
 
-- `>=` (greater than or equal to)
-    - Returns whether x is greater than or equal to y
-    - `x = 4; y = 3; x >= 3` returns `True`
+- `>=` (больше или равно)
+    - Определяет, верно ли, что x больше или равно y
+    - `x = 4; y = 3; x >= 3` даёт `True`
 
-- `==` (equal to)
-    - Compares if the objects are equal
-    - `x = 2; y = 2; x == y` returns `True`
-    - `x = 'str'; y = 'stR'; x == y` returns `False`
-    - `x = 'str'; y = 'str'; x == y` returns `True`
+- `==` (равно)
+    - Проверяет, одинаковы ли объекты
+    - `x = 2; y = 2; x == y` даёт `True`
+    - `x = 'str'; y = 'stR'; x == y` даёт `False`
+    - `x = 'str'; y = 'str'; x == y` даёт `True`
 
-- `!=` (not equal to)
-    - Compares if the objects are not equal
-    - `x = 2; y = 3; x != y` returns `True`
+- `!=` (не равно)
+    - Проверяет, верно ли, что объекты не равны
+    - `x = 2; y = 3; x != y` даёт `True`
 
-- `not` (boolean NOT)
-    - If x is `True`, it returns `False`. If x is `False`, it returns `True`.
-    - `x = True; not x` returns `False`.
+- `not` (логическое НЕ)
+    - Если x равно `True`, оператор вернёт `False`. Если же x равно `False`, получим `True`.
+    - `x = True; not x` даёт `False`.
 
-- `and` (boolean AND)
-    - `x and y` returns `False` if x is `False`, else it returns evaluation of y
-    - `x = False; y = True; x and y` returns `False` since x is False. In this case, Python will not evaluate y since it knows that the left hand side of the 'and' expression is `False` which implies that the whole expression will be `False` irrespective of the other values. This is called short-circuit evaluation.
+- `and` (логическое И)
+    - `x and y` даёт `False`, если x равно `False` , в противном случае возвращает значение y
+    - `x = False; y = True; x and y` возвращает `False`, поскольку x равно `False`. В этом случае Python не станет проверять значение y, так как уже знает, что левая часть выражения 'and' равняется `False`, что подразумевает, что и всё выражение в целом будет равно `False`, независимо от значений всех остальных операндов. Это называется укороченной оценкой булевых (логических) выражений.
 
-- `or` (boolean OR)
-    - If x is `True`, it returns True, else it returns evaluation of y
-    - `x = True; y = False; x or y` returns `True`. Short-circuit evaluation applies here as well.
+- `or` (логическое ИЛИ)
+    - Если x равно `True`, в результате получим `True`, в противном случае получим значение y
+    - `x = True; y = False; x or y` даёт `True`. Здесь также может производиться укороченная оценка выражений.
 
-## Shortcut for math operation and assignment
+## Краткая запись мат. операций и присваивания
 
-It is common to run a math operation on a variable and then assign the result of the operation back to the variable, hence there is a shortcut for such expressions:
+Зачастую результат проведения некой математической операции необходимо присвоить переменной, над которой эта операция производилась. Для этого существуют краткие формы записи выражений. Вы можете записать:
 
 ```python
 a = 2
 a = a * 3
 ```
 
-can be written as:
+в виде:
 
 ```python
 a = 2
 a *= 3
 ```
 
-Notice that `var = var operation expression` becomes `var operation= expression`.
+Обратите внимание, что выражения вида `переменная = переменная операция выражение` принимает вид `переменная операция = выражение`.
 
-## Evaluation Order
+## Порядок вычисления
 
-If you had an expression such as `2 + 3 * 4`, is the addition done first or the multiplication? Our high school maths tells us that the multiplication should be done first. This means that the multiplication operator has higher precedence than the addition operator.
+Если имеется выражение вида `2 + 3 * 4`, что производится раньше: сложение или умножение? Школьный курс математики говорит нам, что умножение должно производиться в первую очередь. Это означает, что оператор умножения имеет более высокий приоритет, чем оператор сложения.
 
-The following table gives the precedence table for Python, from the lowest precedence (least binding) to the highest precedence (most binding). This means that in a given expression, Python will first evaluate the operators and expressions lower in the table before the ones listed higher in the table.
+Следующая таблица показывает приоритет операторов в Python, начиная с самого низкого (самое слабое связывание) и до самого высокого (самое сильное связывание). Это означает, что в любом выражении Python сперва вычисляет операторы и выражения, расположенные внизу таблицы, а затем операторы выше по таблице.
 
-The following table, taken from the [Python reference manual](http://docs.python.org/3/reference/expressions.html#operator-precedence), is provided for the sake of completeness. It is far better to use parentheses to group operators and operands appropriately in order to explicitly specify the precedence. This makes the program more readable. See [Changing the Order of Evaluation](#changing-order-of-evaluation) below for details.
+Эта таблица взята из [Справочника по языку Python (англ.)](http://docs.python.org/3/reference/expressions.html#operator-precedence) и приводится здесь для полноты описания. На практике лучше использовать скобки для группировки операторов и операндов, чтобы в явном виде указать порядок вычисления выражений. Заодно это облегчит чтение программы. Более подробно см. в разделе [Изменение порядка вычисления ниже](#changing-order-of-evaluation).
 
-- `lambda` : Lambda Expression
-- `if - else` : Conditional expression
-- `or` : Boolean OR
-- `and` : Boolean AND
-- `not x` : Boolean NOT
-- `in, not in, is, is not, <, <=, >, >=, !=, ==` : Comparisons, including membership tests and identity tests
-- `|` : Bitwise OR
-- `^` : Bitwise XOR
-- `&` : Bitwise AND
-- `<<, >>` : Shifts
-- `+, -` : Addition and subtraction
-- `*, /, //, %` : Multiplication, Division, Floor Division and Remainder
-- `+x, -x, ~x` : Positive, Negative, bitwise NOT
-- `**` : Exponentiation
-- `x[index], x[index:index], x(arguments...), x.attribute` : Subscription, slicing, call, attribute reference
-- `(expressions...), [expressions...], {key: value...}, {expressions...}` : Binding or tuple display, list display, dictionary display, set display
+- `lambda` : Лямбда-выражение
+- `if - else` : Условное выражение
+- `or` : Логическое ИЛИ
+- `and` : Логическое И
+- `not x` : Логическое НЕ
+- `in, not in, is, is not, <, <=, >, >=, !=, ==` : Сравнения, включая тесты на принадлежность и тесты на идентичность
+- `|` : Побитовое ИЛИ
+- `^` : Побитовое ИСКЛЮЧАЮЩЕЕ ИЛИ
+- `&` : Побитовое И
+- `<<, >>` : Сдвиги
+- `+, -` : Сложение и вычитание
+- `*, /, //, %` : Умножение, деление, целочисленное деление и остаток от деления
+- `+x, -x, ~x` : Положительное, отрицательное, побитовое НЕ
+- `**` : Возведение в степень
+- `x[index], x[index:index], x(arguments...), x.attribute` : Обращение по индексу, срез, вызов функции, ссылка на атрибут
+- `(expressions...), [expressions...], {key: value...}, {expressions...}` : Отображение связки или кортежа, отображение списка, отображение словаря, отображение множества
 
-The operators which we have not already come across will be explained in later chapters.
+Операторы, о которых мы не упомянули, будут объяснены в дальнейших главах.
 
-Operators with the _same precedence_ are listed in the same row in the above table. For example, `+` and `-` have the same precedence.
+В этой таблице операторы с _равным приоритетом_ расположены в одной строке. Например, `+` и `-` имеют равный приоритет.
 
-## Changing the Order Of Evaluation {#changing-order-of-evaluation}
+## Изменение порядка вычисления {#changing-order-of-evaluation}
 
-To make the expressions more readable, we can use parentheses. For example, `2 + (3 * 4)` is definitely easier to understand than `2 + 3 * 4` which requires knowledge of the operator precedences. As with everything else, the parentheses should be used reasonably (do not overdo it) and should not be redundant, as in `(2 + (3 * 4))`.
+Для облегчения чтения выражений можно использовать скобки. Например, `2 + (3 * 4)` определённо легче понять, чем `2 + 3 * 4`, которое требует знания приоритета операторов. Как и всё остальное, скобки нужно использовать разумно (не перестарайтесь) и избегать излишних, как в `(2 + (3 * 4))`.
 
-There is an additional advantage to using parentheses - it helps us to change the order of evaluation. For example, if you want addition to be evaluated before multiplication in an expression, then you can write something like `(2 + 3) * 4`.
+Есть ещё одно преимущество в использовании скобок – они дают возможность изменить порядок вычисления выражений. Например, если сложение необходимо произвести прежде умножения, можно записать нечто вроде `(2 + 3) * 4`.
 
-## Associativity
+## Ассоциативность
 
-Operators are usually associated from left to right. This means that operators with the same precedence are evaluated in a left to right manner. For example, `2 + 3 + 4` is evaluated as `(2 + 3) + 4`.
+Операторы обычно обрабатываются слева направо. Это означает, что операторы с равным приоритетом будут обработаны по порядку от левого до правого. Например, `2 + 3 + 4` обрабатывается как `(2 + 3) + 4`.
 
-## Expressions
+## Выражения
 
-Example (save as `expression.py`):
+Пример (сохраните как `expression.py`):
 
 ```python
 length = 5
 breadth = 2
 
 area = length * breadth
-print('Area is', area)
-print('Perimeter is', 2 * (length + breadth))
+print('Площадь равна', area)
+print('Периметр равен', 2 * (length + breadth))
 ```
 
-Output:
+Вывод:
 
 ```
 $ python expression.py
-Area is 10
-Perimeter is 14
+Площадь равна 10
+Периметр равен 14
 ```
 
-**How It Works**
+**Как это работает**
 
-The length and breadth of the rectangle are stored in variables by the same name. We use these to calculate the area and perimeter of the rectangle with the help of expressions. We store the result of the expression `length * breadth` in the variable `area` and then print it using the `print` function. In the second case, we directly use the value of the expression `2 * (length + breadth)` in the print function.
+Длина и ширина прямоугольника хранятся в переменных `length` и `breadth` соответственно. Мы используем их для вычисления периметра и площади прямоугольника при помощи выражений. Результат выражения `length * breadth` сохраняется в переменной `area`, после чего выводится на экран функцией `print`. Во втором случае мы напрямую подставляем значение выражения `2 * (length + breadth)` в функцию `print`.
 
-Also, notice how Python _pretty-prints_ the output. Even though we have not specified a space between `'Area is'` and the variable `area`, Python puts it for us so that we get a clean nice output and the program is much more readable this way (since we don't need to worry about spacing in the strings we use for output). This is an example of how Python makes life easy for the programmer.
+Также обратите внимание, как Python `красиво печатает` результат. Несмотря на то, что мы не указали пробела между `'Площадь равна'` и переменной `area`, Python подставляет его за нас, чтобы получить красивый и понятный вывод. Программа же остаётся при этом легкочитаемой (поскольку нам не нужно заботиться о пробелах между строками, которые мы выводим). Это пример того, как Python облегчает жизнь программисту.
 
-## Summary
+## Резюме
 
-We have seen how to use operators, operands and expressions - these are the basic building blocks of any program. Next, we will see how to make use of these in our programs using statements.
+Мы увидели, как пользоваться операторами, операндами и выражениями. Это основные строительные блоки любой программы. Далее мы увидим, как это применить на практике.
