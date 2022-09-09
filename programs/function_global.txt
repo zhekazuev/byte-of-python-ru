@@ -1,4 +1,4 @@
 $ python function_global.py
-x is 50
-Changed global x to 2
-Value of x is 2
+x равно 50
+Заменяем глобальное значение x на 2
+Значение x составляет 2

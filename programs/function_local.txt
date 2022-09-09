@@ -1,4 +1,4 @@
 $ python function_local.py
-x is 50
-Changed local x to 2
-x is still 50
+x равен 50
+Замена локального x на 2
+x по-прежнему 50

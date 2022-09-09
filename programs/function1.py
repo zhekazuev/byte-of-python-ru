@@ -1,7 +1,7 @@
 def say_hello():
-    # block belonging to the function
-    print('hello world')
-# End of function
+    # блок, принадлежащий функции
+    print('Привет, Мир!')
+    # Конец функции
 
-say_hello()  # call the function
-say_hello()  # call the function again
+say_hello() # вызов функции
+say_hello() # ещё один вызов функции

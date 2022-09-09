@@ -1,5 +1,5 @@
 $ python function_docstring.py
-5 is maximum
-Prints the maximum of two numbers.
+5 наибольшее
+Выводит максимальное из двух чисел.
 
-    The two values must be integers.
+    Оба значения должны быть целыми числами.

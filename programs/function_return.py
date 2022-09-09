@@ -2,7 +2,7 @@ def maximum(x, y):
     if x > y:
         return x
     elif x == y:
-        return 'The numbers are equal'
+        return 'Числа равны.'
     else:
         return y
 

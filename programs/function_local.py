@@ -2,10 +2,10 @@ x = 50
 
 
 def func(x):
-    print('x is', x)
+    print('x равен', x)
     x = 2
-    print('Changed local x to', x)
+    print('Замена локального x на', x)
 
 
 func(x)
-print('x is still', x)
+print('x по-прежнему', x)

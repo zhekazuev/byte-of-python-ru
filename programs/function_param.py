@@ -1,16 +1,16 @@
 def print_max(a, b):
     if a > b:
-        print(a, 'is maximum')
+        print(a, 'максимально')
     elif a == b:
-        print(a, 'is equal to', b)
+        print(a, 'равно', b)
     else:
-        print(b, 'is maximum')
+        print(b, 'максимально')
 
-# directly pass literal values
+# прямая передача значений
 print_max(3, 4)
 
 x = 5
 y = 7
 
-# pass variables as arguments
+# передача переменных в качестве аргументов
 print_max(x, y)

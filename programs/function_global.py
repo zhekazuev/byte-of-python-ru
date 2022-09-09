@@ -4,10 +4,10 @@ x = 50
 def func():
     global x
 
-    print('x is', x)
+    print('x равно', x)
     x = 2
-    print('Changed global x to', x)
+    print('Заменяем глобальное значение x на', x)
 
 
 func()
-print('Value of x is', x)
+print('Значение x составляет', x)

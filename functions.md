@@ -1,217 +1,225 @@
-# Functions
+# Функции
 
-Functions are reusable pieces of programs. They allow you to give a name to a block of statements, allowing you to run that block using the specified name anywhere in your program and any number of times. This is known as *calling* the function. We have already used many built-in functions such as `len` and `range`.
+Функции – это многократно используемые фрагменты программы. Они позволяют дать имя определённому блоку команд с тем, чтобы впоследствии запускать этот блок по указанному имени в любом месте программы и сколь угодно много раз. Это называется *вызовом* функции. Мы уже использовали много встроенных функций, как то `len` и `range`.
 
-The function concept is probably *the* most important building block of any non-trivial software (in any programming language), so we will explore various aspects of functions in this chapter.
+Функция – это, пожалуй, *наиболее* важный строительный блок любой нетривиальной программы (на любом языке программирования), поэтому в этой главе мы рассмотрим различные аспекты функций.
 
-Functions are defined using the `def` keyword. After this keyword comes an *identifier* name for the function, followed by a pair of parentheses which may enclose some names of variables, and by the final colon that ends the line. Next follows the block of statements that are part of this function. An example will show that this is actually very simple:
+Функции определяются при помощи зарезервированного слова `def`. После этого слова *указывается* имя функции, за которым следует пара скобок, в которых можно указать имена некоторых переменных, и заключительное двоеточие в конце строки. Далее следует блок команд, составляющих функцию. На примере можно видеть, что на самом деле это очень просто:
 
-Example (save as `function1.py`):
+Пример (сохраните как `function1.py`)
 
 <pre><code class="lang-python">{% include "./programs/function1.py" %}</code></pre>
 
-Output:
+Вывод:
 
 <pre><code>{% include "./programs/function1.txt" %}</code></pre>
 
-**How It Works**
+**Как это работает**
 
-We define a function called `say_hello` using the syntax as explained above. This function takes no parameters and hence there are no variables declared in the parentheses. Parameters to functions are just input to the function so that we can pass in different values to it and get back corresponding results.
+Мы определили функцию с именем `say_hello`, используя описанный выше синтаксис. Эта функция не принимает параметров, поэтому в скобках не объявлены какие-либо переменные. Параметры функции – это некие входные данные, которые мы можем передать функции, чтобы получить соответствующий им результат.
 
-Notice that we can call the same function twice which means we do not have to write the same code again.
+Обратите внимание, что мы можем вызывать одну и ту же функцию много раз, а значит нет необходимости писать один и тот же код снова и снова.
 
-## Function Parameters
+## Параметры функций
 
-A function can take parameters, which are values you supply to the function so that the function
-can *do* something utilising those values. These parameters are just like variables except that the
-values of these variables are defined when we call the function and are already assigned values
-when the function runs.
+Функции могут принимать параметры, т.е. некоторые значения, передаваемые функции для того, чтобы она что-либо *сделала* с ними. Эти параметры похожи на переменные, за исключением того, что значение этих переменных указывается при вызове функции, и во время работы функции им уже присвоены их значения.
 
-Parameters are specified within the pair of parentheses in the function definition, separated by
-commas. When we call the function, we supply the values in the same way.  Note the terminology
-used - the names given in the function definition are called *parameters* whereas the values you
-supply in the function call are called *arguments*.
+Параметры указываются в скобках при объявлении функции и разделяются запятыми. Аналогично мы передаём значения, когда вызываем функцию. Обратите внимание на терминологию: имена, указанные в объявлении функции, называются *параметрами*, тогда как значения, которые вы передаёте в функцию при её вызове, – *аргументами*.
 
-Example (save as `function_param.py`):
+Пример (сохраните как `function_param.py`):
 
 <pre><code class="lang-python">{% include "./programs/function_param.py" %}</code></pre>
 
-Output:
+Вывод:
 
 <pre><code>{% include "./programs/function_param.txt" %}</code></pre>
 
-**How It Works**
+**Как это работает**
 
-Here, we define a function called `print_max` that uses two parameters called `a` and `b`.  We find out the greater number using a simple `if..else` statement and then print the bigger number.
+Здесь мы определили функцию с именем `print_max`, которая использует два параметра с именами `a` и `b`. Мы находим наибольшее число с применением простого оператора `if..else` и выводим это число.
 
-The first time we call the function `print_max`, we directly supply the numbers as arguments. In the second case, we call the function with variables as arguments. `print_max(x, y)` causes the value of argument `x` to be assigned to parameter `a` and the value of argument `y` to be assigned to parameter `b`. The `print_max` function works the same way in both cases.
+При первом вызове функции `print_max` мы напрямую передаём числа в качестве аргументов. Во втором случае мы вызываем функцию с переменными в качестве аргументов. `print_max(x, y)` назначает значение аргумента `x` параметру `a`, а значение аргумента `y` – параметру `b`. В обоих случаях функция `print_max` работает одинаково.
 
-## Local Variables
+## Локальные переменные
 
-When you declare variables inside a function definition, they are not related in any way to other variables with the same names used outside the function - i.e. variable names are *local* to the function. This is called the *scope* of the variable. All variables have the scope of the block they are declared in starting from the point of definition of the name.
+При объявлении переменных внутри определения функции, они никоим образом не связаны с другими переменными с таким же именем за пределами функции – т.е. имена переменных являются *локальными* в функции. Это называется *областью видимости* переменной. Область видимости всех переменных ограничена блоком, в котором они объявлены, начиная с точки объявления имени.
 
-Example (save as `function_local.py`):
+Пример (сохраните как `function_local.py`)
 
 <pre><code class="lang-python">{% include "./programs/function_local.py" %}</code></pre>
 
-Output:
+Вывод:
 
 <pre><code>{% include "./programs/function_local.txt" %}</code></pre>
 
-**How It Works**
+**Как это работает**
 
-The first time that we print the *value* of the name *x* with the first line in the function's body, Python uses the value of the parameter declared in the main block, above the function definition.
+При первом выводе *значения*, присвоенного имени *x*, в первой строке функции Python использует значение параметра, объявленного в основном блоке, выше определения функции.
 
-Next, we assign the value `2` to `x`. The name `x` is local to our function.  So, when we change the value of `x` in the function, the `x` defined in the main block remains unaffected.
+Далее мы назначаем `x` значение `2`. Имя `x` локально для нашей функции. Поэтому когда мы заменяем значение `x` в функции, `x`, объявленный в основном блоке, остаётся незатронутым.
 
-With the last `print` statement, we display the value of `x` as defined in the main block, thereby confirming that it is actually unaffected by the local assignment within the previously called function.
+Последним вызовом функции `print` мы выводим значение `x`, указанное в основном блоке, подтверждая таким образом, что оно не изменилось при локальном присваивании значения в ранее вызванной функции.
 
-## The `global` statement {#global-statement}
+## Зарезервированное слово `global` {#global-statement}
 
-If you want to assign a value to a name defined at the top level of the program (i.e. not inside any kind of scope such as functions or classes), then you have to tell Python that the name is not local, but it is *global*. We do this using the `global` statement. It is impossible to assign a value to a variable defined outside a function without the `global` statement.
+Чтобы присвоить некоторое значение переменной, определённой на высшем уровне программы (т.е. не в какой-либо области видимости, как то функции или классы), необходимо указать Python, что её имя не локально, а *глобально* (global). Сделаем это при помощи зарезервированного слова `global`. Без применения зарезервированного слова `global` невозможно присвоить значение переменной, определённой за пределами функции.
 
-You can use the values of such variables defined outside the function (assuming there is no variable with the same name within the function). However, this is not encouraged and should be avoided since it becomes unclear to the reader of the program as to where that variable's definition is. Using the `global` statement makes it amply clear that the variable is defined in an outermost block.
+Можно использовать уже существующие значения переменных, определённых за пределами функции (при условии, что внутри функции не было объявлено переменной с таким же именем). Однако, это не приветствуется, и его следует избегать, поскольку человеку, читающему текст программы, будет непонятно, где находится объявление переменной. Использование зарезервированного слова `global` достаточно ясно показывает, что переменная объявлена в самом внешнем блоке.
 
-Example (save as `function_global.py`):
+Пример (сохраните как `function_global.py`):
 
 <pre><code class="lang-python">{% include "./programs/function_global.py" %}</code></pre>
 
-Output:
+Вывод:
 
 <pre><code>{% include "./programs/function_global.txt" %}</code></pre>
 
-**How It Works**
+**Как это работает**
 
-The `global` statement is used to declare that `x` is a global variable - hence, when we assign a value to `x` inside the function, that change is reflected when we use the value of `x` in the main block.
+Зарезервированное слово `global` используется для того, чтобы объявить, что `x` – это глобальная переменная, а значит, когда мы присваиваем значение имени `x` внутри функции, это изменение отразится на значении переменной `x` в основном блоке программы.
 
-You can specify more than one global variable using the same `global` statement e.g. `global x, y, z`.
+Используя одно зарезервированное слово `global`, можно объявить сразу несколько переменных: `global x, y, z`.
 
-## Default Argument Values {#default-arguments}
+## Значения аргументов по умолчанию {#default-arguments}
 
-For some functions, you may want to make some parameters *optional* and use default values in case the user does not want to provide values for them. This is done with the help of default argument values. You can specify default argument values for parameters by appending to the parameter name in the function definition the assignment operator (`=`) followed by the default value.
+Зачастую часть параметров функций могут быть *необязательными*, и для них будут использоваться некоторые заданные значения по умолчанию, если пользователь не укажет собственных. Этого можно достичь с помощью значений аргументов по умолчанию. Их можно указать, добавив к имени параметра в определении функции оператор присваивания (`=`) с последующим значением.
 
-Note that the default argument value should be a constant. More precisely, the default argument value should be immutable - this is explained in detail in later chapters. For now, just remember this.
+Обратите внимание, что значение по умолчанию должно быть константой. Или точнее говоря, оно должно быть неизменным[^1] – это объясняется подробнее в последующих главах. А пока запомните это.
 
-Example (save as `function_default.py`):
+Пример (сохраните как `function_default.py`):
 
 <pre><code class="lang-python">{% include "./programs/function_default.py" %}</code></pre>
 
-Output:
+Вывод:
 
 <pre><code>{% include "./programs/function_default.txt" %}</code></pre>
 
-**How It Works**
+**Как это работает**
 
-The function named `say` is used to print a string as many times as specified. If we don't supply a value, then by default, the string is printed just once. We achieve this by specifying a default argument value of `1` to the parameter `times`.
+Функция под именем `say` используется для вывода на экран строки указанное число раз. Если мы не указываем значения, по умолчанию строка выводится один раз. Мы достигаем этого указанием значения аргумента по умолчанию, равного `1` для параметра `times`[^2].
 
-In the first usage of `say`, we supply only the string and it prints the string once. In the second usage of `say`, we supply both the string and an argument `5` stating that we want to *say* the string message 5 times.
+При первом вызове `say` мы указываем только строку, и функция выводит её один раз. При втором вызове `say` мы указываем также и аргумент `5`, обозначая таким образом, что мы хотим *сказать*[^3] фразу 5 раз.
 
-> *CAUTION*
-> 
-> Only those parameters which are at the end of the parameter list can be given default argument
-> values i.e. you cannot have a parameter with a default argument value preceding a parameter without
-> a default argument value in the function's parameter list.
-> 
-> This is because the values are assigned to the parameters by position. For example,`def func(a,
-> b=5)` is valid, but `def func(a=5, b)` is *not valid*.
+> *ВАЖНО* 
+>
+> Значениями по умолчанию могут быть снабжены только параметры, находящиеся в конце списка параметров. 
+> Таким образом, в списке параметров функции параметр со значением по умолчанию не может предшествовать параметру без значения по умолчанию. 
+>
+> Это связано с тем, что значения присваиваются параметрам в соответствии с их положением. Например,`def func(a, b=5)` допустимо, а `def func(a=5, b)` – *не допустимо*.
 
-## Keyword Arguments
+## Ключевые аргументы
 
-If you have some functions with many parameters and you want to specify only some of them, then you can give values for such parameters by naming them - this is called *keyword arguments* - we use the name (keyword) instead of the position (which we have been using all along) to specify the arguments to the function.
+Если имеется некоторая функция с большим числом параметров, и при её вызове требуется указать только некоторые из них, значения этих параметров могут задаваться по их имени – это называется *ключевые аргументы*. В этом случае для передачи аргументов функции используется имя (ключ) вместо позиции (как было до сих пор).
 
-There are two advantages - one, using the function is easier since we do not need to worry about the order of the arguments. Two, we can give values to only those parameters to which we want to, provided that the other parameters have default argument values.
+Есть два преимущества такого подхода: во-первых, использование функции становится легче, поскольку нет необходимости отслеживать порядок аргументов; во-вторых, можно задавать значения только некоторым избранным аргументам, при условии, что остальные параметры имеют значения аргумента по умолчанию.
 
-Example (save as `function_keyword.py`):
+Пример (сохраните как `function_keyword.py`):
 
 <pre><code class="lang-python">{% include "./programs/function_keyword.py" %}</code></pre>
 
-Output:
+Вывод:
 
 <pre><code>{% include "./programs/function_keyword.txt" %}</code></pre>
 
-**How It Works**
+**Как это работает**
 
-The function named `func` has one parameter without a default argument value, followed by two parameters with default argument values.
+Функция с именем `func` имеет один параметр без значения по умолчанию, за которым следуют два параметра со значениями по умолчанию.
 
-In the first usage, `func(3, 7)`, the parameter `a` gets the value `3`, the parameter `b` gets the value `7` and `c` gets the default value of `10`.
+При первом вызове, `func(3, 7)`, параметр `a` получает значение `3`, параметр `b` получает значение `7`, а `c` получает своё значение по умолчанию, равное `10`.
 
-In the second usage `func(25, c=24)`, the variable `a` gets the value of 25 due to the position of the argument. Then, the parameter `c` gets the value of `24` due to naming i.e. keyword arguments. The variable `b` gets the default value of `5`.
+При втором вызове `func(25, c=24)` переменная `a` получает значение `25` в силу позиции аргумента. После этого параметр `c` получает значение `24` по имени, т.е. как ключевой параметр. Переменная `b` получает значение по умолчанию, равное `5`.
 
-In the third usage `func(c=50, a=100)`, we use keyword arguments for all specified values. Notice that we are specifying the value for parameter `c` before that for `a` even though `a` is defined before `c` in the function definition.
+При третьем обращении `func(c=50, a=100)` мы используем ключевые аргументы для всех указанных значений. Обратите внимание на то, что мы указываем значение для параметра `c` перед значением для `a`, даже несмотря на то, что в определении функции параметр `a` указан раньше `c`.
 
-## VarArgs parameters
+## Переменное число параметров
 
-Sometimes you might want to define a function that can take _any_ number of parameters, i.e. **var**iable number of **arg**uments, this can be achieved by using the stars (save as `function_varargs.py`):
+Иногда бывает нужно определить функцию, способную принимать _любое_ число параметров[^4]. Этого можно достичь при помощи звёздочек (сохраните как `function_varargs.py`):
 
 <pre><code class="lang-python">{% include "./programs/function_varargs.py" %}</code></pre>
 
-Output:
+Вывод:
 
 <pre><code>{% include "./programs/function_varargs.txt" %}</code></pre>
 
-**How It Works**
+**Как это работает**
 
-When we declare a starred parameter such as `*param`, then all the positional arguments from that point till the end are collected as a tuple called 'param'.
+Когда мы объявляем параметр со звёздочкой (например, `*param`), все позиционные аргументы начиная с этой позиции и до конца будут собраны в кортеж под именем `param`.
 
-Similarly, when we declare a double-starred parameter such as `**param`, then all the keyword arguments from that point till the end are collected as a dictionary called 'param'.
+Аналогично, когда мы объявляем параметры с двумя звёздочками (`**param`), все ключевые аргументы начиная с этой позиции и до конца будут собраны в словарь под именем `param`.
 
-We will explore tuples and dictionaries in a [later chapter](./data_structures.md#data-structures).
+Мы изучим кортежи и словари в одной из [последующих глав](./data_structures.md#data-structures).
 
-## The `return` statement {#return-statement}
+## Оператор `return` {#return-statement}
 
-The `return` statement is used to *return* from a function i.e. break out of the function. We can optionally *return a value* from the function as well.
+Оператор `return` используется для *возврата*[^5] из функции, т.е. для прекращения её работы и выхода из неё. При этом можно также *вернуть некоторое значение* из функции.
 
-Example (save as `function_return.py`):
+Пример (сохраните как `function_return.py`):
 
 <pre><code class="lang-python">{% include "./programs/function_return.py" %}</code></pre>
 
-Output:
+Вывод:
 
 <pre><code>{% include "./programs/function_return.txt" %}</code></pre>
 
-**How It Works**
+**Как это работает**
 
-The `maximum` function returns the maximum of the parameters, in this case the numbers supplied to the function. It uses a simple `if..else` statement to find the greater value and then *returns* that value.
+Функция `maximum` возвращает максимальный из двух параметров, которые в данном случае передаются ей при вызове. Она использует обычный условный оператор `if..else` для определения наибольшего числа, а затем *возвращает* это число.
 
-Note that a `return` statement without a value is equivalent to `return None`. `None` is a special type in Python that represents nothingness. For example, it is used to indicate that a variable has no value if it has a value of `None`.
+Обратите внимание, что оператор `return` без указания возвращаемого значения эквивалентен выражению `return None`. `None` – это специальный тип данных в Python, обозначающий ничего. К примеру, если значение переменной установлено в `None`, это означает, что ей не присвоено никакого значения.
 
-Every function implicitly contains a `return None` statement at the end unless you have written your own `return` statement. You can see this by running `print(some_function())` where the function `some_function` does not use the `return` statement such as:
+Каждая функция содержит в неявной форме оператор `return None` в конце, если вы не указали своего собственного оператора `return`. В этом можно убедиться, запустив `print(some_function())`, где функция `some_function` – это какая-нибудь функция, не имеющая оператора `return` в явном виде. Например:
 
 ```python
 def some_function():
     pass
 ```
 
-The `pass` statement is used in Python to indicate an empty block of statements.
+Оператор `pass` используется в Python для обозначения пустого блока команд.
 
-> TIP: There is a built-in function called `max` that already implements the 'find maximum' functionality, so use this built-in function whenever possible.
+> ПРИМЕЧАНИЕ: Существует встроенная функция `max`, в которой уже реализован функционал 'поиск максимума', так что пользуйтесь этой встроенной функцией, где это возможно.
 
-## DocStrings
+## DocStrings - Строки документации
 
-Python has a nifty feature called *documentation strings*, usually referred to by its shorter name *docstrings*. DocStrings are an important tool that you should make use of since it helps to document the program better and makes it easier to understand. Amazingly, we can even get the docstring back from, say a function, when the program is actually running!
+Python имеет остроумную особенность, называемую *строками документации*, обычно обозначаемую сокращённо *docstrings*. Это очень важный инструмент, которым вы обязательно должны пользоваться, поскольку он помогает лучше документировать программу и облегчает её понимание. Поразительно, но строку документации можно получить, например, из функции, даже во время выполнения программы!
 
-Example (save as `function_docstring.py`):
+Пример (сохраните как `function_docstring.py`):
 
 <pre><code class="lang-python">{% include "./programs/function_docstring.py" %}</code></pre>
 
-Output:
+Вывод:
 
 <pre><code>{% include "./programs/function_docstring.txt" %}</code></pre>
 
-**How It Works**
+**Как это работает**
 
-A string on the first logical line of a function is the *docstring* for that function. Note that DocStrings also apply to [modules](./modules.md#modules) and [classes](./oop.md#oop) which we will learn about in the respective chapters.
+Строка в первой логической строке функции является *строкой документации* для этой функции. Обратите внимание на то, что строки документации применимы также к [модулям](./modules.md#modules) и [классам](./oop.md#oop), о которых мы узнаем в соответствующих главах.
 
-The convention followed for a docstring is a multi-line string where the first line starts with a capital letter and ends with a dot. Then the second line is blank followed by any detailed explanation starting from the third line. You are *strongly advised* to follow this convention for all your docstrings for all your non-trivial functions.
+Строки документации принято записывать в форме многострочной[^7] строки, где первая строка начинается с заглавной буквы и заканчивается точкой. Вторая строка оставляется пустой, а подробное описание начинается с третьей. Вам *настоятельно рекомендуется* следовать такому формату для всех строк документации всех ваших нетривиальных функций.
 
-We can access the docstring of the `print_max` function using the `__doc__` (notice the *double underscores*) attribute (name belonging to) of the function. Just remember that Python treats *everything* as an object and this includes functions. We'll learn more about objects in the chapter on [classes](./oop.md#oop).
+Доступ к строке документации функции `print_max` можно получить с помощью атрибута этой функции (т.е. имени, принадлежащего ей) `__doc__` (обратите внимание на *двойное подчёркивание*). Просто помните, что Python представляет *всё* в виде объектов, включая функции. Мы узнаем больше об объектах в главе о [классах](./oop.md#oop).
 
-If you have used `help()` in Python, then you have already seen the usage of docstrings! What it does is just fetch the `__doc__` attribute of that function and displays it in a neat manner for you. You can try it out on the function above - just include `help(print_max)` in your program. Remember to press the `q` key to exit `help`.
+Если вы пользовались функцией `help()` в Python, значит вы уже видели строки документации. Эта функция просто-напросто считывает атрибут `__doc__` соответствующей функции и аккуратно выводит его на экран. Вы можете проверить её на рассмотренной выше функции: просто включите `help(print_max)` в текст программы. Не забудьте нажать клавишу `q` для выхода из справки (`help`).
 
-Automated tools can retrieve the documentation from your program in this manner. Therefore, I *strongly recommend* that you use docstrings for any non-trivial function that you write. The `pydoc` command that comes with your Python distribution works similarly to `help()` using docstrings.
+Точно так же автоматические инструменты могут получать документацию из программы. Именно поэтому я *настоятельно рекомендую* вам использовать строки документации для любой нетривиальной функции, которую вы пишете. Команда `pydoc`, поставляемая вместе с пакетом Python, работает аналогично функции `help()`.
 
-## Summary
+## Резюме
 
-We have seen so many aspects of functions but note that we still haven't covered all aspects of them. However, we have already covered most of what you'll use regarding Python functions on an everyday basis.
+Мы рассмотрели достаточно много аспектов функций, но тем не менее, вы должны понимать, что это далеко не все их аспекты. В то же время, мы охватили большинство того, с чем вы будете сталкиваться при повседневном использовании функций в Python.
 
-Next, we will see how to use as well as create Python modules.
+Далее мы увидим, как использовать и создавать модули Python.
+
+## Примечания
+
+[^1] "immutable" в терминологии Python (прим. перев.)
+
+[^2] times – англ. "раз" (прим. перев.)
+
+[^3] say – англ. "сказать" (прим. перев.)
+
+[^4] VarArgs – от англ. "Variable number of Arguments" – "переменное число аргументов" (прим. перев.)
+
+[^5] return – англ. "возврат" (прим. перев.)
+
+[^6] DocString - от англ. "Documentation String" – “строка документации” (прим. перев.)
+
+[^7] т.е. строки, содержащей символы перевода строки. (прим. перев)

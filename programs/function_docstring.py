@@ -1,15 +1,15 @@
 def print_max(x, y):
-    '''Prints the maximum of two numbers.
+    '''Выводит максимальное из двух чисел.
 
-    The two values must be integers.'''
-    # convert to integers, if possible
+    Оба значения должны быть целыми числами.'''
+    # конвертируем в целые, если возможно
     x = int(x)
     y = int(y)
 
     if x > y:
-        print(x, 'is maximum')
+        print(x, 'наибольшее')
     else:
-        print(y, 'is maximum')
+        print(y, 'наибольшее')
 
 print_max(3, 5)
 print(print_max.__doc__)
