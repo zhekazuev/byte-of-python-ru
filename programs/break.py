@@ -1,6 +1,6 @@
 while True:
-    s = input('Enter something : ')
-    if s == 'quit':
+    s = input('Введите что-нибудь : ')
+    if s == 'выход':
         break
-    print('Length of the string is', len(s))
-print('Done')
+    print('Длина строки:', len(s))
+print('Завершение')

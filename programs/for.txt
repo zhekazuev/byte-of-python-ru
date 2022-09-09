@@ -3,4 +3,4 @@ $ python for.py
 2
 3
 4
-The for loop is over
+Цикл for закончен

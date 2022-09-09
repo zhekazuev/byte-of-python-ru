@@ -2,18 +2,18 @@ number = 23
 running = True
 
 while running:
-    guess = int(input('Enter an integer : '))
+    guess = int(input('Введите целое число : '))
 
     if guess == number:
-        print('Congratulations, you guessed it.')
-        # this causes the while loop to stop
-        running = False
+        print('Поздравляю, вы угадали.')
+        # это останавливает цикл while
+        running = False 
     elif guess < number:
-        print('No, it is a little higher than that.')
+        print('Нет, загаданное число немного больше этого.')
     else:
-        print('No, it is a little lower than that.')
+        print('Нет, загаданное число немного меньше этого.')
 else:
-    print('The while loop is over.')
-    # Do anything else you want to do here
+    print('Цикл while закончен.')
+    # Здесь можете выполнить всё что вам ещё нужно
 
-print('Done')
+print('Завершение.')

@@ -1,8 +1,8 @@
 $ python continue.py
-Enter something : a
-Too small
-Enter something : 12
-Too small
-Enter something : abc
-Input is of sufficient length
-Enter something : quit
+Введите что-нибудь : a
+Слишком мало
+Введите что-нибудь : 12
+Слишком мало
+Введите что-нибудь : абв
+Введённая строка достаточной длины
+Введите что-нибудь : выход

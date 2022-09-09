@@ -1,19 +1,19 @@
 number = 23
-guess = int(input('Enter an integer : '))
+guess = int(input('Введите целое число : '))
 
 if guess == number:
-    # New block starts here
-    print('Congratulations, you guessed it.')
-    print('(but you do not win any prizes!)')
-    # New block ends here
+    # Здесь начинается новый блок
+    print('Поздравляю, вы угадали,')
+    print('(хотя и не выиграли никакого приза!)')
+    # Здесь заканчивается новый блок
 elif guess < number:
-    # Another block
-    print('No, it is a little higher than that')
-    # You can do whatever you want in a block ...
+    # Ещё один блок
+    print('Нет, загаданное число немного больше этого.')
+    # Внутри блока вы можете выполнять всё, что угодно ...
 else:
-    print('No, it is a little lower than that')
-    # you must have guessed > number to reach here
+    print('Нет, загаданное число немного меньше этого.')
+    # чтобы попасть сюда, guess должно быть больше, чем number
 
-print('Done')
-# This last statement is always executed,
-# after the if statement is executed.
+print('Завершено')
+# Это последнее выражение выполняется всегда 
+# после выполнения оператора if

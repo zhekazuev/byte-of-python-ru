@@ -1,9 +1,9 @@
 while True:
-    s = input('Enter something : ')
-    if s == 'quit':
+    s = input('Введите что-нибудь : ')
+    if s == 'выход':
         break
     if len(s) < 3:
-        print('Too small')
+        print('Слишком мало')
         continue
-    print('Input is of sufficient length')
-    # Do other kinds of processing here...
+    print('Введённая строка достаточной длины')
+    # Разные другие действия здесь...

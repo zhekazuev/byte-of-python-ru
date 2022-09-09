@@ -1,9 +1,9 @@
 $ python while.py
-Enter an integer : 50
-No, it is a little lower than that.
-Enter an integer : 22
-No, it is a little higher than that.
-Enter an integer : 23
-Congratulations, you guessed it.
-The while loop is over.
-Done
+Введите целое число : 50
+Нет, загаданное число немного меньше этого.
+Введите целое число : 22
+Нет, загаданное число немного больше этого.
+Введите целое число : 23
+Поздравляю, вы угадали.
+Цикл while закончен.
+Завершение.

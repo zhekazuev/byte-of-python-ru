@@ -1,15 +1,15 @@
 $ python if.py
-Enter an integer : 50
-No, it is a little lower than that
-Done
+Введите целое число : 50
+Нет, загаданное число немного меньше этого.
+Завершено
 
 $ python if.py
-Enter an integer : 22
-No, it is a little higher than that
-Done
+Введите целое число : 22
+Нет, загаданное число немного больше этого.
+Завершено
 
 $ python if.py
-Enter an integer : 23
-Congratulations, you guessed it.
-(but you do not win any prizes!)
-Done
+Введите целое число : 23
+Поздравляю, вы угадали,
+(хотя и не выиграли никакого приза!)
+Завершено
