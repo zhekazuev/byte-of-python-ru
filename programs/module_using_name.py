@@ -1,4 +1,4 @@
 if __name__ == '__main__':
-    print('This program is being run by itself')
+    print('Эта программа запущена сама по себе.')
 else:
-    print('I am being imported from another module')
+    print('Меня импортировали в другой модуль.')

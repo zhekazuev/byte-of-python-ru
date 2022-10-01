@@ -1,12 +1,12 @@
-$ python module_using_sys.py we are arguments	# each arg is separated by white space
-The command line arguments are:
+$ python module_using_sys.py we are arguments # каждый аргумент отделяется пробелом
+Аргументы командной строки:
 module_using_sys.py
 we
 are
 arguments
 
 
-The PYTHONPATH is ['/tmp/py',
-# many entries here, not shown here
+Переменная PYTHONPATH содержит ['/tmp/py',
+# много записей, не показанных здесь
 '/Library/Python/2.7/site-packages',
 '/usr/local/lib/python2.7/site-packages']

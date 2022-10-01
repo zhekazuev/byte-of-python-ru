@@ -1,7 +1,7 @@
 $ python module_using_name.py
-This program is being run by itself
+Эта программа запущена сама по себе.
 
 $ python
 >>> import module_using_name
-I am being imported from another module
+Меня импортировали в другой модуль.
 >>>
