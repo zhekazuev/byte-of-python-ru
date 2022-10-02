@@ -1,10 +1,10 @@
 $ python ds_using_dict.py
-Swaroop's address is swaroop@swaroopch.com
+Адрес Swaroop'а: swaroop@swaroopch.com
 
-There are 3 contacts in the address-book
+В адресной книге 3 контакта
 
-Contact Swaroop at swaroop@swaroopch.com
-Contact Matsumoto at matz@ruby-lang.org
-Contact Larry at larry@wall.org
+Контакт Swaroop с адресом swaroop@swaroopch.com
+Контакт Matsumoto с адресом matz@ruby-lang.org
+Контакт Larry с адресом larry@wall.org
 
-Guido's address is guido@python.org
+Адрес Guido: guido@python.org

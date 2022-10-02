@@ -1,4 +1,4 @@
-# 'ab' is short for 'a'ddress'b'ook
+# 'ab' - сокращение от 'a'ddress'b'ook
 
 ab = {
     'Swaroop': 'swaroop@swaroopch.com',
@@ -7,18 +7,18 @@ ab = {
     'Spammer': 'spammer@hotmail.com'
 }
 
-print("Swaroop's address is", ab['Swaroop'])
+print("Адрес Swaroop'а:", ab['Swaroop'])
 
-# Deleting a key-value pair
+# Удаление пары ключ-значение
 del ab['Spammer']
 
-print('\nThere are {} contacts in the address-book\n'.format(len(ab)))
+print('\nВ адресной книге {} контакта\n'.format(len(ab)))
 
 for name, address in ab.items():
-    print('Contact {} at {}'.format(name, address))
+    print('Контакт {} с адресом {}'.format(name, address))
 
-# Adding a key-value pair
+# Добавление пары ключ-значение
 ab['Guido'] = 'guido@python.org'
 
 if 'Guido' in ab:
-    print("\nGuido's address is", ab['Guido'])
+    print("\nАдрес Guido:", ab['Guido'])

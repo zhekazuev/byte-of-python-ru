@@ -1,10 +1,10 @@
 $ python ds_using_list.py
-I have 4 items to purchase.
-These items are: apple mango carrot banana
-I also have to buy rice.
-My shopping list is now ['apple', 'mango', 'carrot', 'banana', 'rice']
-I will sort my list now
-Sorted shopping list is ['apple', 'banana', 'carrot', 'mango', 'rice']
-The first item I will buy is apple
-I bought the apple
-My shopping list is now ['banana', 'carrot', 'mango', 'rice']
+Я должен сделать 4 покупки.
+Покупки: яблоки манго морковь бананы
+Также нужно купить риса.
+Теперь мой список покупок таков: ['яблоки', 'манго', 'морковь', 'бананы', 'рис']
+Отсортирую-ка я свой список
+Отсортированный список покупок выглядит так: ['бананы', 'манго', 'морковь', 'рис', 'яблоки']
+Первое, что мне нужно купить, это бананы
+Я купил бананы
+Теперь мой список покупок: ['манго', 'морковь', 'рис', 'яблоки']

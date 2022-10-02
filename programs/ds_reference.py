@@ -1,23 +1,23 @@
-print('Simple Assignment')
-shoplist = ['apple', 'mango', 'carrot', 'banana']
-# mylist is just another name pointing to the same object!
+print('Простое присваивание')
+shoplist = ['яблоки', 'манго', 'морковь', 'бананы']
+# mylist - лишь ещё одно имя, указывающее на тот же объект!
 mylist = shoplist
 
-# I purchased the first item, so I remove it from the list
-del shoplist[0]
+# Я сделал первую покупку, поэтому удаляю её из списка
+del shoplist[0] 
 
-print('shoplist is', shoplist)
-print('mylist is', mylist)
-# Notice that both shoplist and mylist both print
-# the same list without the 'apple' confirming that
-# they point to the same object
+print('shoplist:', shoplist)
+print('mylist:', mylist)
+# Обратите внимание, что и shoplist, и mylist выводят один и тот же список
+# без пункта "яблоко", подтверждая тем самым, 
+# что они указывают на один объект.
 
-print('Copy by making a full slice')
-# Make a copy by doing a full slice
+print('Копирование при помощи полного среза')
+# создаём копию путём полного среза
 mylist = shoplist[:]
-# Remove first item
+# удаляем первый элемент
 del mylist[0]
 
-print('shoplist is', shoplist)
-print('mylist is', mylist)
-# Notice that now the two lists are different
+print('shoplist:', shoplist)
+print('mylist:', mylist)
+# Обратите внимание, что теперь списки разные

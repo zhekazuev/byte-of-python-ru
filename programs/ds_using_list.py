@@ -1,22 +1,22 @@
-# This is my shopping list
-shoplist = ['apple', 'mango', 'carrot', 'banana']
+# Это мой список покупок
+shoplist = ['яблоки', 'манго', 'морковь', 'бананы']
 
-print('I have', len(shoplist), 'items to purchase.')
+print('Я должен сделать', len(shoplist), 'покупки.')
 
-print('These items are:', end=' ')
+print('Покупки:', end=' ')
 for item in shoplist:
     print(item, end=' ')
 
-print('\nI also have to buy rice.')
-shoplist.append('rice')
-print('My shopping list is now', shoplist)
+print('\nТакже нужно купить риса.')
+shoplist.append('рис')
+print('Теперь мой список покупок таков:', shoplist)
 
-print('I will sort my list now')
+print('Отсортирую-ка я свой список')
 shoplist.sort()
-print('Sorted shopping list is', shoplist)
+print('Отсортированный список покупок выглядит так:', shoplist)
 
-print('The first item I will buy is', shoplist[0])
+print('Первое, что мне нужно купить, это', shoplist[0])
 olditem = shoplist[0]
 del shoplist[0]
-print('I bought the', olditem)
-print('My shopping list is now', shoplist)
+print('Я купил', olditem)
+print('Теперь мой список покупок:', shoplist)
