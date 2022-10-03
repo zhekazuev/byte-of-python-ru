@@ -1,22 +1,22 @@
 import pickle
 
-# The name of the file where we will store the object
+# имя файла, в котором мы сохраним объект
 shoplistfile = 'shoplist.data'
-# The list of things to buy
-shoplist = ['apple', 'mango', 'carrot']
+# список покупок
+shoplist = ['яблоки', 'манго', 'морковь']
 
-# Write to the file
+# Запись в файл
 f = open(shoplistfile, 'wb')
-# Dump the object to a file
+# помещаем объект в файл
 pickle.dump(shoplist, f)
 f.close()
 
-# Destroy the shoplist variable
+# уничтожаем переменную shoplist
 del shoplist
 
-# Read back from the storage
+# Считываем из хранилища
 f = open(shoplistfile, 'rb')
-# Load the object from the file
+# загружаем объект из файла
 storedlist = pickle.load(f)
 print(storedlist)
 f.close()

@@ -6,8 +6,8 @@ def is_palindrome(text):
     return text == reverse(text)
 
 
-something = input("Enter text: ")
-if is_palindrome(something):
-    print("Yes, it is a palindrome")
+something = input('Введите текст: ')
+if (is_palindrome(something)):
+    print("Да, это палиндром")
 else:
-    print("No, it is not a palindrome")
+    print("Нет, это не палиндром")

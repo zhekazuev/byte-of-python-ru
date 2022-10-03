@@ -1,11 +1,11 @@
 $ python3 io_input.py
-Enter text: sir
-No, it is not a palindrome
+Введите текст: сэр
+Нет, это не палиндром
 
 $ python3 io_input.py
-Enter text: madam
-Yes, it is a palindrome
+Введите текст: мадам
+Да, это палиндром
 
 $ python3 io_input.py
-Enter text: racecar
-Yes, it is a palindrome
+Введите текст: топот
+Да, это палиндром

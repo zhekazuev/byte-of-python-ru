@@ -1,4 +1,4 @@
-Programming is fun
-When the work is done
-if you wanna make your work also fun:
-    use Python!
+Программировать весело.
+Если работа скучна,
+Чтобы придать ей весёлый тон -
+    используй Python!

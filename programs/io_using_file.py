@@ -1,28 +1,29 @@
 poem = '''\
-Programming is fun
-When the work is done
-if you wanna make your work also fun:
-    use Python!
+Программировать весело.
+Если работа скучна,
+Чтобы придать ей весёлый тон -
+    используй Python!
 '''
 
-# Open for 'w'riting
+# открываем для записи (writing)
 f = open('poem.txt', 'w')
-# Write text to file
+# записываем текст в файл
 f.write(poem)
-# Close the file
+# закрываем файл
 f.close()
 
-# If no mode is specified,
-# 'r'ead mode is assumed by default
+# если не указан режим, по умолчанию подразумевается
+# режим чтения ('r'eading)
 f = open('poem.txt')
+
 while True:
     line = f.readline()
-    # Zero length indicates EOF
+    # Нулевая длина обозначает конец файла (EOF)
     if len(line) == 0:
         break
-    # The `line` already has a newline
-    # at the end of each line
-    # since it is reading from a file.
+    # Строка `line` уже имеет новую строку
+    # в конце каждой строки
+    # так как он читает из файла.
     print(line, end='')
-# close the file
+# закрываем файл
 f.close()

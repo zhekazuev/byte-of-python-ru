@@ -1,82 +1,82 @@
-# Input and Output {#io}
+# Ввод-вывод {#io}
 
-There will be situations where your program has to interact with the user. For example, you would want to take input from the user and then print some results back. We can achieve this using the `input()` function and `print` function respectively.
+Рано или поздно возникают ситуации, когда программа должна взаимодействовать с пользователем. Например, принять какие-нибудь данные от пользователя, а затем вывести результаты. Для этого применяются функции `input()` и `print()` соответственно.
 
-For output, we can also use the various methods of the `str` (string) class. For example, you can use the `rjust` method to get a string which is right justified to a specified width. See `help(str)` for more details.
+Для вывода можно также использовать различные методы класса `str` (строка). К примеру, при помощи метода `rjust` можно получить строку, выравненную по правому краю к указанной ширине. См. `help(str)` для более подробного описания.
 
-Another common type of input/output is dealing with files. The ability to create, read and write files is essential to many programs and we will explore this aspect in this chapter.
+Ещё одним распространённым типом ввода/вывода является работа с файлами. Возможность создавать, читать и записывать в файлы является ключевой для многих программ, поэтому в настоящей главе и мы рассмотрим этот аспект.
 
-## Input from user
+## Ввод от пользователя
 
-Save this program as `io_input.py`:
+Сохраните эту программу как `io_input.py`:
 
 <pre><code class="lang-python">{% include "./programs/io_input.py" %}</code></pre>
 
-Output:
+Вывод:
 
 <pre><code>{% include "./programs/io_input.txt" %}</code></pre>
 
-**How It Works**
+**Как это работает**
 
-We use the slicing feature to reverse the text. We've already seen how we can make [slices from sequences](./data_structures.md#sequence) using the `seq[a:b]` code starting from position `a` to position `b`. We can also provide a third argument that determines the _step_ by which the slicing is done. The default step is `1` because of which it returns a continuous part of the text. Giving a negative step, i.e., `-1` will return the text in reverse.
+Мы применяем операцию среза для переворачивания текста. Мы уже видели, как создаются [срезы из последовательностей](./data_structures.md#sequence) при помощи кода `seq[a:b]`, начиная с позиции `a` до позиции `b`. Но ведь мы также можем указать и третий аргумент, определяющий _шаг_, с которым производится срез. По умолчанию шаг равен `1`, поэтому и возвращается непрерывный фрагмент текста. Указание отрицательного шага, т.е. `-1` приведёт к выводу текста в обратном порядке.
 
-The `input()` function takes a string as argument and displays it to the user. Then it waits for the user to type something and press the return key. Once the user has entered and pressed the return key, the `input()` function will then return that text the user has entered.
+Функция `input()` принимает строку в качестве аргумента и показывает её пользователю. Затем она ждёт, чтобы пользователь набрал что-нибудь и нажал клавишу ввода. Как только пользователь это сделал, функция `input()` возвращает введённый пользователем текст.
 
-We take that text and reverse it. If the original text and reversed text are equal, then the text is a [palindrome](http://en.wiktionary.org/wiki/palindrome).
+Мы считываем этот текст и выстраиваем его в обратном порядке. Если перевёрнутый и исходный текст одинаковы, значит введённый текст является [палиндромом](http://en.wiktionary.org/wiki/palindrome).
 
-### Homework exercise
+### Домашнее задание 
 
-Checking whether a text is a palindrome should also ignore punctuation, spaces and case. For example, "Rise to vote, sir." is also a palindrome but our current program doesn't say it is. Can you improve the above program to recognize this palindrome?
+Проверка, является ли текст палиндромом должна также игнорировать знаки пунктуации, пробелы и регистр букв. Например, "А роза упала на лапу Азора" также является палиндромом, но наша текущая программа так не считает. Попробуйте улучшить её так, чтобы она распознала этот палиндром.
 
-If you need a hint, the idea is that...[^1]
+Если вам нужна подсказка, идея заключается в том, что...[^1]
 
-## Files
+## Файлы
 
-You can open and use files for reading or writing by creating an object of the `file` class and using its `read`, `readline` or `write` methods appropriately to read from or write to the file. The ability to read or write to the file depends on the mode you have specified for the file opening. Then finally, when you are finished with the file, you call the `close` method to tell Python that we are done using the file.
+Открывать и использовать файлы для чтения или записи можно путём создания объекта класса `file`, а читать/записывать в файл – при помощи его методов `read`, `readline` или `write` соответственно. Возможность читать или записывать в файл зависит от режима, указанного при открытии файла. По окончании работы с файлом, нужно вызвать метод `close`[^2], чтобы указать Python, что файл больше не используется.
 
-Example (save as `io_using_file.py`):
+Пример (сохраните как `io_using_file.py`):
 
 <pre><code class="lang-python">{% include "./programs/io_using_file.py" %}</code></pre>
 
-Output:
+Вывод:
 
 <pre><code>{% include "./programs/io_using_file.txt" %}</code></pre>
 
-**How It Works**
+**Как это работает**
 
-Note that we can create a new file object simply by using the `open` method.  We open (or create it if it doesn't already exist) this file by using the built-in `open` function and specifying the name of the file and the mode in which we want to open the file. The mode can be a read mode (`'r'`), write mode (`'w'`) or append mode (`'a'`). We can also specify whether we are reading, writing, or appending in text mode (`'t'`) or binary mode (`'b'`). There are actually many more modes available and `help(open)` will give you more details about them. By default, `open()` considers the file to be a 't'ext file and opens it in 'r'ead mode.
+Сперва мы открываем файл при помощи встроенной функции `open` с указанием имени файла и режима, в котором мы хотим его открыть. Режим может быть для чтения (`'r'`), записи (`'w'`) или добавления (`'a'`)[^3]. Можно также указать, в каком виде мы будем считывать, записывать или добавлять данные: в текстовом (`'t'`) или бинарном (`'b'`). На самом деле существует много других режимов, и `help(open)` даст вам их детальное описание. По умолчанию `open()` открывает файл как текст в режиме для чтения.
 
-In our example, we first open/create the file in write text mode and use the `write` method of the file object to write  our string variable `poem` to the file and then we finally `close` the file.
+В нашем примере мы сначала открываем файл в режиме записи текста и используем метод `write` файлового объекта для записи в файл, после чего закрываем файл при помощи `close`.
 
-Next, we open the same file again for reading. We don't need to specify a mode because 'read text file' is the default mode. We read in each line of the file using the `readline` method in a loop. This method returns a complete line including the newline character at the end of the line. When an _empty_ string is returned, it means that we have reached the end of the file and we 'break' out of the loop.
+Далее мы открываем тот же самый файл для чтения. В этом случае нет нужды указывать режим, так как режим “чтения текстового файла” применяется по умолчанию. Мы считываем файл построчно методом `readline` в цикле. Этот метод возвращает полную строку, включая символ перевода строки в конце. Когда же он возвращает _пустую_ строку, это означает, что мы достигли конца файла, и мы прерываем цикл при помощи `break`.
 
-In the end, we finally `close` the file.
+И, наконец, мы закрываем файл с помощью `close`.
 
-We can see from our `readline` output that this program has indeed written to and read from our new `poem.txt` file.
+Теперь проверяем содержимое файла `poem.txt`, чтобы убедиться, что программа действительно записала текст в него и считала из него.
 
 ## Pickle
 
-Python provides a standard module called `pickle` which you can use to store _any_ plain Python object in a file and then get it back later. This is called storing the object *persistently*.
+Python предоставляет стандартный модуль с именем `pickle`[^4], при помощи которого можно сохранять _любой_ объект Python в файле, а затем извлекать его обратно. Это называется *длительным* хранением объекта.
 
-Example (save as `io_pickle.py`):
+Пример (сохраните как `io_pickle.py`):
 
 <pre><code class="lang-python">{% include "./programs/io_pickle.py" %}</code></pre>
 
-Output:
+Вывод:
 
 <pre><code>{% include "./programs/io_pickle.txt" %}</code></pre>
 
-**How It Works**
+**Как это работает**
 
-To store an object in a file, we have to first `open` the file in __w__rite __b__inary mode and then call the `dump` function of the `pickle` module. This process is called _pickling_.
+Чтобы сохранить объект в файле, нам нужно сперва открыть файл с помощью `open` в режиме бинарной записи (`'wb'`), после чего вызвать функцию `dump` из модуля `pickle`. Этот процесс называется _консервацией_ ("pickling").
 
-Next, we retrieve the object using the `load` function of the `pickle` module which returns the object. This process is called _unpickling_.
+После этого мы извлекаем объект при помощи функции `load` из модуля `pickle`, которая возвращает объект. Этот процесс называется _расконсервацией_ ("unpickling").
 
-## Unicode
+## Юникод
 
-So far, when we have been writing and using strings, or reading and writing to a file, we have used simple English characters only.  Both English and non-English characters can be represented in Unicode (please see the articles at the end of this section for more info), and Python 3 by default stores string variables (think of all that text we wrote using single or double or triple quotes) in Unicode.  
+До сих пор, когда мы писали и использовали строки или читали и записывали в файл, мы использовали только простые английские символы. Как английские, так и неанглийские символы могут быть представлены в Юникоде (дополнительную информацию см. в статьях в конце этого раздела), и Python 3 по умолчанию хранит строковые переменные (вспомните весь тот текст, который мы написали, используя одинарные, двойные или тройные кавычки) в Юникоде.  
 
-> NOTE: If you are using Python 2, and we want to be able to read and write other non-English languages, we need to use the `unicode` type, and it all starts with the character `u`, e.g. `u"hello world"`
+> ПРИМЕЧАНИЕ: Если вы используете Python 2, и мы хотим иметь возможность читать и писать на других неанглийских языках, нам нужно использовать тип `unicode`, и все начинается с символа `u`, например, `u"hello world"`.
 
 ```python
 >>> "hello world"
@@ -89,28 +89,34 @@ So far, when we have been writing and using strings, or reading and writing to a
 <class 'str'>
 ```
 
-When data is sent over the Internet, we need to send it in bytes... something your computer easily understands.  The rules for translating Unicode (which is what Python uses when it stores a string) to bytes is called encoding.  A popular encoding to use is UTF-8.  We can read and write in UTF-8 by using a simple keyword argument in our `open` function.
+Когда данные передаются через Интернет, мы должны отправлять их в байтах... , что ваш компьютер легко понимает. Правила перевода Unicode (именно его использует Python при хранении строки) в байты называются кодировкой. Популярной кодировкой является UTF-8. Мы можем читать и писать в UTF-8, используя простой аргумент ключевого слова в нашей функции `open`.
 
 <pre><code class="lang-python">{% include "./programs/io_unicode.py" %}</code></pre>
 
-**How It Works**
+**Как это работает**
 
-We use `io.open` and then use the `encoding` argument in the first open statement to encode the message, and then again in the second open statement when decoding the message.  Note that we should only use encoding in the open statement when in text mode.
+Мы используем `io.open` и затем используем аргумент `encoding` в первом операторе open для кодирования сообщения, а затем снова во втором операторе open при декодировании сообщения. Обратите внимание, что мы должны использовать кодировку в операторе open только в текстовом режиме.
 
-Whenever we write a program that uses Unicode literals (by putting a `u` before the string) like we have used above, we have to make sure that Python itself is told that our program uses UTF-8, and we have to put  `# encoding=utf-8`  comment at the top of our program.  
+Всякий раз, когда мы пишем программу, использующую символы Unicode (помещая `u` перед строкой), как мы использовали выше, мы должны убедиться, что Python сам сообщает, что наша программа использует UTF-8, и мы должны поместить комментарий `# encoding=utf-8` в верхней части нашей программы.  
 
-You should learn more about this topic by reading:
+Вы должны узнать больше об этой теме, прочитав:
 
 - ["The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets"](http://www.joelonsoftware.com/articles/Unicode.html)
 - [Python Unicode Howto](http://docs.python.org/3/howto/unicode.html)
 - [Pragmatic Unicode talk by Nat Batchelder](http://nedbatchelder.com/text/unipain.html)
 
-## Summary
+## Резюме
 
-We have discussed various types of input/output, about file handling, about the pickle module and about Unicode.
+Мы обсудили разные типы ввода/вывода, а также работу с файлами и использование модуля pickle.
 
-Next, we will explore the concept of exceptions.
+Далее мы познакомимся с концепцией исключений.
 
 ---
 
-[^1]: Use a tuple (you can find a list of _all_ [punctuation marks here](http://grammar.ccc.commnet.edu/grammar/marks/marks.htm)) to hold all the forbidden characters, then use the membership test to determine whether a character should be removed or not, i.e. forbidden = (`!`, `?`, `.`, ...).
+[^1]: Используйте кортеж (вы можете найти список _всех_ [знаков препинания здесь](http://grammar.ccc.commnet.edu/grammar/marks/marks.htm)) для хранения всех запрещенных символов, затем используйте тест принадлежности, чтобы определить, должен ли символ быть удален или нет, т.е. forbidden = (`!`, `?`, `.`, ...).
+
+[^2] close – англ. "закрывать" (прим.перев)
+
+[^3] read, write и append соответственно (прим.перев.)
+
+[^4] pickle – англ. "мариновать", "солить" (прим.перев.)
