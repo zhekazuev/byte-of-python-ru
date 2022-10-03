@@ -12,6 +12,10 @@
         "pythonVersion": "3.6.0",
         "sourceUrl": "https://github.com/swaroopch/byte-of-python",
         "sourceRuUrl": "https://github.com/zhekazuev/byte-of-python-ru/",
-        "vimBookUrl": "https://vim.swaroopch.com/byte-of-vim.pdf"
+        "vimBookUrl": "https://vim.swaroopch.com/byte-of-vim.pdf",
+        "py_version": "3.8",
+        "py_release": "3.8.6",
+        "py_min_version": "3.6",
+        "py_min_release": "3.6.8"
     }
 }
