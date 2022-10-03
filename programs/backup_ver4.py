@@ -1,58 +1,58 @@
 import os
 import time
 
-# 1. The files and directories to be backed up are
-# specified in a list.
-# Example on Windows:
+# 1. Файлы и каталоги, которые необходимо скопировать, 
+# собираются в список.
+# Пример на Windows:
 # source = ['"C:\\My Documents"', 'C:\\Code']
-# Example on Mac OS X and Linux:
+# Пример на Mac OS X и Linux:
 source = ['/Users/swa/notes']
-# Notice we had to use double quotes inside the string
-# for names with spaces in it.
+# Заметьте, что для имён, содержащих пробелы, необходимо использовать
+# двойные кавычки внутри строки.
 
-# 2. The backup must be stored in a
-# main backup directory
-# Example on Windows:
+# 2. Резервные копии должны храниться 
+# в основном каталоге резерва.
+# Пример на Windows:
 # target_dir = 'E:\\Backup'
-# Example on Mac OS X and Linux:
+# Пример на Mac OS X и Linux:
 target_dir = '/Users/swa/backup'
-# Remember to change this to which folder you will be using
+# Подставьте тот путь, который вы будете использовать.
 
-# Create target directory if it is not present
+# Создайте целевой каталог, если он отсутствует
 if not os.path.exists(target_dir):
-    os.mkdir(target_dir)  # make directory
+    os.mkdir(target_dir)  # создать каталог
 
-# 3. The files are backed up into a zip file.
-# 4. The current day is the name of the subdirectory
-# in the main directory.
+# 3. Файлы помещаются в zip-архив.
+# 4. Текущий день - это имя подкаталога
+# в главном каталоге.
 today = target_dir + os.sep + time.strftime('%Y%m%d')
-# The current time is the name of the zip archive.
+# Текущее время - это имя zip-архива.
 now = time.strftime('%H%M%S')
 
-# Take a comment from the user to
-# create the name of the zip file
-comment = input('Enter a comment --> ')
-# Check if a comment was entered
+# Принять комментарий от пользователя, чтобы
+# создать имя zip-файла
+comment = input('Введите комментарий --> ')
+# Проверьте, был ли введен комментарий
 if len(comment) == 0:
     target = today + os.sep + now + '.zip'
 else:
     target = today + os.sep + now + '_' + \
         comment.replace(' ', '_') + '.zip'
 
-# Create the subdirectory if it isn't already there
+# Создайте целевой каталог, если он отсутствует
 if not os.path.exists(today):
     os.mkdir(today)
-    print('Successfully created directory', today)
+    print('Каталог успешно создан', today)
 
-# 5. We use the zip command to put the files in a zip archive
+# 5. Используем команду "zip" для помещения файлов в zip-архив
 zip_command = 'zip -r {0} {1}'.format(target,
                                       ' '.join(source))
 
-# Run the backup
-print('Zip command is:')
+# Запускаем создание резервной копии
+print('Zip команда:')
 print(zip_command)
-print('Running:')
+print('Выполняется:')
 if os.system(zip_command) == 0:
-    print('Successful backup to', target)
+    print('Резервная копия успешно создана в', target)
 else:
-    print('Backup FAILED')
+    print('Создание резервной копии НЕ УДАЛОСЬ')

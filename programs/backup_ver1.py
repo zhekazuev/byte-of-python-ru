@@ -1,42 +1,42 @@
 import os
 import time
 
-# 1. The files and directories to be backed up are
-# specified in a list.
-# Example on Windows:
+# 1. Файлы и каталоги, которые необходимо скопировать, 
+# собираются в список.
+# Пример на Windows:
 # source = ['"C:\\My Documents"']
-# Example on Mac OS X and Linux:
+# Пример на Mac OS X и Linux:
 source = ['/Users/swa/notes']
-# Notice we have to use double quotes inside a string
-# for names with spaces in it.  We could have also used
-# a raw string by writing [r'C:\My Documents'].
+# Заметьте, что для имён, содержащих пробелы, необходимо использовать
+# двойные кавычки внутри строки. Мы могли бы также использовать
+# необработанную строку, записав [r'C:\My Documents'].
 
-# 2. The backup must be stored in a
-# main backup directory
-# Example on Windows:
+# 2. Резервные копии должны храниться 
+# в основном каталоге резерва.
+# Пример на Windows:
 # target_dir = 'E:\\Backup'
-# Example on Mac OS X and Linux:
+# Пример на Mac OS X и Linux:
 target_dir = '/Users/swa/backup'
-# Remember to change this to which folder you will be using
+# Подставьте тот путь, который вы будете использовать.
 
-# 3. The files are backed up into a zip file.
-# 4. The name of the zip archive is the current date and time
+# 3. Файлы помещаются в zip-архив.
+# 4. Именем для zip-архива служит текущая дата и время.
 target = target_dir + os.sep + \
          time.strftime('%Y%m%d%H%M%S') + '.zip'
 
-# Create target directory if it is not present
+# Создайте целевой каталог, если он отсутствует
 if not os.path.exists(target_dir):
-    os.mkdir(target_dir)  # make directory
+    os.mkdir(target_dir)  # создать каталог
 
-# 5. We use the zip command to put the files in a zip archive
+# 5. Используем команду "zip" для помещения файлов в zip-архив
 zip_command = 'zip -r {0} {1}'.format(target,
                                       ' '.join(source))
 
-# Run the backup
-print('Zip command is:')
+# Запускаем создание резервной копии
+print('Zip команда:')
 print(zip_command)
-print('Running:')
+print('Выполняется:')
 if os.system(zip_command) == 0:
-    print('Successful backup to', target)
+    print('Резервная копия успешно создана в', target)
 else:
-    print('Backup FAILED')
+    print('Создание резервной копии НЕ УДАЛОСЬ')

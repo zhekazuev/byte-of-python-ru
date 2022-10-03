@@ -1,157 +1,175 @@
-# Problem Solving
+# Решение задач
 
-We have explored various parts of the Python language and now we will take a look at how all these parts fit together, by designing and writing a program which _does_ something useful. The idea is to learn how to write a Python script on your own.
+Мы рассмотрели различные части языка Python, и теперь посмотрим, как все эти части работают вместе, проектируя и составляя программу, которая _делает_ что-то полезное. Цель состоит в том, чтобы научиться писать сценарии на языке Python самостоятельно.
 
-## The Problem
+## Задача
 
-The problem we want to solve is:
+Перед нами стоит следующая задача:
 
-> I want a program which creates a backup of all my important files.
+> Составить программу, которая создаёт резервные копии всех наших важных файлов.
 
-Although, this is a simple problem, there is not enough information for us to get started with the solution. A little more *analysis* is required. For example, how do we specify _which_ files are to be backed up? _How_ are they stored? _Where_ are they stored?
+Хотя задача и проста, информации явно недостаточно, чтобы приступать к её решению. Необходим некоторый дополнительный *анализ*. Например, как мы выберем, _какие_ файлы необходимо копировать? _Как_ их хранить? _Где_ их хранить?
 
-After analyzing the problem properly, we *design* our program. We make a list of things about how our program should work. In this case, I have created the following list on how _I_ want it to work. If you do the design, you may not come up with the same kind of analysis since every person has their own way of doing things, so that is perfectly okay.
+После надлежащего анализа мы *проектируем* нашу программу. Мы создаём список, описывающий то, как наша программа должна работать. В данном случае я создал список того, как я себе представляю её работу. Когда вы проектируете программу, у вас может получиться другой результат, поскольку каждый человек представляет себе это по-своему, так что это в порядке вещей.
 
-- The files and directories to be backed up are specified in a list.
-- The backup must be stored in a main backup directory.
-- The files are backed up into a zip file.
-- The name of the zip archive is the current date and time.
-- We use the standard `zip` command available by default in any standard GNU/Linux or Unix distribution. Note that you can use any archiving command you want as long as it has a command line interface.
+- Файлы и каталоги, которые необходимо скопировать, собираются в список.
+- Резервные копии должны храниться в основном каталоге резерва.
+- Файлы помещаются в zip-архив.
+- Именем для zip-архива служит текущая дата и время.
+- Будем использовать стандартную команду `zip`, имеющуюся по умолчанию в любом стандартном дистрибутиве GNU/Linux. Обратите внимание, что для этого подойдёт любая команда архивации, если у неё есть интерфейс командной строки, чтобы ей можно было передавать аргументы из нашего сценария.
 
-> **For Windows users**
+> **Для пользователей Windows**
 > 
-> Windows users can [install](http://gnuwin32.sourceforge.net/downlinks/zip.php) the `zip` command from the [GnuWin32 project page](http://gnuwin32.sourceforge.net/packages/zip.htm) and add `C:\Program Files\GnuWin32\bin` to your system `PATH` environment variable, similar to [what we did for recognizing the python command itself](./installation.md#dos-prompt).
+> Пользователи Windows могут [установить](http://gnuwin32.sourceforge.net/downlinks/zip.php) её со [страницы проекта GnuWin32](http://gnuwin32.sourceforge.net/packages/zip.htm) и добавить `C:\Program Files\GnuWin32\bin` к системной переменной окружения `PATH`, аналогично тому, как [мы это делали для самой команды python](./installation.md#dos-prompt).
 
-## The Solution
+## Решение
 
-As the design of our program is now reasonably stable, we can write the code which is an *implementation* of our solution.
+Как только проект программы более-менее устоялся, можно приступать к написанию кода, который и будет являться *реализацией* нашего решения.
 
-Save as `backup_ver1.py`:
+Сохраните как `backup_ver1.py`:
 
 <pre><code class="lang-python">{% include "./programs/backup_ver1.py" %}</code></pre>
 
-Output:
+Вывод:
 
 <pre><code>{% include "./programs/backup_ver1.txt" %}</code></pre>
 
-Now, we are in the *testing* phase where we test that our program works properly. If it doesn't behave as expected, then we have to *debug* our program i.e. remove the *bugs* (errors) from the program.
+Теперь наступает стадия *тестирования*, когда мы проверяем, правильно ли работает наша программа. Если она работает не так, как ожидалось, нам придётся заняться её *отладкой* (дебагом)[^1], т.е. устранением *багов* (ошибок) в программе.
 
-If the above program does not work for you, copy the line printed after the `Zip command is` line in the output, paste it in the shell (on GNU/Linux and Mac OS X) / `cmd` (on Windows), see what the error is and try to fix it. Also check the zip command manual on what could be wrong. If this command succeeds, then the problem might be in the Python program itself, so check if it exactly matches the program written above.
+Если приведенная выше программа не работает, скопируйте строку, напечатанную после строки `Zip команда:` в выводе, вставьте ее в командную строку (в GNU/Linux и Mac OS X) / `cmd` (в Windows), посмотрите, в чем заключается ошибка, и попытайтесь ее исправить. Если она не срабатывает, проверьте справку по команде zip, чтобы выяснить, в чём может быть проблема. Если команда выполнится, проверьте, совпадает ли ваша программа на Python в точности с программой, приведённой выше.
 
-**How It Works**
+**Как это работает**
 
-You will notice how we have converted our *design* into *code* in a step-by-step manner.
+Вы заметили, как мы превратили наш *проект* в *код* шаг за шагом.
 
-We make use of the `os` and `time` modules by first importing them. Then, we specify the files and directories to be backed up in the `source` list. The target directory is where we store all the backup files and this is specified in the `target_dir` variable. The name of the zip archive that we are going to create is the current date and time which we generate using the `time.strftime()` function. It will also have the `.zip` extension and will be stored in the `target_dir` directory.
+Мы использовали модули `os` и `time`, предварительно импортировав их. Далее мы указали файлы и каталоги для резервного копирования в списке `source`[^2]. Каталог назначения – это каталог, в котором мы сохраняем все резервные копии, и он указывается в переменной `target_dir`. Именем zip-архива, который мы создаём, будет текущая дата и время, которые генерируются при помощи функции `time.strftime()`. У него будет расширение `.zip`, и храниться он будет в каталоге `target_dir`.
 
-Notice the use of the `os.sep` variable - this gives the directory separator according to your operating system, i.e. it will be `'/'` in GNU/Linux, Unix, macOS, and will be `'\\'` in Windows. Using `os.sep` instead of these characters directly will make our program portable and work across all of these systems.
+Обратите внимание на употребление переменной `os.sep` – она содержит разделитель пути для конкретной операционной системы, т.е. он будет `'/'` в GNU/Linux и Unix[^3], `'\\'` в Windows. Использование `os.sep` вместо этих символов напрямую делает программу переносимой, и она сможет работать на всех этих операционных системах.
 
-The `time.strftime()` function takes a specification such as the one we have used in the above program. The `%Y` specification will be replaced by the year with the century. The `%m` specification will be replaced by the month as a decimal number between `01` and `12` and so on. The complete list of such specifications can be found in the [Python Reference Manual](http://docs.python.org/3/library/time.html#time.strftime).
+Функция `time.strftime()` принимает в качестве аргумента формат вывода времени, например, такой, как мы указали в программе выше. Символ формата `%Y` будет замещён годом и столетием. Символ `%m` будет замещён месяцем в форме числа от `01` до `12`, и так далее. Полный список таких символов формата можно найти в [справочнике по Python](http://docs.python.org/3/library/time.html#time.strftime).
 
-We create the name of the target zip file using the addition operator which _concatenates_ the strings i.e. it joins the two strings together and returns a new one. Then, we create a string `zip_command` which contains the command that we are going to execute. You can check if this command works by running it in the shell (GNU/Linux terminal or DOS prompt).
+Имя конечного zip-файла мы создаём при помощи оператора, который _соединяет_ строки, т.е. объединяет две строки и возвращает новую. После этого мы создаём строку `zip_command`, которая содержит команду, которую мы намерены выполнить. Проверить, работает ли эта команда, можно запустив её отдельно в командной оболочке (терминал в GNU/Linux или командная строка DOS).
 
-The `zip` command that we are using has some options available, and one of these options is `-r`.  The `-r` option specifies that the zip command should work **r**ecursively for directories, i.e. it should include all the subdirectories and files. Options are followed by the name of the zip archive to create, followed by the list of files and directories to backup. We convert the `source` list into a string using the `join` method of strings which we have already seen how to use.
+Команда `zip`, которую мы используем, имеет некоторые параметры. Параметр `-r` обозначает, что команда архивации должна работать **р**екурсивно[^4] для каталогов, т.е. должна включать все подкаталоги и файлы. За параметрами следует имя создаваемого zip-архива, за которым указывается список файлов и каталогов для резервного копирования. Мы превращаем список `source` в строку, используя уже знакомый нам метод `join`.
 
-Then, we finally *run* the command using the `os.system` function which runs the command as if it was run from the *system* i.e. in the shell - it returns `0` if the command was successfully, else it returns an error number.
+Затем мы, наконец, *выполняем* команду при помощи функции `os.system`, которая запускает команду так, как будто она была запущена из *системы*, т.е. из командной оболочки. Она возвращает `0`, если команда выполнена успешно, в противном случае она возвращает код ошибки.
 
-Depending on the outcome of the command, we print the appropriate message that the backup has failed or succeeded.
+В зависимости от вывода команды, мы печатаем соответствующее сообщение о том, успешным было создание резервных копий или нет.
 
-That's it, we have created a script to take a backup of our important files!
+Вот и всё, мы создали сценарий для сохранения резервных копий наших важных файлов!
 
-> **Note to Windows Users**
-> 
-> Instead of double backslash escape sequences, you can also use raw strings. For example, use `'C:\\Documents'` or `r'C:\Documents'`. However, do *not* use `'C:\Documents'` since you end up using an unknown escape sequence `\D`.
+> **Замечание для пользователей Windows**
+>
+> Вместо управляющей последовательности для обратной наклонной черты могут использоваться "сырые"[^5] строки. Например, можно писать `C:\\Documents` или `r'C:\Documents'`. Однако, не используйте `'C:\Documents'`, так как в этом случае окажется, что вы пытаетесь применить неизвестную управляющую последовательность `\D`.
 
-Now that we have a working backup script, we can use it whenever we want to take a backup of the files. This is called the *operation* phase or the *deployment* phase of the software.
+Теперь, когда у нас есть рабочий сценарий резервного копирования, мы можем использовать его для создания копий наших файлов. Это называется *операционной* фазой или *развёртыванием* программы.
 
-The above program works properly, but (usually) first programs do not work exactly as you expect. For example, there might be problems if you have not designed the program properly or if you have made a mistake when typing the code, etc. Appropriately, you will have to go back to the design phase or you will have to debug your program.
+Программа, приведённая выше, работает корректно, но (обычно) поначалу программы не работают так, как вы того ожидаете. Проблемы могут возникать вследствие неправильного проектирования программы, допущения ошибки при наборе программного кода и т.д. В таких случаях приходится возвращаться к стадии проектирования или отладки программы.
 
-## Second Version
+## Вторая версия
 
-The first version of our script works. However, we can make some refinements to it so that it can work better on a daily basis. This is called the *maintenance* phase of the software.
+Первая версия нашего сценария работает. Тем не менее, его можно улучшить так, чтобы было удобнее пользоваться в повседневной работе. Это называется стадией *поддержки* программы.
 
-One of the refinements I felt was useful is a better file-naming mechanism - using the _time_ as the name of the file within a directory with the current _date_ as a directory within the main backup directory. The first advantage is that your backups are stored in a hierarchical manner and therefore it is much easier to manage. The second advantage is that the filenames are much shorter. The third advantage is that separate directories will help you check if you have made a backup for each day since the directory would be created only if you have made a backup for that day.
+Одно из улучшений, показавшееся мне полезным, – это лучший механизм именования файлов: использование _времени_ в качестве имени файла, сохраняющегося в каталог с текущей _датой_ в качестве имени, который в свою очередь, расположен в главном каталоге для хранения резервных копий. Первое достоинство этого состоит в том, что копии хранятся в иерархической структуре, которой легче управлять. Второе достоинство – в том, что имена файлов намного короче. Третье достоинство состоит в том, что по именам каталогов можно легко определить, в какие дни создавались резервные копии, так как каталог создаётся только в случае резервного копирования данных в этот день.
 
-Save as `backup_ver2.py`:
+Сохраните как `backup_ver2.py`:
 
 <pre><code class="lang-python">{% include "./programs/backup_ver2.py" %}</code></pre>
 
-Output:
+Вывод:
 
 <pre><code>{% include "./programs/backup_ver2.txt" %}</code></pre>
 
-**How It Works**
+**Как это работает**
 
-Most of the program remains the same. The changes are that we check if there is a directory with the current day as its name inside the main backup directory using the `os.path.exists` function. If it doesn't exist, we create it using the `os.mkdir` function.
+Большая часть программы осталась прежней. Разница в том, что теперь мы проверяем, существует ли каталог с именем, соответствующем текущей дате, внутри главного каталога для хранения резервных копий. Для этого мы используем функцию `os.path.exists`. Если он не существует, мы создаём его функцией `os.mkdir`.
 
-## Third Version
+## Третья версия
 
-The second version works fine when I do many backups, but when there are lots of backups, I am finding it hard to differentiate what the backups were for! For example, I might have made some major changes to a program or presentation, then I want to associate what those changes are with the name of the zip archive. This can be easily achieved by attaching a user-supplied comment to the name of the zip archive.
+Вторая версия уже удобнее для работы с большим количеством резервных копий. С другой стороны, когда их много, становится трудно отличить, какая копия для чего. Например, мы могли внести значительные изменения в какую-то программу или презентацию, и теперь хотим указать суть этих изменений в имени zip-архива. Этого легко можно достичь добавлением пользовательского комментария к имени zip-архива.
 
-WARNING: The following program does not work, so do not be alarmed, please follow along because there's a lesson in here.
+ПРИМЕЧАНИЕ: Следующая программа не работает, так что не переживайте, просто проследуйте по ней, так как в ней содержится урок.
 
-Save as `backup_ver3.py`:
+Сохраните как `backup_ver3.py`:
 
 <pre><code class="lang-python">{% include "./programs/backup_ver3.py" %}</code></pre>
 
-Output:
+Вывод:
 
 <pre><code>{% include "./programs/backup_ver3.txt" %}</code></pre>
 
-**How This (does not) Work**
+**Как это (не) работает**
 
-*This program does not work!* Python says there is a syntax error which means that the script does not satisfy the structure that Python expects to see. When we observe the error given by Python, it also tells us the place where it detected the error as well. So we start *debugging* our program from that line.
+*Эта программа не работает!* Python сообщает об обнаружении ошибки синтаксиса, что означает, что сценарий не удовлетворяет структуре, которую ожидает увидеть Python. Когда Python выдаёт сообщение об ошибке, он также указывает нам на место ошибки. Так что мы начинаем *отладку* программы с этой строки.
 
-On careful observation, we see that the single logical line has been split into two physical lines but we have not specified that these two physical lines belong together. Basically, Python has found the addition operator (`+`) without any operand in that logical line and hence it doesn't know how to continue. Remember that we can specify that the logical line continues in the next physical line by the use of a backslash at the end of the physical line. So, we make this correction to our program. This correction of the program when we find errors is called *bug fixing*.
+При внимательном рассмотрении, мы видим, что одна логическая строка была разбита на две физические строки, но мы не указали, что эти две физические строки являются частью одной. На деле же Python просто обнаружил оператор сложения (`+`) без соответствующего операнда в той же логической строке, а поэтому не знает, как продолжать. Помните, что мы можем указать, что логическая строка продолжается на следующей физической при помощи обратной наклонной черты в конце физической строки. Внесём это исправление в нашу программу. Коррекция программы при обнаружении ошибок и называется *отладкой*[^6].
 
-## Fourth Version
+## Четвёртая версия
 
-Save as `backup_ver4.py`:
+Сохраните как `backup_ver4.py`:
 
 <pre><code class="lang-python">{% include "./programs/backup_ver4.py" %}</code></pre>
 
-Output:
+Вывод:
 
 <pre><code>{% include "./programs/backup_ver4.txt" %}</code></pre>
 
-**How It Works**
+**Как это работает**
 
-This program now works! Let us go through the actual enhancements that we had made in version 3. We take in the user's comments using the `input` function and then check if the user actually entered something by finding out the length of the input using the `len` function. If the user has just pressed `enter` without entering anything (maybe it was just a routine backup or no special changes were made), then we proceed as we have done before.
+Теперь эта программа работает! Давайте просмотрим все улучшения, сделанные нами для версии 3. Мы запрашиваем пользовательский комментарий при помощи функции `input`, а затем проверяем, ввёл ли пользователь что-либо, определяя длину введённой строки функцией `len`. Если пользователь просто нажал `enter`, не вводя никакого текста (может быть, это было регулярное создание резервной копии, или никаких особых изменений внесено не было), мы продолжаем так же, как делали до сих пор.
 
-However, if a comment was supplied, then this is attached to the name of the zip archive just before the `.zip` extension.  Notice that we are replacing spaces in the comment with underscores - this is because managing filenames without spaces is much easier.
+Если же комментарий был введён, он добавляется к имени zip-архива перед расширением `.zip`. Обратите внимание, что мы заменяем пробелы в комментарии подчёркиваниями: управлять файлами без пробелов в именах намного легче.
 
-## More Refinements
+## Дополнительные усовершенствования
 
-The fourth version is a satisfactorily working script for most users, but there is always room for improvement. For example, you can include a _verbosity_ level for the zip command by specifying a `-v` option to make your program become more talkative or a `-q` option to make it _quiet_.
+Четвёртая версия – вполне удовлетворительный рабочий сценарий для большинства пользователей, однако нет пределов совершенства. Например, в программу можно добавить уровень _подробности_[^7] вывода, чтобы при указании параметра `-v` она становилась более "разговорчивой" или параметр `-q` чтобы сделать это _тихо_[^8].
 
-Another possible enhancement would be to allow extra files and directories to be passed to the script at the command line. We can get these names from the `sys.argv` list and we can add them to our `source` list using the `extend` method provided by the `list` class.
+Ещё одним возможным улучшением была бы возможность передавать сценарию другие файлы и каталоги прямо в командной строке. Эти имена можно получать из списка `sys.argv` и добавлять к нашему списку `source` при помощи метода `extend` класса `list`.
 
-The most important refinement would be to not use the `os.system` way of creating archives and instead using the [zipfile](http://docs.python.org/3/library/zipfile.html) or [tarfile](http://docs.python.org/3/library/tarfile.html) built-in modules to create these archives. They are part of the standard library and available already for you to use without external dependencies on the zip program to be available on your computer.
+Наиболее важным усовершенствованием было бы прекращение использования `os.system` для создания архивов, а применение вместо него встроенных модулей [zipfile](http://docs.python.org/3/library/zipfile.html) или [tarfile](http://docs.python.org/3/library/tarfile.html). Они являются частью стандартной библиотеки, поэтому всегда доступны для использования без зависимости от внешней программы zip на компьютере.
 
-However, I have been using the `os.system` way of creating a backup in the above examples purely for pedagogical purposes, so that the example is simple enough to be understood by everybody but real enough to be useful.
+В приведённых примерах мы использовали способ с `os.system` для создания резервных копий исключительно в педагогических целях, чтобы пример был достаточно прост для понимания любым читателем, но достаточно реален для того, чтобы делать что-то полезное.
 
-Can you try writing the fifth version that uses the [zipfile](http://docs.python.org/3/library/zipfile.html) module instead of the `os.system` call?
+Попробуйте написать пятую версию с использованием модуля [zipfile](http://docs.python.org/3/library/zipfile.html) вместо вызова `os.system`.
 
-## The Software Development Process
+## Процесс разработки программного обеспечения
 
-We have now gone through the various *phases* in the process of writing a software. These phases can be summarised as follows:
+В процессе создания программы мы прошли через несколько *стадий*. Эти стадии можно свести примерно в такой список:
 
-1. What (Analysis)
-2. How (Design)
-3. Do It (Implementation)
-4. Test (Testing and Debugging)
-5. Use (Operation or Deployment)
-6. Maintain (Refinement)
+1. Что (Анализ)
+2. Как (Проектирование)
+3. Создание (Реализация)
+4. Тестирование (Тестирование и Отладка)
+5. Использование (Развёртывание и Оперирование)
+6. Поддержка (Усовершенствование)
 
-A recommended way of writing programs is the procedure we have followed in creating the backup script: Do the analysis and design. Start implementing with a simple version. Test and debug it. Use it to ensure that it works as expected. Now, add any features that you want and continue to repeat the Do It-Test-Use cycle as many times as required.
+Процедура, которую мы прошли при написании сценария создания резервных копий рекомендуется и для других программ: Проведите анализ и проектирование. Начните реализацию с простейшей версии. Протестируйте и отладьте её. Попользуйтесь ею, чтобы убедиться, что она работает, как ожидалось. После этого добавляйте любые необходимые функции, повторяя цикл "Создание-Тестирование-Использование" столько раз, сколько потребуется.
 
-Remember:
+Помните:
 
-> Software is grown, not built.
+> Программы выращиваются, а не строятся.
 > -- [Bill de hÓra](http://97things.oreilly.com/wiki/index.php/Great_software_is_not_built,_it_is_grown)
 
-## Summary
+## Резюме
 
-We have seen how to create our own Python programs/scripts and the various stages involved in writing such programs. You may find it useful to create your own program just like we did in this chapter so that you become comfortable with Python as well as problem-solving.
+Мы увидели, как создавать свои собственные программы/сценарии на Python, а также различные стадии написания программ. На данном этапе вам будет полезно создать собственную программу по такому рецепту, как мы это делали в настоящей главе, чтобы лучше привыкнуть к Python, равно как и к решению задач.
 
-Next, we will discuss object-oriented programming.
+Далее мы обсудим объектно-ориентированное программирование.
+
+## Примечания
+
+[1]	debug – применительно к компьютерным программам обозначает отладку (обнаружение и устранение ошибок, которые при этом принято называть "bug", т.е. "жук"). По всей видимости, это берёт своё начало с процедуры изгнания насекомых из схем больших ЭВМ, хотя само понятие "bug" в смысле маленькой неисправности встречается и в более ранней литературе, например, в записях Томаса Эдисона 1878 года. (прим. перев.)
+
+[2]	source – англ. "источник" (прим.перев.)
+
+[3]	Под словом "Unix" здесь подразумеваются все операционные системы, построенные по принципам ОС Unix, а не только она сама по себе. Примерами таких операционных систем являются все дистрибутивы GNU/Linux, семейство ОС *BSD, Android, Solaris и т.д. (прим.перев.)
+
+[^4] recursive – англ. "рекурсивно" (прим.перев.)
+
+[^5] raw – англ. "сырой", "необработанный" (прим.перев)
+
+[^6] bug fixing – устранение "багов", исправление ошибок (прим.перев)
+
+[^7] verbosity – англ. "многословность". Применительно к компьютерным программам обозначает степень подробности выводимых программой сообщений, т.е. степень "разговорчивости" программы. Отсюда и название этого параметра (прим.перев)
+
+[^4] quiet – англ. "тихо" (прим.перев.)
