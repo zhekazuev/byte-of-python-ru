@@ -1,7 +1,7 @@
 $ python stdlib_logging.py
-Logging to /Users/swa/test.log
+Сохраняем лог в /Users/swa/test.log
 
 $ cat /Users/swa/test.log
-2014-03-29 09:27:36,660 : DEBUG : Start of the program
-2014-03-29 09:27:36,660 : INFO : Doing something
-2014-03-29 09:27:36,660 : WARNING : Dying now
+2012-10-26 16:52:41,457 : DEBUG : Начало программы
+2012-10-26 16:52:41,474 : INFO : Какие-то действия
+2012-10-26 16:52:41,475 : WARNING : Программа умирает

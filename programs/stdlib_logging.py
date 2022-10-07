@@ -10,7 +10,7 @@ else:
     logging_file = os.path.join(os.getenv('HOME'),
                                 'test.log')
 
-print("Logging to", logging_file)
+print("Сохраняем лог в", logging_file)
 
 logging.basicConfig(
     level=logging.DEBUG,
@@ -19,6 +19,6 @@ logging.basicConfig(
     filemode='w',
 )
 
-logging.debug("Start of the program")
-logging.info("Doing something")
-logging.warning("Dying now")
+logging.debug("Начало программы")
+logging.info("Какие-то действия")
+logging.warning("Программа умирает")

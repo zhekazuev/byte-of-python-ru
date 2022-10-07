@@ -1,18 +1,18 @@
-# Standard Library {#stdlib}
+# Стандартная библиотека {#stdlib}
 
-The Python Standard Library contains a huge number of useful modules and is part of every standard Python installation. It is important to become familiar with the Python Standard Library since many problems can be solved quickly if you are familiar with the range of things that these libraries can do.
+Стандартная библиотека Python содержит огромное количество полезных модулей и является частью стандартного комплекта поставки Python. Ознакомиться со стандартной библиотекой Python очень важно, так как множество задач можно решить очень быстро, если вы знакомы с возможностями этих библиотек.
 
-We will explore some of the commonly used modules in this library. You can find complete details for all of the modules in the Python Standard Library in the ['Library Reference' section](http://docs.python.org/3/library/) of the documentation that comes with your Python installation.
+Рассмотрим некоторые наиболее часто используемые модули этой библиотеки. Детальное описание всех модулей стандартной библиотеки Python можно найти в [разделе "Library Reference"](http://docs.python.org/3/library/) документации, входящей в комплект поставки Python.
 
-Let us explore a few useful modules.
+Давайте изучим несколько полезных модулей.
 
-> CAUTION: If you find the topics in this chapter too advanced, you may skip this chapter. However, I highly recommend coming back to this chapter when you are more comfortable with programming using Python.
+> ПРИМЕЧАНИЕ: Если темы в настоящей главе покажутся вам слишком сложными, вы можете её пропустить. Однако я настоятельно рекомендую вернуться к этой главе, когда вы будете чувствовать себя более уверенно с Python.
 
-## `sys` module {#sys}
+## Модуль `sys` {#sys}
 
-The `sys` module contains system-specific functionality. We have already seen that the `sys.argv` list contains the command-line arguments.
+Модуль `sys` содержит функциональность, характерную для системы. Так мы видели, что список `sys.argv` содержит аргументы командной строки.
 
-Suppose we want to check the version of the Python software being used, the `sys` module gives us that information.
+Предположим, нам нужно узнать версию используемой команды Python с тем, чтобы, к примеру, убедиться в том, что мы используем как минимум версию 3. Модуль `sys` предоставляет такую возможность.
 
 <!-- The output should match pythonVersion variable in book.json -->
 ```python
@@ -23,45 +23,48 @@ sys.version_info(major=3, minor=6, micro=0, releaselevel='final', serial=0)
 True
 ```
 
-**How It Works**
+**Как это работает**
 
-The `sys` module has a `version_info` tuple that gives us the version information. The first entry is the major version. We can pull out this information to use it.
+Модуль `sys` содержит кортеж `version_info`, который хранит информацию о версии. Первый элемент этого кортежа обозначает старшую версию. Мы можем извлечь эту информацию, чтобы использовать ее.
 
-## `logging` module {#logging}
+## Модуль `logging` {#logging}
 
-What if you wanted to have some debugging messages or important messages to be stored somewhere so that you can check whether your program has been running as you would expect it? How do you "store somewhere" these messages? This can be achieved using the `logging` module.
+Представьте ситуацию, когда необходимо сохранить некоторые отладочные или другие важные сообщения где-нибудь, чтобы иметь возможность позже проверить, отработала ли программа, как ожидалось. Как мы "сохраним где-нибудь" эти сообщения? Сделать это можно при помощи модуля `logging`.
 
-Save as `stdlib_logging.py`:
+Сохраните как `stdlib_logging.py`:
 
 <pre><code class="lang-python">{% include "./programs/stdlib_logging.py" %}</code></pre>
 
-Output:
+Вывод:
 
 <pre><code>{% include "./programs/stdlib_logging.txt" %}</code></pre>
 
-The `cat` command is used in the command line to read the 'test.log' file.  If the `cat` command is not available, you can open the `test.log` file in a text editor instead.
+Команда `cat` используется в командной строке для чтения файла 'test.log'. Если команда `cat` недоступна, вы можете открыть файл `test.log` в текстовом редакторе.
 
-**How It Works**
+**Как это работает**
 
-We use three modules from the standard library - the `os` module for interacting with the operating system, the `platform` module for information about the platform i.e. the operating system and the `logging` module to *log* information.
+Мы использовали три модуля из стандартной библиотеки: модуль `os` для взаимодействия с операционной системой, модуль `platform` для получения информации о платформе (т.е. операционной системе) и модуль `logging` для сохранения *лога*[^1].
 
-First, we check which operating system we are using by checking the string returned by `platform.platform()` (for more information, see `import platform; help(platform)`). If it is Windows, we figure out the home drive, the home folder and the filename where we want to store the information. Putting these three parts together, we get the full location of the file. For other platforms, we need to know just the home folder of the user and we get the full location of the file.
+Прежде всего, при помощи строки, возвращаемой функцией `platform.platform()` мы проверяем, какая операционная система используется (для более подробной информации см. `import platform; help(platform)`). Если это Windows, то мы определяем диск, содержащий домашний каталог, путь к домашнему каталогу на нём и имя файла, в котором хотим сохранить информацию. Сложив все эти три части, мы получаем полный путь к файлу. Для других платформ нам нужно знать только путь к домашнему каталогу пользователя, и мы получим полный путь к файлу.
 
-We use the `os.path.join()` function to put these three parts of the location together. The reason to use a special function rather than just adding the strings together is because this function will ensure the full location matches the format expected by the operating system.  Note: the `join()` method we use here that's part of the `os` module is different from the string method `join()` that we've used elsewhere in this book.
+При помощи функции `os.path.join()` мы объединяем три части пути к файлу вместе. Мы используем эту функцию вместо простого объединения строк для того, чтобы гарантировать, что полный путь к файлу записан в формате, ожидаемом операционной системой. Примечание: метод `join()`, который мы используем здесь и который является частью модуля `os`, отличается от строкового метода `join()`, который мы использовали в других частях этой книги.
 
-We configure the `logging` module to write all the messages in a particular format to the file we have specified.
+Далее мы конфигурируем модуль `logging` таким образом, чтобы он записывал все сообщения в определённом формате в указанный файл.
 
-Finally, we can put messages that are either meant for debugging, information, warning or even critical messages. Once the program has run, we can check this file and we will know what happened in the program, even though no information was displayed to the user running the program.
+Наконец, мы можем выводить сообщения, предназначенные для отладки, информирования, предупреждения и даже критические сообщения. После выполнения программы можно просмотреть этот файл и узнать, что происходило в программе, хотя пользователю, запустившему программу, ничего не было показано.
 
-## Module of the Week Series {#motw}
+## Серия "Модуль недели" {#motw}
 
-There is much more to be explored in the standard library such as [debugging](http://docs.python.org/3/library/pdb.html),
-[handling command line options](http://docs.python.org/3/library/argparse.html), [regular expressions](http://docs.python.org/3/library/re.html) and so on.
+В стандартной библиотеке можно найти ещё много полезного. Например, [отладка](http://docs.python.org/3/library/pdb.html), [обработка параметров командной строки](http://docs.python.org/3/library/argparse.html), [регулярные выражения](http://docs.python.org/3/library/re.html) и так далее.
 
-The best way to further explore the standard library is to read Doug Hellmann's excellent [Python Module of the Week](http://pymotw.com/2/contents.html) series (also available as a [book](http://amzn.com/0321767349)) and reading the [Python documentation](http://docs.python.org/3/).
+Лучший способ дальнейшего изучения стандартной библиотеки – читать замечательную серию Дуга Хелмана [Модуль недели](http://pymotw.com/2/contents.html) (также доступно в виде [книги](http://amzn.com/0321767349)) или [официальную документацию Python](http://docs.python.org/3/).
 
-## Summary
+## Резюме
 
-We have explored some of the functionality of many modules in the Python Standard Library. It is highly recommended to browse through the [Python Standard Library documentation](http://docs.python.org/3/library/) to get an idea of all the modules that are available.
+Мы изучили лишь некоторые возможности некоторых модулей стандартной библиотеки Python. Я настоятельно рекомендую просмотреть документацию по [стандартной библиотеке Python](http://docs.python.org/3/library/), чтобы увидеть все доступные модули.
 
-Next, we will cover various aspects of Python that will make our tour of Python more _complete_.
+Далее мы обратимся к некоторым аспектам, которые сделают вашу экскурсию по Python более _завершённой_.
+
+## Примечания
+
+[^1] log – англ. "журнал", "вести журнал" (прим.перев.)
