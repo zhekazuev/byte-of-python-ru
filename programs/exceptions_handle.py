@@ -1,8 +1,8 @@
 try:
-    text = input('Enter something --> ')
+    text = input('Введите что-нибудь --> ')
 except EOFError:
-    print('Why did you do an EOF on me?')
+    print('Ну зачем вы сделали мне EOF?')
 except KeyboardInterrupt:
-    print('You cancelled the operation.')
+    print('Вы отменили операцию.')
 else:
-    print('You entered {}'.format(text))
+    print('Вы ввели {}'.format(text))
