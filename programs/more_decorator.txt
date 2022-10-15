@@ -1,12 +1,12 @@
 $ python more_decorator.py
-Write to a database or make a network call or etc.
-This will be automatically retried if exception is thrown.
-ERROR:retry:Attempt 1/5 failed : (('Some bad value',), {})
+Запись в базу данных, сетевой вызов и т.д.
+При возникновении исключения попытка будет автоматически повторена.
+ERROR:retry:Попытка 1/5 не удалась : (('Некоторое плохое значение',), {})
 Traceback (most recent call last):
   File "more_decorator.py", line 14, in wrapper_function
     return f(*args, **kwargs)
   File "more_decorator.py", line 39, in save_to_database
     raise ValueError(arg)
-ValueError: Some bad value
-Write to a database or make a network call or etc.
-This will be automatically retried if exception is thrown.
+ValueError: Некоторое плохое значение
+Запись в базу данных, сетевой вызов и т.д.
+При возникновении исключения попытка будет автоматически повторена.

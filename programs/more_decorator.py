@@ -13,12 +13,12 @@ def retry(f):
             try:
                 return f(*args, **kwargs)
             except Exception:
-                log.exception("Attempt %s/%s failed : %s",
+                log.exception("Попытка %s/%s не удалась : %s",
                               attempt,
                               MAX_ATTEMPTS,
                               (args, kwargs))
                 sleep(10 * attempt)
-        log.critical("All %s attempts failed : %s",
+        log.critical("Все %s попытки не удались : %s",
                      MAX_ATTEMPTS,
                      (args, kwargs))
     return wrapper_function
@@ -29,15 +29,15 @@ counter = 0
 
 @retry
 def save_to_database(arg):
-    print("Write to a database or make a network call or etc.")
-    print("This will be automatically retried if exception is thrown.")
+    print("Запись в базу данных, сетевой вызов и т.д.")
+    print("При возникновении исключения попытка будет автоматически повторена.")
     global counter
     counter += 1
-    # This will throw an exception in the first call
-    # And will work fine in the second call (i.e. a retry)
+    # Это приведет к исключению при первом вызове.
+    # И будет работать нормально во втором вызове (т.е. при повторной попытке)
     if counter < 2:
         raise ValueError(arg)
 
 
 if __name__ == '__main__':
-    save_to_database("Some bad value")
+    save_to_database("Некоторое плохое значение")
