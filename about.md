@@ -1,37 +1,37 @@
-# Appendix: Colophon {#colophon}
+# Приложение: о книге {#colophon}
 
-Almost all of the software that I have used in the creation of this book are [FLOSS](./floss.md#floss).
+Практически все программы, которые я использовал при написании этой книги, являются [свободными](./floss.md#floss).
 
-## Birth of the Book
+## Рождение книги
 
-In the first draft of this book, I had used Red Hat 9.0 Linux as the foundation of my setup and in the sixth draft, I used Fedora Core 3 Linux as the basis of my setup.
+При написании первого черновика этой книги в основе моей системы была Red Hat 9.0 Linux, но уже шестую версию черновика я писал на Fedora Core 3 Linux.
 
-Initially, I was using KWord to write the book (as explained in the [history lesson](./revision_history.md#history-lesson)).
+В начале для написания книги я использовал KWord (как я и описывал в [Предисловии](./revision_history.md#history-lesson)).
 
-## Teenage Years
+## Отрочество
 
-Later, I switched to DocBook XML using Kate but I found it too tedious. So, I switched to OpenOffice which was just excellent with the level of control it provided for formatting as well as the PDF generation, but it produced very sloppy HTML from the document.
+Позже я перешёл на формат DocBook XML и использовал Kate, но это показалось мне слишком скучным. Поэтому я перешёл на OpenOffice, который замечательно подходил со своим уровнем управления форматированием и возможностью генерировать PDF, но он выдавал слишком небрежные HTML-страницы.
 
-Finally, I discovered XEmacs and I rewrote the book from scratch in DocBook XML (again) after I decided that this format was the long term solution.
+Наконец, я открыл для себя XEmacs и переписал всю книгу с нуля в формате DocBook XML (снова), так как решил, что этот формат – надолго.
 
-In the sixth draft, I decided to use Quanta+ to do all the editing. The standard XSL stylesheets that came with Fedora Core 3 Linux were being used. However, I had written a CSS document to give color and style to the HTML pages. I had also written a crude lexical analyzer, in Python of course, which automatically provides syntax highlighting to all the program listings.
+Для шестой версии черновика я решил использовать Quanta+. При этом я использовал стандартные таблицы стилей XSL, которые шли в комплекте с Fedora Core 3 Linux. Потом я написал CSS документ, чтобы придать цвет и стиль HTML-страницам. Я также на скорую руку написал лексический анализатор (конечно, на Python), который осуществлял автоматическую подсветку синтаксиса в примерах программ.
 
-For the seventh draft, I was using [MediaWiki](http://www.mediawiki.org) as the basis of my setup. I used to edit everything online and the readers can directly read/edit/discuss within the wiki website, but I ended up spending more time fighting spam than writing.
+Для седьмой редакции я использовал [MediaWiki](http://www.mediawiki.org) в качестве основы для своего сайта. Теперь я всё редактирую прямо на сайте, а читатели могут сразу же читать/редактировать/обсуждать содержимое на вики-странице.
 
-For the eight draft, I used [Vim]({{ book.vimBookUrl }}), [Pandoc](http://johnmacfarlane.net/pandoc/README.html), and Mac OS X.
+Для работы над восьмым черновиком я использовал [Vim]({{ book.vimBookUrl }}), [Pandoc](http://johnmacfarlane.net/pandoc/README.html) и Mac OS X.
 
-For the ninth draft, I switched to [AsciiDoc format](http://asciidoctor.org/docs/what-is-asciidoc/) and used [Emacs 24.3](http://www.masteringemacs.org/articles/2013/03/11/whats-new-emacs-24-3/),
-[tomorrow theme](https://github.com/chriskempson/tomorrow-theme),
-[Fira Mono font](https://www.mozilla.org/en-US/styleguide/products/firefox-os/typeface/#download-primary) and [adoc-mode](https://github.com/sensorflo/adoc-mode/wiki) to write.
+Для девятого черновика я перешел на [формат AsciiDoc](http://asciidoctor.org/docs/what-is-asciidoc/) и использовал [Emacs 24.3](http://www.masteringemacs.org/articles/2013/03/11/whats-new-emacs-24-3/),
+[тему tomorrow](https://github.com/chriskempson/tomorrow-theme),
+[шрифт Fira Mono](https://www.mozilla.org/en-US/styleguide/products/firefox-os/typeface/#download-primary) и [adoc-mode](https://github.com/sensorflo/adoc-mode/wiki) для написания.
 
-## Now
+## Сейчас
 
-2016: I got tired of several minor rendering issues in AsciiDoctor, like the `++` in `C/C++` would disappear and it was hard to keep track of escaping such minor things. Plus, I had become reluctant to edit the text because of the complex Asciidoc format.
+2016: Я устал от нескольких незначительных проблем с рендерингом в AsciiDoctor, например, `++` в `C/C++` исчезали, и было трудно следить за экранированием таких незначительных вещей. Кроме того, мне стало неохота редактировать текст из-за сложного формата Asciidoc.
 
-For the tenth draft, I switched to writing in Markdown + [GitBook](https://www.gitbook.com) format, using the [Spacemacs editor](http://spacemacs.org).
+Для десятого черновика я перешел на написание в формате Markdown + [GitBook](https://www.gitbook.com), используя редактор [Spacemacs](http://spacemacs.org).
 
-Nov 2020: Since Gitbook abandoned their open source software, migrated to [Honkit, a community-maintained fork of Gitbook legacy](https://github.com/honkit/honkit).
+Ноябрь 2020 года: Поскольку Gitbook отказался от своего открытого программного обеспечения, перешел на [Honkit, поддерживаемый сообществом форк наследия Gitbook](https://github.com/honkit/honkit).
 
-## About the Author
+## Об авторе
 
-See {{ book.authorUrl }}
+Смотри {{ book.authorUrl }}
