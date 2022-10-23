@@ -1,0 +1,12 @@
+$ python module_using_sys.py we are arguments # каждый аргумент отделяется пробелом
+Аргументы командной строки:
+module_using_sys.py
+we
+are
+arguments
+
+
+Переменная PYTHONPATH содержит ['/tmp/py',
+# много записей, не показанных здесь
+'/Library/Python/2.7/site-packages',
+'/usr/local/lib/python2.7/site-packages']

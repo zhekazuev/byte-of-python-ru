@@ -1,0 +1,11 @@
+# Press ctrl + d
+$ python exceptions_handle.py
+Введите что-нибудь --> Ну зачем вы сделали мне EOF?
+
+# Press ctrl + c
+$ python exceptions_handle.py
+Введите что-нибудь --> ^CВы отменили операцию.
+
+$ python exceptions_handle.py
+Введите что-нибудь --> Без ошибок
+Вы ввели Без ошибок

@@ -1,0 +1,7 @@
+$ python module_using_name.py
+Эта программа запущена сама по себе.
+
+$ python
+>>> import module_using_name
+Меня импортировали в другой модуль.
+>>>

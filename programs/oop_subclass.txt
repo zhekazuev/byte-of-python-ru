@@ -1,0 +1,8 @@
+$ python oop_subclass.py
+(Создан SchoolMember: Mrs. Shrividya)
+(Создан Teacher: Mrs. Shrividya)
+(Создан SchoolMember: Swaroop)
+(Создан Student: Swaroop)
+
+Имя:"Mrs. Shrividya" Возраст:"40" Зарплата: "30000"
+Имя:"Swaroop" Возраст:"25" Оценки: "75"

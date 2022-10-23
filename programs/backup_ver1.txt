@@ -1,0 +1,9 @@
+$ python backup_ver1.py
+Zip команда:
+zip -r /Users/swa/backup/20140328084844.zip /Users/swa/notes
+Выполняется:
+  adding: Users/swa/notes/ (stored 0%)
+  adding: Users/swa/notes/blah1.txt (stored 0%)
+  adding: Users/swa/notes/blah2.txt (stored 0%)
+  adding: Users/swa/notes/blah3.txt (stored 0%)
+Резервная копия успешно создана в /Users/swa/backup/20140328084844.zip

@@ -1,0 +1,916 @@
+
+<!DOCTYPE HTML>
+<html lang="ru" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Структуры данных · Укус Питона – A Byte of Python по-русски</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 4.0.4">
+        <meta name="author" content="Swaroop C.H.">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="problem_solving.html" />
+    
+    
+    <link rel="prev" href="modules.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Введите условия поиска" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Введение
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="dedication.html">
+            
+                <a href="dedication.html">
+            
+                    
+                    Посвящение
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="preface.html">
+            
+                <a href="preface.html">
+            
+                    
+                    Предисловие
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="about_python.html">
+            
+                <a href="about_python.html">
+            
+                    
+                    О языке Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    Установка
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="first_steps.html">
+            
+                <a href="first_steps.html">
+            
+                    
+                    Первые шаги
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="basics.html">
+            
+                <a href="basics.html">
+            
+                    
+                    Основы
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="op_exp.html">
+            
+                <a href="op_exp.html">
+            
+                    
+                    Операторы и выражения
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="control_flow.html">
+            
+                <a href="control_flow.html">
+            
+                    
+                    Поток команд
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="functions.html">
+            
+                <a href="functions.html">
+            
+                    
+                    Функции
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="modules.html">
+            
+                <a href="modules.html">
+            
+                    
+                    Модули
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.12" data-path="data_structures.html">
+            
+                <a href="data_structures.html">
+            
+                    
+                    Структуры данных
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="problem_solving.html">
+            
+                <a href="problem_solving.html">
+            
+                    
+                    Решение задач
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="oop.html">
+            
+                <a href="oop.html">
+            
+                    
+                    Объектно-ориентированное программирование
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="io.html">
+            
+                <a href="io.html">
+            
+                    
+                    Ввод-вывод
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="exceptions.html">
+            
+                <a href="exceptions.html">
+            
+                    
+                    Исключения
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="stdlib.html">
+            
+                <a href="stdlib.html">
+            
+                    
+                    Стандартная библиотека
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="more.html">
+            
+                <a href="more.html">
+            
+                    
+                    Дополнительно
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="what_next.html">
+            
+                <a href="what_next.html">
+            
+                    
+                    Что дальше
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="floss.html">
+            
+                <a href="floss.html">
+            
+                    
+                    Приложение: FLOSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="about.html">
+            
+                <a href="about.html">
+            
+                    
+                    Приложение: О книге
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="revision_history.html">
+            
+                <a href="revision_history.html">
+            
+                    
+                    Приложение: История версий
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="translations.html">
+            
+                <a href="translations.html">
+            
+                    
+                    Приложение: Переводы
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="translation_howto.html">
+            
+                <a href="translation_howto.html">
+            
+                    
+                    Приложение: Инструкция по переводу
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="feedback.html">
+            
+                <a href="feedback.html">
+            
+                    
+                    Обратная связь
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Опубликовано с помощью HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Структуры данных</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="data-structures">Структуры данных </h1>
+<p>Структуры данных – это, по сути, и есть <em>структуры</em>, которые могут хранить некоторые <em>данные</em> вместе. Другими словами, они используются для хранения связанных данных.</p>
+<p>В Python существуют четыре встроенных структуры данных: <em>список, кортеж, словарь и множество</em>. Посмотрим, как ими пользоваться, и как они могут облегчить нам жизнь.</p>
+<h2 id="список">Список</h2>
+<p><code>Список</code><sup><a href="#fn_1" id="reffn_1">1</a></sup> – это структура данных, которая содержит упорядоченный набор элементов, т.е. хранит <em>последовательность</em> элементов. Это легко представить, если вспомнить список покупок, в котором перечисляется, что нужно купить, с тем лишь исключением, что в списке покупок каждый элемент обычно размещается на отдельной строке, тогда как в Python они разделяются запятыми.</p>
+<p>Список элементов должен быть заключён в квадратные скобки, чтобы Python понял, что это список. Как только список создан, можно добавлять, удалять или искать элементы в нём. Поскольку элементы можно добавлять и удалять, мы говорим, что список – это <em>изменяемый</em> тип данных, т.е. его можно модифицировать.</p>
+<h2 id="краткое-введение-в-объекты-и-классы">Краткое введение в объекты и классы</h2>
+<p>Хотя я и старался до сих пор оттянуть обсуждение объектов и классов, на данном этапе всё же необходимо некоторое пояснение, чтобы вы лучше поняли идею списков. Мы изучим эту тему детально в её <a href="oop.html#oop">собственной главе</a>.</p>
+<p>Список – это один из примеров использования объектов и классов. Когда мы назначаем некоторой переменной <code>i</code> значение, скажем, целое число <code>5</code>, это можно представить себе как создание <em>объекта</em> (т.е. экземпляра) <code>i</code> <em>класса</em> (т.е. типа) <code>int</code>. Чтобы лучше понять это, прочитайте <code>help(int)</code>.</p>
+<p>Класс может также иметь <em>методы</em>, т.е. функции, определённые для использования только применительно к данному классу. Этот функционал будет доступен только когда имеется объект данного класса. Например, Python предоставляет метод <code>append</code> для класса <code>list</code>, который позволяет добавлять элемент к концу списка. Так <code>mylist.append(&apos;an item&apos;)</code> добавит эту строку к списку <code>mylist</code>. Обратите внимание на обозначение точкой для доступа к методам объектов.</p>
+<p>Класс также может иметь <em>поля</em>, которые представляют собой не что иное, как переменные, определённые для использования только применительно к данному классу. Эти переменные/имена можно использовать только тогда, когда имеется объект этого класса. Доступ к полям также осуществляется при помощи точки. Например, <code>mylist.field</code>.</p>
+<p>Пример (сохраните как <code>ds_using_list.py</code>):</p>
+<pre><code class="lang-python"><span class="hljs-comment"># Это мой список покупок</span>
+shoplist = [<span class="hljs-string">&apos;яблоки&apos;</span>, <span class="hljs-string">&apos;манго&apos;</span>, <span class="hljs-string">&apos;морковь&apos;</span>, <span class="hljs-string">&apos;бананы&apos;</span>]
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Я должен сделать&apos;</span>, <span class="hljs-built_in">len</span>(shoplist), <span class="hljs-string">&apos;покупки.&apos;</span>)
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Покупки:&apos;</span>, end=<span class="hljs-string">&apos; &apos;</span>)
+<span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> shoplist:
+    <span class="hljs-built_in">print</span>(item, end=<span class="hljs-string">&apos; &apos;</span>)
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;\nТакже нужно купить риса.&apos;</span>)
+shoplist.append(<span class="hljs-string">&apos;рис&apos;</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Теперь мой список покупок таков:&apos;</span>, shoplist)
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Отсортирую-ка я свой список&apos;</span>)
+shoplist.sort()
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Отсортированный список покупок выглядит так:&apos;</span>, shoplist)
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Первое, что мне нужно купить, это&apos;</span>, shoplist[<span class="hljs-number">0</span>])
+olditem = shoplist[<span class="hljs-number">0</span>]
+<span class="hljs-keyword">del</span> shoplist[<span class="hljs-number">0</span>]
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Я купил&apos;</span>, olditem)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Теперь мой список покупок:&apos;</span>, shoplist)
+</code></pre>
+
+<p>Вывод:</p>
+<pre><code>$ python ds_using_list.py
+Я должен сделать 4 покупки.
+Покупки: яблоки манго морковь бананы
+Также нужно купить риса.
+Теперь мой список покупок таков: [&apos;яблоки&apos;, &apos;манго&apos;, &apos;морковь&apos;, &apos;бананы&apos;, &apos;рис&apos;]
+Отсортирую-ка я свой список
+Отсортированный список покупок выглядит так: [&apos;бананы&apos;, &apos;манго&apos;, &apos;морковь&apos;, &apos;рис&apos;, &apos;яблоки&apos;]
+Первое, что мне нужно купить, это бананы
+Я купил бананы
+Теперь мой список покупок: [&apos;манго&apos;, &apos;морковь&apos;, &apos;рис&apos;, &apos;яблоки&apos;]
+</code></pre>
+
+<p><strong>Как это работает</strong></p>
+<p>Переменная <code>shoplist</code> – это список покупок человека, идущего на рынок. В <code>shoplist</code> мы храним только строки с названиями того, что нужно купить, однако в список можно добавлять <em>любые объекты</em>, включая числа или даже другие списки.</p>
+<p>Мы также использовали цикл <code>for..in</code> для итерации по элементам списка. Вы уже, наверное, поняли, что список является также и последовательностью. Особенности последовательностей будут рассмотрены <a href="#sequence">ниже</a>.</p>
+<p>Обратите внимание на использование ключевого аргумента <code>end</code> в функции <code>print</code>, который показывает, что мы хотим закончить вывод пробелом вместо обычного перевода строки.</p>
+<p>Далее мы добавляем элемент к списку при помощи <code>append</code> – метода объекта списка, который уже обсуждался ранее. Затем мы проверяем, действительно ли элемент был добавлен к списку, выводя содержимое списка на экран при помощи простой передачи этого списка функции <code>print</code>, которая аккуратно его печатает.</p>
+<p>Затем мы сортируем список, используя метод <code>sort</code> объекта списка. Имейте в виду, что этот метод действует на сам список, а не возвращает изменённую его версию. В этом отличие от того, как происходит работа со строками. Именно это имеется в виду, когда мы говорим, что списки <em>изменяемы</em>, а строки – <em>неизменяемы</em>.</p>
+<p>Далее после совершения покупки мы хотим удалить её из списка. Это достигается применением оператора <code>del</code>. Мы указываем, какой элемент списка мы хотим удалить, и оператор <code>del</code> удаляет его. Мы указываем, что хотим удалить первый элемент списка, и поэтому пишем <code>del shoplist[0]</code> (помните, что Python начинает отсчёт с 0).</p>
+<p>Чтобы узнать более детально обо всех методах объекта списка, просмотрите <code>help(list)</code>.</p>
+<h2 id="кортеж">Кортеж</h2>
+<p>Кортежи служат для хранения нескольких объектов вместе. Их можно рассматривать как аналог списков, но без такой обширной функциональности, которую предоставляет класс списка. Одна из важнейших особенностей кортежей заключается в том, что они <em>неизменяемы</em>, так же, как и строки. Т.е. модифицировать кортежи невозможно.</p>
+<p>Кортежи обозначаются указанием элементов, разделённых запятыми; по желанию их можно ещё заключить в круглые скобки.</p>
+<p>Кортежи обычно используются в тех случаях, когда оператор или пользовательская функция должны наверняка знать, что набор значений, т.е. кортеж значений, не изменится.</p>
+<p>Пример (сохраните как <code>ds_using_tuple.py</code>):</p>
+<pre><code class="lang-python"><span class="hljs-comment"># Я бы рекомендовал всегда использовать круглые скобки</span>
+<span class="hljs-comment"># для обозначения начала и конца кортежа</span>
+<span class="hljs-comment"># даже если круглые скобки необязательны.</span>
+<span class="hljs-comment"># Явное лучше неявного.</span>
+zoo = (<span class="hljs-string">&apos;питон&apos;</span>, <span class="hljs-string">&apos;слон&apos;</span>, <span class="hljs-string">&apos;пингвин&apos;</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Количество животных в зоопарке -&apos;</span>, <span class="hljs-built_in">len</span>(zoo))
+
+new_zoo = <span class="hljs-string">&apos;обезьяна&apos;</span>, <span class="hljs-string">&apos;верблюд&apos;</span>, zoo    <span class="hljs-comment"># круглые скобки не обязательны, но являются хорошей идеей</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Количество клеток в зоопарке -&apos;</span>, <span class="hljs-built_in">len</span>(new_zoo))
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Все животные в новом зоопарке:&apos;</span>, new_zoo)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Животные, привезённые из старого зоопарка:&apos;</span>, new_zoo[<span class="hljs-number">2</span>])
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Последнее животное, привезённое из старого зоопарка -&apos;</span>, new_zoo[<span class="hljs-number">2</span>][<span class="hljs-number">2</span>])
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Количество животных в новом зоопарке -&apos;</span>, 
+      <span class="hljs-built_in">len</span>(new_zoo)-<span class="hljs-number">1</span>+<span class="hljs-built_in">len</span>(new_zoo[<span class="hljs-number">2</span>]))
+</code></pre>
+
+<p>Вывод:</p>
+<pre><code>$ python ds_using_tuple.py
+Количество животных в зоопарке - 3
+Количество клеток в зоопарке - 3
+Все животные в новом зоопарке: (&apos;обезьяна&apos;, &apos;верблюд&apos;, (&apos;питон&apos;, &apos;слон&apos;, &apos;пингвин&apos;))
+Животные, привезённые из старого зоопарка: (&apos;питон&apos;, &apos;слон&apos;, &apos;пингвин&apos;)
+Последнее животное, привезённое из старого зоопарка - пингвин
+Количество животных в новом зоопарке - 5
+</code></pre>
+
+<p><strong>Как это работает</strong></p>
+<p>Переменная <code>zoo</code> обозначает кортеж элементов. Как мы видим, функция <code>len</code> позволяет получить длину кортежа. Это также указывает на то, что кортеж является <a href="#sequence">последовательностью</a>.</p>
+<p>Теперь мы перемещаем этих животных в новый зоопарк, поскольку старый зоопарк закрывается. Поэтому кортеж <code>new_zoo</code> содержит тех животных, которые уже там, наряду с привезёнными из старого зоопарка. Возвращаясь к реальности, обратите внимание на то, что кортеж внутри кортежа не теряет своей индивидуальности.</p>
+<p>Доступ к элементам кортежа осуществляется указанием позиции элемента, заключённой в квадратные скобки – точно так же, как мы это делали для списков. Это называется оператором <em>индексирования</em>. Доступ к третьему элементу в <code>new_zoo</code> мы получаем, указывая <code>new_zoo[2]</code>, а доступ к третьему элементу внутри третьего элемента в кортеже <code>new_zoo</code> – указывая <code>new_zoo[2][2]</code>. Это достаточно просто, как только вы поймёте принцип.</p>
+<blockquote>
+<p><strong>Кортеж, содержащий 0 или 1 элемент</strong></p>
+<p>Пустой кортеж создаётся при помощи пустой пары скобок – <code>myempty = ()</code>. Однако, с кортежем из одного элемента не всё так просто. Его нужно указывать при помощи запятой после первого (и единственного) элемента, чтобы Python мог отличить кортеж от скобок, окружающих объект в выражении. Таким образом, чтобы получить кортеж, содержащий элемент <code>2</code>, вам потребуется указать <code>singleton = (2,)</code>.</p>
+</blockquote>
+<!-- -->
+<blockquote>
+<p><strong>Замечание для программистов на Perl</strong></p>
+<p>Список внутри списка не теряет своей индивидуальности, т.е. списки не развёртываются, как в Perl. Это же относится к кортежу внутри кортежа, или кортежу внутри списка, или списку внутри кортежа и т.д. В Python все они рассматриваются как объекты, хранящиеся внутри другого объекта – только и всего.</p>
+</blockquote>
+<h2 id="словарь">Словарь</h2>
+<p>Словарь – это некий аналог адресной книги, в которой можно найти адрес или контактную информацию о человеке, зная лишь его имя; т.е. некоторые <em>ключи</em> (имена) связаны со <em>значениями</em> (информацией). Заметьте, что ключ должен быть уникальным – вы ведь не сможете получить корректную информацию, если у вас записаны два человека с полностью одинаковыми именами.</p>
+<p>Обратите также внимание на то, что в словарях в качестве ключей могут использоваться только неизменяемые объекты (как строки), а в качестве значений можно использовать как неизменяемые, так и изменяемые объекты. Точнее говоря, в качестве ключей должны использоваться только простые объекты.</p>
+<p>Пары ключ-значение указываются в словаре следующим образом: <code>d = {key1 : value1, key2 : value2}</code>. Обратите внимание, что ключ и значение разделяются двоеточием, а пары друг от друга отделяются запятыми, а затем всё это заключается в фигурные скобки.</p>
+<p>Помните, что пары ключ-значение никоим образом не упорядочены в словаре. Если вам необходим некоторый порядок, вам придётся отдельно отсортировать словарь перед обращением к нему.</p>
+<p>Словари являются экземплярами/объектами класса <code>dict</code>.</p>
+<p>Пример (сохраните как <code>ds_using_dict.py</code>):</p>
+<pre><code class="lang-python"><span class="hljs-comment"># &apos;ab&apos; - сокращение от &apos;a&apos;ddress&apos;b&apos;ook</span>
+
+ab = {
+    <span class="hljs-string">&apos;Swaroop&apos;</span>: <span class="hljs-string">&apos;swaroop@swaroopch.com&apos;</span>,
+    <span class="hljs-string">&apos;Larry&apos;</span>: <span class="hljs-string">&apos;larry@wall.org&apos;</span>,
+    <span class="hljs-string">&apos;Matsumoto&apos;</span>: <span class="hljs-string">&apos;matz@ruby-lang.org&apos;</span>,
+    <span class="hljs-string">&apos;Spammer&apos;</span>: <span class="hljs-string">&apos;spammer@hotmail.com&apos;</span>
+}
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Адрес Swaroop&apos;а:&quot;</span>, ab[<span class="hljs-string">&apos;Swaroop&apos;</span>])
+
+<span class="hljs-comment"># Удаление пары ключ-значение</span>
+<span class="hljs-keyword">del</span> ab[<span class="hljs-string">&apos;Spammer&apos;</span>]
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;\nВ адресной книге {} контакта\n&apos;</span>.<span class="hljs-built_in">format</span>(<span class="hljs-built_in">len</span>(ab)))
+
+<span class="hljs-keyword">for</span> name, address <span class="hljs-keyword">in</span> ab.items():
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Контакт {} с адресом {}&apos;</span>.<span class="hljs-built_in">format</span>(name, address))
+
+<span class="hljs-comment"># Добавление пары ключ-значение</span>
+ab[<span class="hljs-string">&apos;Guido&apos;</span>] = <span class="hljs-string">&apos;guido@python.org&apos;</span>
+
+<span class="hljs-keyword">if</span> <span class="hljs-string">&apos;Guido&apos;</span> <span class="hljs-keyword">in</span> ab:
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\nАдрес Guido:&quot;</span>, ab[<span class="hljs-string">&apos;Guido&apos;</span>])
+</code></pre>
+
+<p>Вывод:</p>
+<pre><code>$ python ds_using_dict.py
+Адрес Swaroop&apos;а: swaroop@swaroopch.com
+
+В адресной книге 3 контакта
+
+Контакт Swaroop с адресом swaroop@swaroopch.com
+Контакт Matsumoto с адресом matz@ruby-lang.org
+Контакт Larry с адресом larry@wall.org
+
+Адрес Guido: guido@python.org
+</code></pre>
+
+<p><strong>Как это работает</strong></p>
+<p>Мы создаём словарь <code>ab</code><sup><a href="#fn_2" id="reffn_2">2</a></sup> при помощи обозначений, описанных ранее. Затем мы обращаемся к парам ключ-значение, указывая ключ в операторе индексирования, которым мы пользовались для списков и кортежей. Как видите, синтаксис прост.</p>
+<p>Удалять пары ключ-значение можно при помощи нашего старого доброго оператора <code>del</code>. Мы просто указываем имя словаря и оператор индексирования для удаляемого ключа, после чего передаём это оператору <code>del</code>. Для этой операции нет необходимости знать, какое значение соответствует данному ключу.</p>
+<p>Далее мы обращаемся ко всем парам ключ-значение нашего словаря, используя метод <code>items</code>, который возвращает список кортежей, каждый из которых содержит пару элементов: ключ и значение. Мы получаем эту пару и присваиваем её значение переменным <code>name</code> и <code>address</code> соответственно в цикле <code>for..in</code>, а затем выводим эти значения на экран в блоке for.</p>
+<p>Новые пары ключ-значение добавляются простым обращением к нужному ключу при помощи оператора индексирования и присваиванием ему некоторого значения, как мы сделали для Guido в примере выше.</p>
+<p>Проверить, существует ли пара ключ-значение, можно при помощи оператора <code>in</code>.</p>
+<p>Чтобы просмотреть список всех методов класса <code>dict</code> смотрите <code>help(dict)</code>.</p>
+<blockquote>
+<p><strong>Ключевые Аргументы и Словари</strong></p>
+<p>К слову, если вы использовали ключевые аргументы в ваших функциях, вы уже использовали словари! Только подумайте: вы указали пару ключ-значение среди параметров функции при её определении, а когда обращаетесь к переменным внутри функции, то это, фактически, обращение по ключу к словарю (который в терминах разработчиков компиляторов называется <em>таблицей имён</em>).</p>
+</blockquote>
+<h2 id="последовательности">Последовательности</h2>
+<p>Списки, кортежи и строки являются примерами последовательностей. Но что такое последовательности и что в них такого особенного?</p>
+<p>Основные возможности – это <em>проверка принадлежности</em> (т.е. выражения <code>in</code> и <code>not in</code>) и <em>оператор индексирования</em>, позволяющий получить напрямую некоторый элемент последовательности.</p>
+<p>Все три типа последовательностей, упоминавшиеся выше (списки, кортежи и строки), также предоставляют операцию получения <em>среза</em>, которая позволяет получить срез последовательности, т.е. её фрагмент.</p>
+<p>Пример (сохраните как <code>ds_seq.py</code>):</p>
+<pre><code class="lang-python">shoplist = [<span class="hljs-string">&apos;яблоки&apos;</span>, <span class="hljs-string">&apos;манго&apos;</span>, <span class="hljs-string">&apos;морковь&apos;</span>, <span class="hljs-string">&apos;бананы&apos;</span>]
+name = <span class="hljs-string">&apos;swaroop&apos;</span>
+
+<span class="hljs-comment"># Операция индексирования </span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Элемент 0 -&apos;</span>, shoplist[<span class="hljs-number">0</span>])
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Элемент 1 -&apos;</span>, shoplist[<span class="hljs-number">1</span>])
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Элемент 2 -&apos;</span>, shoplist[<span class="hljs-number">2</span>])
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Элемент 3 -&apos;</span>, shoplist[<span class="hljs-number">3</span>])
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Элемент -1 -&apos;</span>, shoplist[-<span class="hljs-number">1</span>])
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Элемент -2 -&apos;</span>, shoplist[-<span class="hljs-number">2</span>])
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Символ 0 -&apos;</span>, name[<span class="hljs-number">0</span>])
+
+<span class="hljs-comment"># Срез списка</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Элементы с 1 по 3:&apos;</span>, shoplist[<span class="hljs-number">1</span>:<span class="hljs-number">3</span>])
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Элементы с 2 до конца:&apos;</span>, shoplist[<span class="hljs-number">2</span>:])
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Элементы с 1 по -1:&apos;</span>, shoplist[<span class="hljs-number">1</span>:-<span class="hljs-number">1</span>])
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Элементы от начала до конца:&apos;</span>, shoplist[:])
+
+<span class="hljs-comment"># Срез строки</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Символы с 1 по 3:&apos;</span>, name[<span class="hljs-number">1</span>:<span class="hljs-number">3</span>])
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Символы с 2 до конца:&apos;</span>, name[<span class="hljs-number">2</span>:])
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Символы с 1 до -1:&apos;</span>, name[<span class="hljs-number">1</span>:-<span class="hljs-number">1</span>])
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Символы от начала до конца:&apos;</span>, name[:])
+</code></pre>
+
+<p>Вывод:</p>
+<pre><code>$ python ds_seq.py
+Элемент 0 - яблоки
+Элемент 1 - манго
+Элемент 2 - морковь
+Элемент 3 - бананы
+Элемент -1 - бананы
+Элемент -2 - морковь
+Символ 0 - s
+Элементы с 1 по 3: [&apos;манго&apos;, &apos;морковь&apos;]
+Элементы с 2 до конца: [&apos;морковь&apos;, &apos;бананы&apos;]
+Элементы с 1 по -1: [&apos;манго&apos;, &apos;морковь&apos;]
+Элементы от начала до конца: [&apos;яблоки&apos;, &apos;манго&apos;, &apos;морковь&apos;, &apos;бананы&apos;]
+Символы с 1 по 3: wa
+Символы с 2 до конца: aroop
+Символы с 1 до -1: waroo
+Символы от начала до конца: swaroop
+</code></pre>
+
+<p><strong>Как это работает</strong></p>
+<p>Прежде всего, мы видим, как использовать индексы для получения отдельных элементов последовательности. Это ещё называют <em>приписыванием индекса</em>. Когда мы указываем число в квадратных скобках после последовательности, как показано выше, Python извлекает элемент, соответствующий указанной позиции в последовательности. Помните, что Python начинает отсчёт с 0. Поэтому <code>shoplist[0]</code> извлекает первый элемент, а <code>shoplist[3]</code> – четвёртый элемент последовательности <code>shoplist</code>.</p>
+<p>Индекс также может быть отрицательным числом. В этом случае позиция отсчитывается от конца последовательности. Поэтому <code>shoplist[-1]</code> указывает на последний элемент последовательности <code>shoplist</code>, а <code>shoplist[-2]</code> – на предпоследний.</p>
+<p>Операция вырезки производится при помощи указания имени последовательности, за которым может следовать пара чисел, разделённых двоеточием и заключённых в квадратные скобки. Заметьте, как это похоже на операцию индексирования, которой мы пользовались до сих пор. Помните, что числа в скобках необязательны, тогда как двоеточие – обязательно.</p>
+<p>Первое число (перед двоеточием) в операции среза указывает позицию, с которой срез должен начинаться, а второе число (после двоеточия) указывает, где срез должен закончиться. Если первое число не указано, Python начнёт срез с начала последовательности. Если пропущено второе число, Python закончит срез у конца последовательности. Обратите внимание, что полученный срез будет <em>начинаться</em> с указанной начальной позиции, а <em>заканчиваться</em> прямо перед указанной конечной позицией, т.е. начальная позиция будет включена в срез, а конечная – нет.</p>
+<p>Таким образом, <code>shoplist[1:3]</code> возвращает срез из последовательности, начинающуюся с позиции 1, включает позицию 2, но останавливается на позиции 3, и поэтому возвращает <em>срез</em> из двух элементов. Аналогично, <code>shoplist[:]</code> возвращает копию всей последовательности.</p>
+<p>Срез может осуществляться и с отрицательными значениями. Отрицательные числа обозначают позицию с конца последовательности. Например, <code>shoplist[:-1]</code> вернёт вырезку из последовательности, исключающую последний элемент, но содержащую все остальные.</p>
+<p>Кроме того, можно также указать третий аргумент для среза, который будет обозначать <em>шаг</em> среза (по умолчанию шаг среза равен 1):</p>
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>shoplist = [<span class="hljs-string">&apos;яблоки&apos;</span>, <span class="hljs-string">&apos;манго&apos;</span>, <span class="hljs-string">&apos;морковь&apos;</span>, <span class="hljs-string">&apos;бананы&apos;</span>]
+<span class="hljs-meta">&gt;&gt;&gt; </span>shoplist[::<span class="hljs-number">1</span>]
+[<span class="hljs-string">&apos;яблоки&apos;</span>, <span class="hljs-string">&apos;манго&apos;</span>, <span class="hljs-string">&apos;морковь&apos;</span>, <span class="hljs-string">&apos;бананы&apos;</span>]
+<span class="hljs-meta">&gt;&gt;&gt; </span>shoplist[::<span class="hljs-number">2</span>]
+[<span class="hljs-string">&apos;яблоки&apos;</span>, <span class="hljs-string">&apos;морковь&apos;</span>]
+<span class="hljs-meta">&gt;&gt;&gt; </span>shoplist[::<span class="hljs-number">3</span>]
+[<span class="hljs-string">&apos;яблоки&apos;</span>, <span class="hljs-string">&apos;бананы&apos;</span>]
+<span class="hljs-meta">&gt;&gt;&gt; </span>shoplist[::-<span class="hljs-number">1</span>]
+[<span class="hljs-string">&apos;бананы&apos;</span>, <span class="hljs-string">&apos;морковь&apos;</span>, <span class="hljs-string">&apos;манго&apos;</span>, <span class="hljs-string">&apos;яблоки&apos;</span>]
+</code></pre>
+<p>Обратите внимание на то, что когда шаг равен 2, мы получаем элементы, находящиеся на позициях 0, 2, ... Когда шаг равен 3, мы получаем элементы с позиций 0, 3, ... и т.д.</p>
+<p>Попробуйте разные комбинации параметров среза, используя интерактивную оболочку интерпретатора Python, т.е. его командную строку, чтобы сразу видеть результат. Последовательности замечательны тем, что они дают возможность обращаться к кортежам, спискам и строкам одним и тем же способом!</p>
+<h2 id="множество">Множество</h2>
+<p>Множества – это <em>неупорядоченные</em> наборы простых объектов. Они необходимы тогда, когда присутствие объекта в наборе важнее порядка или того, сколько раз данный объект там встречается.</p>
+<p>Используя множества, можно осуществлять проверку принадлежности, определять, является ли данное множество подмножеством другого множества, находить пересечения множеств и так далее.</p>
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>bri = <span class="hljs-built_in">set</span>([<span class="hljs-string">&apos;Бразилия&apos;</span>, <span class="hljs-string">&apos;Россия&apos;</span>, <span class="hljs-string">&apos;Индия&apos;</span>])
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-string">&apos;Индия&apos;</span> <span class="hljs-keyword">in</span> bri
+<span class="hljs-literal">True</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-string">&apos;США&apos;</span> <span class="hljs-keyword">in</span> bri
+<span class="hljs-literal">False</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>bric = bri.copy()
+<span class="hljs-meta">&gt;&gt;&gt; </span>bric.add(<span class="hljs-string">&apos;Китай&apos;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>bric.issuperset(bri)
+<span class="hljs-literal">True</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>bri.remove(<span class="hljs-string">&apos;Россия&apos;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>bri &amp; bric <span class="hljs-comment"># или bri.intersection(bric)</span>
+{<span class="hljs-string">&apos;Бразилия&apos;</span>, <span class="hljs-string">&apos;Индия&apos;</span>}
+</code></pre>
+<p><strong>Как это работает</strong></p>
+<p>Если вы помните основы теории множеств из школы, то этот пример достаточно понятен. Но если нет, вы можете погуглить &quot;теория множеств&quot; и &quot;диаграмма Венна&quot;, чтобы лучше понять наше использование множеств в Python.</p>
+<h2 id="ссылки">Ссылки</h2>
+<p>Когда мы создаём объект и присваиваем его переменной, переменная только <em>ссылается</em> на объект, а не представляет собой этот объект! То есть имя переменной указывает на ту часть памяти компьютера, где хранится объект. Это называется <em>привязкой</em> имени к объекту.</p>
+<p>Обычно вам не следует об этом беспокоиться, однако есть некоторый неочевидный эффект, о котором нужно помнить.</p>
+<p>Пример (сохраните как <code>ds_reference.py</code>):</p>
+<pre><code class="lang-python"><span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Простое присваивание&apos;</span>)
+shoplist = [<span class="hljs-string">&apos;яблоки&apos;</span>, <span class="hljs-string">&apos;манго&apos;</span>, <span class="hljs-string">&apos;морковь&apos;</span>, <span class="hljs-string">&apos;бананы&apos;</span>]
+<span class="hljs-comment"># mylist - лишь ещё одно имя, указывающее на тот же объект!</span>
+mylist = shoplist
+
+<span class="hljs-comment"># Я сделал первую покупку, поэтому удаляю её из списка</span>
+<span class="hljs-keyword">del</span> shoplist[<span class="hljs-number">0</span>] 
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;shoplist:&apos;</span>, shoplist)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;mylist:&apos;</span>, mylist)
+<span class="hljs-comment"># Обратите внимание, что и shoplist, и mylist выводят один и тот же список</span>
+<span class="hljs-comment"># без пункта &quot;яблоко&quot;, подтверждая тем самым, </span>
+<span class="hljs-comment"># что они указывают на один объект.</span>
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Копирование при помощи полного среза&apos;</span>)
+<span class="hljs-comment"># создаём копию путём полного среза</span>
+mylist = shoplist[:]
+<span class="hljs-comment"># удаляем первый элемент</span>
+<span class="hljs-keyword">del</span> mylist[<span class="hljs-number">0</span>]
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;shoplist:&apos;</span>, shoplist)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;mylist:&apos;</span>, mylist)
+<span class="hljs-comment"># Обратите внимание, что теперь списки разные</span>
+</code></pre>
+
+<p>Вывод:</p>
+<pre><code>$ python ds_reference.py
+Простое присваивание
+shoplist: [&apos;манго&apos;, &apos;морковь&apos;, &apos;бананы&apos;]
+mylist: [&apos;манго&apos;, &apos;морковь&apos;, &apos;бананы&apos;]
+Копирование при помощи полного среза
+shoplist: [&apos;манго&apos;, &apos;морковь&apos;, &apos;бананы&apos;]
+mylist: [&apos;морковь&apos;, &apos;бананы&apos;]
+</code></pre>
+
+<p><strong>Как это работает</strong></p>
+<p>Большая часть объяснения содержится в комментариях.</p>
+<p>Помните, что если вам нужно сделать копию списка или подобной последовательности, или другого сложного <em>объекта</em> (не такого простого объекта, как целое число), вам следует воспользоваться операцией среза. Если вы просто присвоите имя переменной другому имени, оба они будут ссылаться на один и тот же объект, а это может привести к проблемам, если вы не осторожны.</p>
+<blockquote>
+<p><strong>Примечание для программистов на Perl</strong>.</p>
+<p>Помните, что оператор присваивания для списков <strong>не</strong> создает копию. Для создания копии последовательности необходимо использовать операцию среза.</p>
+</blockquote>
+<h2 id="more-strings">Ещё о строках </h2>
+<p>Мы уже детально обсуждали строки ранее. Что же ещё можно о них узнать? Что ж, вы знали, например, что строки также являются объектами и имеют методы, при помощи которых можно делать практически всё: от проверки части строки до удаления краевых пробелов? На самом деле, вы уже использовали строковый метод... метод <code>format</code>!</p>
+<p>Все строки, используемые вами в программах, являются объектами класса <code>str</code>. Некоторые полезные методы этого класса продемонстрированы на примере ниже. Чтобы посмотреть весь список методов, выполните <code>help(str)</code>.</p>
+<p>Пример (сохраните как <code>ds_str_methods.py</code>):</p>
+<pre><code class="lang-python"><span class="hljs-comment"># Это объект строки</span>
+name = <span class="hljs-string">&apos;Swaroop&apos;</span>
+
+<span class="hljs-keyword">if</span> name.startswith(<span class="hljs-string">&apos;Swa&apos;</span>):
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Да, строка начинается на &quot;Swa&quot;&apos;</span>)
+
+<span class="hljs-keyword">if</span> <span class="hljs-string">&apos;a&apos;</span> <span class="hljs-keyword">in</span> name:
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Да, она содержит строку &quot;a&quot;&apos;</span>)
+
+<span class="hljs-keyword">if</span> name.find(<span class="hljs-string">&apos;war&apos;</span>) != -<span class="hljs-number">1</span>:
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Да, она содержит строку &quot;war&quot;&apos;</span>)
+
+delimiter = <span class="hljs-string">&apos;_*_&apos;</span>
+mylist = [<span class="hljs-string">&apos;Бразилия&apos;</span>, <span class="hljs-string">&apos;Россия&apos;</span>, <span class="hljs-string">&apos;Индия&apos;</span>, <span class="hljs-string">&apos;Китай&apos;</span>]
+<span class="hljs-built_in">print</span>(delimiter.join(mylist))
+</code></pre>
+
+<p>Вывод:</p>
+<pre><code>$ python ds_str_methods.py
+Да, строка начинается на &quot;Swa&quot;
+Да, она содержит строку &quot;a&quot;
+Да, она содержит строку &quot;war&quot;
+Бразилия_*_Россия_*_Индия_*_Китай
+</code></pre>
+
+<p><strong>Как это работает</strong></p>
+<p>Здесь мы видим сразу несколько методов строк в действии. Метод <code>startswith</code> служит для того, чтобы определять, начинается ли строка с некоторой заданной подстроки. Оператор <code>in</code> используется для проверки, является ли некоторая строка частью данной строки.</p>
+<p>Метод <code>find</code> используется для определения позиции данной подстроки в строке; <code>find</code> возвращает -1, если подстрока не обнаружена. В классе <code>str</code> также имеется отличный метод для объединения <code>(join)</code><sup><a href="#fn_3" id="reffn_3">3</a></sup> элементов последовательности с указанной строкой в качестве разделителя между элементами, возвращающий большую строку, сгенерированную таким образом.</p>
+<h2 id="резюме">Резюме</h2>
+<p>Мы детально рассмотрели различные встроенные структуры данных Python. Эти структуры данных будут крайне важны для написания программ существенного размера.</p>
+<p>Теперь, когда мы накопили достаточно базовых знаний о Python, далее посмотрим, как проектировать и писать настоящую программу на Python.</p>
+<h2 id="примечания">Примечания</h2>
+<blockquote id="fn_1">
+<sup>1</sup>. list – англ. &quot;список&quot; (прим.перев.)<a href="#reffn_1" title="Jump back to footnote [1] in the text."> ↩</a>
+</blockquote>
+<blockquote id="fn_2">
+<sup>2</sup>. address book – англ. &quot;адресная книга&quot; (прим. перев.)<a href="#reffn_2" title="Jump back to footnote [2] in the text."> ↩</a>
+</blockquote>
+<blockquote id="fn_3">
+<sup>3</sup>. join – англ. &quot;объединять&quot; (прим.перев.)<a href="#reffn_3" title="Jump back to footnote [3] in the text."> ↩</a>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="modules.html" class="navigation navigation-prev " aria-label="Previous page: Модули">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="problem_solving.html" class="navigation navigation-next " aria-label="Next page: Решение задач">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Структуры данных","level":"1.12","depth":1,"next":{"title":"Решение задач","level":"1.13","depth":1,"path":"problem_solving.md","ref":"problem_solving.md","articles":[]},"previous":{"title":"Модули","level":"1.11","depth":1,"path":"modules.md","ref":"modules.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Swaroop C.H.","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"Swaroopch C.H.","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{"buyBookUrl":"https://swaroopch.com/buybook","officialRuUrl":"https://zhekazuev.github.io/byte-of-python-ru/","py_version":"3.8","downloadRuUrl":"https://github.com/zhekazuev/byte-of-python-ru/releases/latest","py_min_release":"3.6.8","officialUrl":"https://python.swaroopch.com","authorUrl":"https://swaroopch.com/about","downloadUrl":"https://github.com/swaroopch/byte-of-python/releases/latest","vimBookUrl":"https://vim.swaroopch.com/byte-of-vim.pdf","contactUrl":"https://swaroopch.com/contact","sourceRuUrl":"https://github.com/zhekazuev/byte-of-python-ru/","py_release":"3.8.6","sourceUrl":"https://github.com/swaroopch/byte-of-python","py_min_version":"3.6","pythonVersion":"3.6.0"},"series":"Byte of","title":"Укус Питона – A Byte of Python по-русски","language":"ru","gitbook":"*","publisher":"Swaroop C.H."},"file":{"path":"data_structures.md","mtime":"2022-10-23T15:14:46.941Z","type":"markdown"},"gitbook":{"version":"4.0.4","time":"2022-10-23T15:15:02.340Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

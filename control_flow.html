@@ -1,0 +1,818 @@
+
+<!DOCTYPE HTML>
+<html lang="ru" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Поток команд · Укус Питона – A Byte of Python по-русски</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 4.0.4">
+        <meta name="author" content="Swaroop C.H.">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="functions.html" />
+    
+    
+    <link rel="prev" href="op_exp.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Введите условия поиска" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Введение
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="dedication.html">
+            
+                <a href="dedication.html">
+            
+                    
+                    Посвящение
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="preface.html">
+            
+                <a href="preface.html">
+            
+                    
+                    Предисловие
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="about_python.html">
+            
+                <a href="about_python.html">
+            
+                    
+                    О языке Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    Установка
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="first_steps.html">
+            
+                <a href="first_steps.html">
+            
+                    
+                    Первые шаги
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="basics.html">
+            
+                <a href="basics.html">
+            
+                    
+                    Основы
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="op_exp.html">
+            
+                <a href="op_exp.html">
+            
+                    
+                    Операторы и выражения
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9" data-path="control_flow.html">
+            
+                <a href="control_flow.html">
+            
+                    
+                    Поток команд
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="functions.html">
+            
+                <a href="functions.html">
+            
+                    
+                    Функции
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="modules.html">
+            
+                <a href="modules.html">
+            
+                    
+                    Модули
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="data_structures.html">
+            
+                <a href="data_structures.html">
+            
+                    
+                    Структуры данных
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="problem_solving.html">
+            
+                <a href="problem_solving.html">
+            
+                    
+                    Решение задач
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="oop.html">
+            
+                <a href="oop.html">
+            
+                    
+                    Объектно-ориентированное программирование
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="io.html">
+            
+                <a href="io.html">
+            
+                    
+                    Ввод-вывод
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="exceptions.html">
+            
+                <a href="exceptions.html">
+            
+                    
+                    Исключения
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="stdlib.html">
+            
+                <a href="stdlib.html">
+            
+                    
+                    Стандартная библиотека
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="more.html">
+            
+                <a href="more.html">
+            
+                    
+                    Дополнительно
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="what_next.html">
+            
+                <a href="what_next.html">
+            
+                    
+                    Что дальше
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="floss.html">
+            
+                <a href="floss.html">
+            
+                    
+                    Приложение: FLOSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="about.html">
+            
+                <a href="about.html">
+            
+                    
+                    Приложение: О книге
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="revision_history.html">
+            
+                <a href="revision_history.html">
+            
+                    
+                    Приложение: История версий
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="translations.html">
+            
+                <a href="translations.html">
+            
+                    
+                    Приложение: Переводы
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="translation_howto.html">
+            
+                <a href="translation_howto.html">
+            
+                    
+                    Приложение: Инструкция по переводу
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="feedback.html">
+            
+                <a href="feedback.html">
+            
+                    
+                    Обратная связь
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Опубликовано с помощью HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Поток команд</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="control-flow">Поток команд </h1>
+<p>В программах, которые мы до сих пор рассматривали, последовательность команд всегда выполнялась Python по порядку строго сверху вниз. А что, если нам необходимо изменить поток выполняющихся команд? Например, если требуется, чтобы программа принимала некоторое решение и выполняла различные действия в зависимости от ситуации; скажем, печатала &apos;Доброе утро&apos; или &apos;Добрый вечер&apos; в зависимости от времени суток.</p>
+<p>Как вы уже, наверное, догадались, этого можно достичь при помощи операторов управления потоком. В Python есть три оператора управления потоком: <code>if</code>, <code>for</code> и <code>while</code>.</p>
+<h2 id="оператор-if">Оператор <code>if</code></h2>
+<p>Оператор <code>if</code> используется для проверки условий: <em>если</em><sup><a href="#fn_1" id="reffn_1">1</a></sup> условие верно<sup><a href="#fn_2" id="reffn_2">2</a></sup>, выполняется блок выражений (называемый <em>if-блок</em>), <em>иначе</em><sup><a href="#fn_3" id="reffn_3">3</a></sup> выполняется другой блок выражений (называемый <em>else-блок</em>). Блок <em>else</em> является необязательным.</p>
+<p>Пример (сохраните как <code>if.py</code>):</p>
+<!-- Tags expansion does not happen inside code blocks https://github.com/GitbookIO/gitbook/issues/707 -->
+<pre><code class="lang-python">number = <span class="hljs-number">23</span>
+guess = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&apos;Введите целое число : &apos;</span>))
+
+<span class="hljs-keyword">if</span> guess == number:
+    <span class="hljs-comment"># Здесь начинается новый блок</span>
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Поздравляю, вы угадали,&apos;</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;(хотя и не выиграли никакого приза!)&apos;</span>)
+    <span class="hljs-comment"># Здесь заканчивается новый блок</span>
+<span class="hljs-keyword">elif</span> guess &lt; number:
+    <span class="hljs-comment"># Ещё один блок</span>
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Нет, загаданное число немного больше этого.&apos;</span>)
+    <span class="hljs-comment"># Внутри блока вы можете выполнять всё, что угодно ...</span>
+<span class="hljs-keyword">else</span>:
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Нет, загаданное число немного меньше этого.&apos;</span>)
+    <span class="hljs-comment"># чтобы попасть сюда, guess должно быть больше, чем number</span>
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Завершено&apos;</span>)
+<span class="hljs-comment"># Это последнее выражение выполняется всегда </span>
+<span class="hljs-comment"># после выполнения оператора if</span>
+</code></pre>
+
+<p>Вывод:</p>
+<pre><code>$ python if.py
+Введите целое число : 50
+Нет, загаданное число немного меньше этого.
+Завершено
+
+$ python if.py
+Введите целое число : 22
+Нет, загаданное число немного больше этого.
+Завершено
+
+$ python if.py
+Введите целое число : 23
+Поздравляю, вы угадали,
+(хотя и не выиграли никакого приза!)
+Завершено
+</code></pre>
+
+<p><strong>Как это работает</strong></p>
+<p>В этой программе мы принимаем варианты от пользователя и проверяем, совпадают ли они с заранее заданным числом. Мы устанавливаем переменной <code>number</code> значение любого целого числа, какого хотим. Например, <code>23</code>. После этого мы принимаем вариант числа от пользователя при помощи функции <code>input()</code>. Функции – это всего-навсего многократно используемые фрагменты программы. Мы узнаем о них больше в <a href="functions.html#functions">следующей главе</a>.</p>
+<p>Мы передаём встроенной функции <code>input</code> строку, которую она выводит на экран и ожидает ввода от пользователя. Как только мы ввели что-нибудь и нажали клавишу [enter], функция <code>input()</code> возвращает строку, которую мы ввели. Затем мы преобразуем полученную строку в число при помощи <code>int</code>, и сохраняем это значение в переменную <code>guess</code>. Вообще-то, <code>int</code> – это класс, но на данном этапе вам достаточно знать лишь, что при помощи него можно преобразовать строку в целое число (предполагая, что строка содержит целое число).</p>
+<p>Далее мы сравниваем число, введённое пользователем, с числом, которое мы выбрали заранее. Если они равны, мы печатаем сообщение об успехе. Обратите внимание, что мы используем соответствующие уровни отступа, чтобы указать Python, какие выражения относятся к какому блоку. Вот почему отступы так важны в Python. Я надеюсь, вы придерживаетесь правила “постоянных отступов”, не так ли?</p>
+<p>Обратите внимание, что в конце оператора <code>if</code> стоит двоеточие – этим мы показываем, что далее следует блок выражений.</p>
+<p>После этого мы проверяем, верно ли, что пользовательский вариант числа меньше загаданного, и если это так, мы информируем пользователя о том, что ему следует выбирать числа немного больше этого. Здесь мы использовали выражение <code>elif</code>, которое попросту объединяет в себе два связанных <code>if else-if else</code> выражения в одно выражение <code>if-elif-else</code>. Это облегчает чтение программы, а также не требует дополнительных отступов.</p>
+<p>Выражения <code>elif</code> и <code>else</code> также имеют двоеточие в конце логической строки, за которым следуют соответствующие блоки команд (с соответствующим числом отступов, конечно).</p>
+<p>Внутри <code>if-блока</code> оператора <code>if</code> может быть другой оператор <code>if</code> и так далее – это называется вложенным<sup><a href="#fn_4" id="reffn_4">4</a></sup> оператором <code>if</code>.</p>
+<p>Помните, что части <code>elif</code> и <code>else</code> не обязательны. Минимальная корректная запись оператора <code>if</code> такова:</p>
+<pre><code class="lang-python"><span class="hljs-keyword">if</span> <span class="hljs-literal">True</span>:
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Да, это верно.&apos;</span>)
+</code></pre>
+<p>После того, как Python заканчивает выполнение всего оператора <code>if</code> вместе с его частями <code>elif</code> и <code>else</code>, он переходит к следующему выражению в блоке, содержащем этот оператор <code>if</code>. В нашем случае это основной блок программы (в котором начинается выполнение программы), а следующее выражение – это <code>print(&apos;Завершено&apos;)</code>. После этого Python доходит до конца программы и просто выходит из неё.</p>
+<p>Хотя это и чрезвычайно простая программа, я указал вам на целый ряд вещей, которые стоит взять на заметку. Всё это довольно легко (даже удивительно легко для тех из вас, кто пришёл из мира C/C++). Поначалу вам придётся держать все эти вещи в памяти, но после некоторой практики вы привыкнете, и они вам покажутся вполне “естественными”.</p>
+<blockquote>
+<p><strong>Замечание для программистов на C/C++</strong></p>
+<p>В Python нет оператора <code>switch</code>. Однако, при помощи конструкции <code>if..elif..else</code> можно достичь того же самого (а в некоторых случаях можно даже использовать <a href="data_structures.html#dictionary">словарь</a>, чтобы сделать это быстро).</p>
+</blockquote>
+<h2 id="оператор-while">Оператор while</h2>
+<p>Оператор <code>while</code> позволяет многократно выполнять блок команд до тех пор, пока выполняется некоторое условие. Это один из так называемых операторов <em>цикла</em>. Он также может иметь необязательный пункт <code>else</code>.</p>
+<p>Пример (сохраните как <code>while.py</code>):</p>
+<pre><code class="lang-python">number = <span class="hljs-number">23</span>
+running = <span class="hljs-literal">True</span>
+
+<span class="hljs-keyword">while</span> running:
+    guess = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&apos;Введите целое число : &apos;</span>))
+
+    <span class="hljs-keyword">if</span> guess == number:
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Поздравляю, вы угадали.&apos;</span>)
+        <span class="hljs-comment"># это останавливает цикл while</span>
+        running = <span class="hljs-literal">False</span> 
+    <span class="hljs-keyword">elif</span> guess &lt; number:
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Нет, загаданное число немного больше этого.&apos;</span>)
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Нет, загаданное число немного меньше этого.&apos;</span>)
+<span class="hljs-keyword">else</span>:
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Цикл while закончен.&apos;</span>)
+    <span class="hljs-comment"># Здесь можете выполнить всё что вам ещё нужно</span>
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Завершение.&apos;</span>)
+</code></pre>
+
+<p>Вывод:</p>
+<pre><code>$ python while.py
+Введите целое число : 50
+Нет, загаданное число немного меньше этого.
+Введите целое число : 22
+Нет, загаданное число немного больше этого.
+Введите целое число : 23
+Поздравляю, вы угадали.
+Цикл while закончен.
+Завершение.
+</code></pre>
+
+<p><strong>Как это работает</strong></p>
+<p>В этой программе мы продолжаем играть в игру с угадыванием, но преимущество состоит в том, что теперь пользователь может угадывать до тех пор, пока не угадает правильное число, и ему не придётся запускать программу заново для каждой попытки, как это происходило до сих пор. Это наглядно демонстрирует применение оператора <code>while</code>.</p>
+<p>Мы переместили операторы <code>input</code> и <code>if</code> внутрь цикла <code>while</code> и установили переменную <code>running</code> в значение True <code>перед</code> запуском цикла. Прежде всего проверяется, равно ли значение переменной <code>running</code> <code>True</code>, а затем происходит переход к соответствующему <em>while-блоку</em>. После выполнения этого блока команд условие, которым в данном случае является переменная <code>running</code>, проверяется снова. Если оно истинно, while-блок запускается снова, в противном случае происходит переход к дополнительному else-блоку, а затем – к следующему оператору.</p>
+<p>Блок <code>else</code> выполняется тогда, когда условие цикла <code>while</code> становится ложным (<code>False</code>) – это может случиться даже при самой первой проверке условия. Если у цикла <code>while</code> имеется дополнительный блок <code>else</code>, он всегда выполняется, если только цикл не будет прерван оператором <code>break</code>.</p>
+<p><code>True</code> и <code>False</code> называются булевым типом данных, и вы можете считать их эквивалентными значениям <code>1</code> и <code>0</code> соответственно.</p>
+<blockquote>
+<p><strong>Примечание для программистов на C/C++</strong></p>
+<p>Помните, что у цикла <code>while</code> может быть блок <code>else</code>.</p>
+</blockquote>
+<h2 id="цикл-for">Цикл <code>for</code></h2>
+<p>Оператор <code>for..in</code> также является оператором цикла, который осуществляет <em>итерацию</em> по последовательности объектов, т.е. проходит через каждый элемент в последовательности. Мы узнаем больше о <a href="data_structures.html#sequence">последовательностях</a> в дальнейших главах, а пока просто запомните, что последовательность – это упорядоченный набор элементов.</p>
+<p>Пример (сохраните как <code>for.py</code>):</p>
+<pre><code class="lang-python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, <span class="hljs-number">5</span>):
+    <span class="hljs-built_in">print</span>(i)
+<span class="hljs-keyword">else</span>:
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Цикл for закончен&apos;</span>)
+</code></pre>
+
+<p>Вывод:</p>
+<pre><code>$ python for.py
+1
+2
+3
+4
+Цикл for закончен
+</code></pre>
+
+<p><strong>Как это работает</strong></p>
+<p>В этой программе мы выводим на экран <em>последовательность</em> чисел. Мы генерируем эту последовательность, используя встроенную функцию <code>range</code><sup><a href="#fn_5" id="reffn_5">5</a></sup>.</p>
+<p>Мы задаём два числа, и <code>range</code> возвращает последовательность чисел от первого числа до второго. Например, <code>range(1,5)</code> даёт последовательность <code>[1, 2, 3, 4]</code>. По умолчанию <code>range</code> принимает значение шага, равное 1. Если мы зададим также и третье число <code>range</code>, оно будет служить шагом. Например, <code>range(1,5,2)</code> даст <code>[1,3]</code>. Помните, интервал простирается <em>только до</em> второго числа, т.е. <em>не включает</em> его в себя.</p>
+<p>Обратите внимание, что <code>range()</code> генерирует только одно число за раз, если вам нужен полный список чисел, вызовите <code>list()</code> в <code>range()</code>, например, <code>list(range(5))</code> приведет к <code>[0, 1, 2, 3, 4]</code>. Списки<sup><a href="#fn_6" id="reffn_6">6</a></sup> объясняются в <a href="data_structures.html#data-structures">главе о структурах данных</a>.</p>
+<p>Затем цикл <code>for</code> осуществляет итерацию по этому диапазону - <code>for i in range(1,5)</code> эквивалентно <code>for i in [1, 2, 3, 4]</code>, что напоминает присваивание переменной i по одному числу (или объекту) за раз, выполняя блок команд для каждого значения <code>i</code>. В данном случае в блоке команд мы просто выводим значение на экран.</p>
+<p>Помните, что блок <code>else</code> не обязателен. Если он присутствует, он всегда выполняется один раз после окончания цикла <code>for</code>, если только не указан оператор <a href="#break-statement">break</a>.</p>
+<p>Помните также, что цикл <code>for..in</code> работает для любой последовательности. В нашем случае это список чисел, сгенерированный встроенной функцией <code>range</code>, но в общем случае можно использовать любую последовательность любых объектов! В следующих разделах мы познакомимся с этим поближе.</p>
+<blockquote>
+<p><strong>Примечание для программистов на C/C++/Java/C#</strong></p>
+<p>Цикл <code>for</code> в Python радикально отличается от цикла <code>for</code> в C/C++. Программисты на C# заметят, что цикл <code>for</code> в Python похож на цикл <code>foreach</code> в C#. Программистам на Java это может напомнить конструкцию <code>for (int i : IntArray)</code> в Java 1.5.</p>
+<p>Если в C/C++ записать <code>for (int i = 0; i &lt; 5; i++)</code>, то в Python этому соответствовало бы выражение <code>for i in range(0,5)</code>. Как видно, в Python цикл <code>for</code> проще, более выразителен и менее подвержен ошибкам.</p>
+</blockquote>
+<h2 id="break-statement">Оператор break </h2>
+<p>Оператор <code>break</code> служит для <em>прерывания</em><sup><a href="#fn_7" id="reffn_7">7</a></sup> цикла, т.е. остановки выполнения команд даже если условие выполнения цикла ещё не приняло значения <code>False</code> или последовательность элементов не закончилась.</p>
+<p>Важно отметить, что если циклы <code>for</code> или <code>while</code> <em>прервать</em> оператором <code>break</code>, соответствующие им блоки <code>else</code> выполняться <strong>не</strong> будут.</p>
+<p>Пример (сохраните как <code>break.py</code>):</p>
+<pre><code class="lang-python"><span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:
+    s = <span class="hljs-built_in">input</span>(<span class="hljs-string">&apos;Введите что-нибудь : &apos;</span>)
+    <span class="hljs-keyword">if</span> s == <span class="hljs-string">&apos;выход&apos;</span>:
+        <span class="hljs-keyword">break</span>
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Длина строки:&apos;</span>, <span class="hljs-built_in">len</span>(s))
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Завершение&apos;</span>)
+</code></pre>
+
+<p>Вывод:</p>
+<pre><code>$ python break.py
+Введите что-нибудь : Программировать весело.
+Длина строки: 23
+Введите что-нибудь : Если работа скучна,
+Длина строки: 19
+Введите что-нибудь : Чтобы придать ей весёлый тон -
+Длина строки: 30
+Введите что-нибудь :     используй Python!
+Длина строки: 23
+Введите что-нибудь : выход
+Завершение
+</code></pre>
+
+<p><strong>Как это работает</strong></p>
+<p>В этой программе мы многократно считываем пользовательский ввод и выводим на экран длину каждой введённой строки. Для остановки программы мы вводим специальное условие, проверяющее, совпадает ли пользовательский ввод со строкой <code>&apos;выход&apos;</code>. Мы останавливаем программу <em>прерыванием</em> цикла оператором <code>break</code> и достигаем её конца.</p>
+<p>Длина введённой строки может быть найдена при помощи встроенной функции <code>len</code>.</p>
+<p>Помните также, что оператор <code>break</code> может применяться и в цикле <code>for</code>.</p>
+<p><strong>Поэтический Python Swaroop’а</strong></p>
+<p>Для ввода строк здесь я использовал мини-стишок, который сам сочинил. Он называется Поэтический Python Swaroop’а<sup><a href="#fn_8" id="reffn_8">8</a></sup>:</p>
+<pre><code>Программировать весело.
+Если работа скучна,
+Чтобы придать ей весёлый тон -
+    используй Python!
+</code></pre><h2 id="continue-statement">Оператор <code>continue</code> </h2>
+<p>Оператор <code>continue</code> используется для указания Python, что необходимо пропустить все оставшиеся команды в текущем блоке цикла и <em>продолжить</em><sup><a href="#fn_9" id="reffn_9">9</a></sup> со следующей итерации цикла.</p>
+<p>Пример (сохраните как <code>continue.py</code>):</p>
+<pre><code class="lang-python"><span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:
+    s = <span class="hljs-built_in">input</span>(<span class="hljs-string">&apos;Введите что-нибудь : &apos;</span>)
+    <span class="hljs-keyword">if</span> s == <span class="hljs-string">&apos;выход&apos;</span>:
+        <span class="hljs-keyword">break</span>
+    <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(s) &lt; <span class="hljs-number">3</span>:
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Слишком мало&apos;</span>)
+        <span class="hljs-keyword">continue</span>
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Введённая строка достаточной длины&apos;</span>)
+    <span class="hljs-comment"># Разные другие действия здесь...</span>
+</code></pre>
+
+<p>Вывод:</p>
+<pre><code>$ python continue.py
+Введите что-нибудь : a
+Слишком мало
+Введите что-нибудь : 12
+Слишком мало
+Введите что-нибудь : абв
+Введённая строка достаточной длины
+Введите что-нибудь : выход
+</code></pre>
+
+<p><strong>Как это работает</strong></p>
+<p>В этой программе мы запрашиваем ввод со стороны пользователя, но обрабатываем введённую строку только если она имеет длину хотя бы в 3 символа. Итак, мы используем встроенную функцию <code>len</code> для получения длины строки, и если длина менее 3, мы пропускаем остальные действия в блоке при помощи оператора <code>continue</code>. В противном случае все остальные команды в цикле выполняются, производя любые манипуляции, которые нам нужны.</p>
+<p>Заметьте, что оператор <code>continue</code> также работает и с циклом <code>for</code>.</p>
+<h2 id="резюме">Резюме</h2>
+<p>Мы увидели, как использовать три оператора для управления потоком команд: <code>if</code>, <code>while</code> и <code>for</code>, а также связанные с ними операторы <code>break</code> и <code>continue</code>. Это наиболее часто используемые конструкции Python, поэтому овладеть ими очень важно.</p>
+<p>Далее мы увидим, как создавать и использовать функции.</p>
+<h2 id="примечания">Примечания</h2>
+<blockquote id="fn_1">
+<sup>1</sup>. if – англ. &quot;если&quot; (прим.перев.)<a href="#reffn_1" title="Jump back to footnote [1] in the text."> ↩</a>
+</blockquote>
+<blockquote id="fn_2">
+<sup>2</sup>. Соответствует булевому значению True (прим.перев.)<a href="#reffn_2" title="Jump back to footnote [2] in the text."> ↩</a>
+</blockquote>
+<blockquote id="fn_3">
+<sup>3</sup>. else – англ. &quot;иначе&quot;, &quot;в противном случае&quot; (прим.перев.)<a href="#reffn_3" title="Jump back to footnote [3] in the text."> ↩</a>
+</blockquote>
+<blockquote id="fn_4">
+<sup>4</sup>. nested – англ. &quot;вложенный&quot; (прим.перев.)<a href="#reffn_4" title="Jump back to footnote [4] in the text."> ↩</a>
+</blockquote>
+<blockquote id="fn_5">
+<sup>5</sup>. range – англ. &quot;диапазон&quot;, &quot;интервал&quot; (прим.перев.)<a href="#reffn_5" title="Jump back to footnote [5] in the text."> ↩</a>
+</blockquote>
+<blockquote id="fn_6">
+<sup>6</sup>. list – англ. &quot;список&quot; (прим.перев.)<a href="#reffn_6" title="Jump back to footnote [6] in the text."> ↩</a>
+</blockquote>
+<blockquote id="fn_7">
+<sup>7</sup>. break – англ. &quot;разбивать&quot;, &quot;разрывать&quot; (прим.перев.)<a href="#reffn_7" title="Jump back to footnote [7] in the text."> ↩</a>
+</blockquote>
+<blockquote id="fn_8">
+<sup>8</sup>. Swaroop’s Poetic Python:<a href="#reffn_8" title="Jump back to footnote [8] in the text."> ↩</a>
+</blockquote>
+<pre><code> Programming is fun.
+ When the work is done,
+ if you wanna make your work also fun:
+      use Python!
+</code></pre><blockquote id="fn_9">
+<sup>9</sup>. continue – англ. &quot;продолжать&quot; (прим.перев.)<a href="#reffn_9" title="Jump back to footnote [9] in the text."> ↩</a>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="op_exp.html" class="navigation navigation-prev " aria-label="Previous page: Операторы и выражения">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="functions.html" class="navigation navigation-next " aria-label="Next page: Функции">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Поток команд","level":"1.9","depth":1,"next":{"title":"Функции","level":"1.10","depth":1,"path":"functions.md","ref":"functions.md","articles":[]},"previous":{"title":"Операторы и выражения","level":"1.8","depth":1,"path":"op_exp.md","ref":"op_exp.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Swaroop C.H.","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"Swaroopch C.H.","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{"buyBookUrl":"https://swaroopch.com/buybook","officialRuUrl":"https://zhekazuev.github.io/byte-of-python-ru/","py_version":"3.8","downloadRuUrl":"https://github.com/zhekazuev/byte-of-python-ru/releases/latest","py_min_release":"3.6.8","officialUrl":"https://python.swaroopch.com","authorUrl":"https://swaroopch.com/about","downloadUrl":"https://github.com/swaroopch/byte-of-python/releases/latest","vimBookUrl":"https://vim.swaroopch.com/byte-of-vim.pdf","contactUrl":"https://swaroopch.com/contact","sourceRuUrl":"https://github.com/zhekazuev/byte-of-python-ru/","py_release":"3.8.6","sourceUrl":"https://github.com/swaroopch/byte-of-python","py_min_version":"3.6","pythonVersion":"3.6.0"},"series":"Byte of","title":"Укус Питона – A Byte of Python по-русски","language":"ru","gitbook":"*","publisher":"Swaroop C.H."},"file":{"path":"control_flow.md","mtime":"2022-10-23T15:14:46.941Z","type":"markdown"},"gitbook":{"version":"4.0.4","time":"2022-10-23T15:15:02.340Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

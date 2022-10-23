@@ -1,0 +1,7 @@
+$ python exceptions_raise.py
+Введите что-нибудь --> а
+ShortInputException: Длина введённой строки 1, ожидалось, как минимум 3
+
+$ python exceptions_raise.py
+Введите что-нибудь --> абв
+Не было исключений.

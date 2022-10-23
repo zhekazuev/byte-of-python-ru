@@ -1,0 +1,2 @@
+$ python oop_method.py
+Привет! Как дела?
