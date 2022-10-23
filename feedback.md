@@ -1,3 +1,3 @@
-# Feedback
+# Обратная связь
 
-The book needs the help of its readers such as yourselves to point out any parts of the book which are not good, not comprehensible or are simply wrong. Please [write to the main author]({{ book.contactUrl }}) or the respective [translators](./translations.md#translations) with your comments and suggestions.
+Книга нуждается в помощи читателей, таких как вы, чтобы указать на те части книги, которые не очень хороши, непонятны или просто ошибочны. Пожалуйста, [напишите основному автору]({{ book.contactUrl }}) или соответствующим [переводчикам](./translations.md#translations) со своими замечаниями и предложениями.
