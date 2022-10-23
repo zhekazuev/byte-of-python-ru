@@ -18,4 +18,4 @@ npx honkit pdf . byte-of-python.pdf
 npx honkit epub . byte-of-python.epub
 ```
 
-See https://github.com/honkit/honkit and https://honkit.netlify.app/
+Ознакомьтесь с https://github.com/honkit/honkit и https://honkit.netlify.app/
