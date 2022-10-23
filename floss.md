@@ -1,41 +1,42 @@
-# Appendix: FLOSS {#floss}
+# Приложение: FLOSS {#floss}
 
-> NOTE: Please note that this section was written in 2003, so some of this will sound quaint to you :-)
+> ПРИМЕЧАНИЕ: Пожалуйста, обратите внимание, что этот раздел был написан в 2003 году, поэтому кое-что из этого покажется вам устаревшим :-)
 
-"Free/Libre and Open Source Software", in short, [FLOSS](http://en.wikipedia.org/wiki/FLOSS) is based on the concept of a community, which itself is based on the concept of sharing, and particularly the sharing of knowledge. FLOSS are free for usage, modification and redistribution.
+"Free/Libre and Open Source Software", коротко [FLOSS](http://en.wikipedia.org/wiki/FLOSS).
+В основу идеи FLOSS положена концепция сообщества, в котором принято делиться, и особенно делиться знаниями. Свободные программы можно свободно использовать, изменять и распространять.
 
-If you have already read this book, then you are already familiar with FLOSS since you have been using *Python* all along and Python is an open source software!
+Если вы уже прочли эту книгу, то вы уже знакомы со свободным ПО, так как вы изучали *Python* всё это время, а Python является свободным программным обеспечением!
 
-Here are some examples of FLOSS to give an idea of the kind of things that community sharing and building can create:
+Вот несколько примеров свободного ПО, по которым можно составить некоторое представление о том, что способно создать такое сообщество:
 
-[Linux](http://www.kernel.org): This is a FLOSS OS kernel used in the GNU/Linux operating system. Linux, the kernel, was started by Linus Torvalds as a student. Android is based on Linux. Any website you use these days will mostly be running on Linux.
+[Linux](http://www.kernel.org): Это свободное ядро операционной системы, используемое, например, в операционной системе GNU/Linux. Разработку ядра "Linux" начал Линус Торвальдс ещё в свою бытность студентом.
 
-[Ubuntu](http://www.ubuntu.com): This is a community-driven distribution, sponsored by Canonical and it is the most popular GNU/Linux distribution today. It allows you to install a plethora of FLOSS available and all this in an easy-to-use and easy-to-install manner. Best of all, you can just reboot your computer and run GNU/Linux off the CD! This allows you to completely try out the new OS before installing it on your computer. However, Ubuntu is not entirely free software; it contains proprietary drivers, firmware, and applications.
+[Ubuntu](http://www.ubuntu.com): Это дистрибутив, разрабатываемый сообществом и спонсируемый фирмой Canonical. В настоящее время это, пожалуй, самый популярный дистрибутив GNU/Linux. Он позволяет легко устанавливать и использовать множество свободных программ. Больше того, он позволяет просто перезагрузить ваш компьютер и запустить GNU/Linux с CD! Это даёт возможность в полной мере опробовать новую операционную систему до установки на жёсткий диск. Однако, Ubuntu не полностью свободна, так как включает некоторые проприетарные драйверы, микрокод и приложения.
 
-[LibreOffice](http://www.libreoffice.org/): This is an excellent community-driven and developed office suite with a writer, presentation, spreadsheet and drawing components among other things. It can even open and edit MS Word and MS PowerPoint files with ease. It runs on almost all platforms and is entirely free, libre and open source software.
+[LibreOffice](http://www.libreoffice.org/): Это превосходный офисный пакет, разрабатываемый сообществом и включающий в себя компоненты для создания текста, презентаций, электронных таблиц, рисунков и многого другого. Он также позволяет открывать и редактировать файлы MS Word и MS Powerpoint. Он работает практически на всех платформах и является полностью свободным и открытым программным обеспечением.
 
-[Mozilla Firefox](http://www.mozilla.org/products/firefox): This is _the_ best web browser. It is blazingly fast and has gained critical acclaim for its sensible and impressive features. The extensions concept allows any kind of plugins to be used.
+[Mozilla Firefox](http://www.mozilla.org/products/firefox): _Это_ веб-браузер нового поколения, являющийся сильнейшим соперником Internet Explorer. Он огненно быстр, и заработал широкое признание своими удобными и впечатляющими возможностями. А концепция расширений позволяет дополнять его самыми разнообразными плагинами.
 
-[Mono](http://www.mono-project.com): This is an open source implementation of the Microsoft .NET platform.  It allows .NET applications to be created and run on GNU/Linux, Windows, FreeBSD, Mac OS and many other platforms as well.
+[Mono](http://www.mono-project.com): Это свободная реализация платформы Microsoft .NET. Она позволяет создавать и запускать .NET-приложения в GNU/Linux, Windows, FreeBSD, Mac OS и на многих других платформах.
 
-[Apache web server](http://httpd.apache.org): This is the popular open source web server. In fact, it is _the_ most popular web server on the planet! It runs nearly more than half of the websites out there. Yes, that's right - Apache handles more websites than all the competition (including Microsoft IIS) combined.
+[Apache web server](http://httpd.apache.org): Это популярный открытый веб-сервер. По сути, _это_ самый популярный веб-сервер на планете. На нём работает более половины всех сайтов. Да, Apache действительно обслуживает больше сайтов, чем все остальные веб-серверы (включая Microsoft IIS) вместе взятые.
 
-[VLC Player](http://www.videolan.org/vlc/): This is a video player that can play anything from DivX to MP3 to Ogg to VCDs and DVDs to ... who says open source ain't fun? ;-)
+[VLC Player](http://www.videolan.org/vlc/): Это проигрыватель, который может воспроизводить всё, начиная от DivX и до MP3, до Ogg, до VCD, до DVD, до ... и кто сказал, что open source не забавно? ;-)
 
-This list is just intended to give you a brief idea - there are many more excellent FLOSS out there, such as the Perl language, PHP language, Drupal content management system for websites, PostgreSQL database server, TORCS racing game, KDevelop IDE, Xine - the movie player, VIM editor, Quanta+ editor, Banshee audio player, GIMP image editing program, ... This list could go on forever.
+Этот список предназначен только лишь для того, чтобы вкратце передать вам мысль, на самом же деле существует ещё огромное множество свободного ПО, такого как язык Perl, язык PHP, система управления содержимым веб-сайтов Drupal, сервер баз данных PostgreSQL, игра TORCS, среда разработки KDevelop, проигрыватель Xine, текстовый редактор VIM, редактор Quanta+, аудио-плеер Banshee, графический редактор GIMP, ... этот список можно продолжать вечно.
 
-To get the latest buzz in the FLOSS world, check out the following websites:
+Чтобы отследить свежие слухи в мире свободного ПО, посетите следующие сайты:
 
 - [OMG! Ubuntu!](http://www.omgubuntu.co.uk/)
 - [Web Upd8](http://www.webupd8.org/)
 - [DistroWatch](http://www.distrowatch.com)
 - [Planet Debian](http://planet.debian.org/)
 
-Visit the following websites for more information on FLOSS:
+Узнать больше о свободном ПО можно на следующих сайтах:
 
 - [GitHub Explore](http://github.com/explore)
 - [Code Triage](http://www.codetriage.com/)
 - [SourceForge](http://www.sourceforge.net)
 - [FreshMeat](http://www.freshmeat.net)
 
-So, go ahead and explore the vast, free and open world of FLOSS!
+Так что вперёд – осваивать бескрайний, свободный и открытый мир СПО!
